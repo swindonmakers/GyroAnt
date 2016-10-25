@@ -14,6 +14,9 @@ import views
 import pystache
 from types import *
 from assemblies import machine_dir
+import csv
+
+sourcing = {};
 
 def md_filename(s):
     s = s.replace(" ","")
@@ -199,6 +202,268 @@ def gen_assembly(m, a):
 def assembly_level(a):
     return a['level']
 
+
+def gen_assembly_guide(m, target_dir, guide_template):
+    print(m['title'])
+
+    md = ''
+
+    md += '# '+m['title'] + '\n'
+    md += '# Assembly Guide\n\n'
+
+    # machine views
+    for c in m['children']:
+        if type(c) is DictType and c['type'] == 'view' and 'filepath' in c:
+            view = c
+            md += '!['+view['caption']+']('+ view['filepath'] +')\n\n'
+
+    # intro
+    md += gen_intro(m)
+
+
+    # BOM
+    md += gen_bom(m)
+
+    # Cut Parts
+    if len(m['cut']) > 0:
+        md += '# Cutting Instructions\n\n'
+
+        # Cut Parts
+        m['cut'].sort(key=cut_call, reverse=False)
+        for c in m['cut']:
+            md += gen_cut(m,c)
+
+    # Assemblies
+    if len(m['assemblies']) > 0:
+        md += '# Assembly Instructions\n\n'
+
+        # Assemblies
+        # sort by level desc
+        m['assemblies'].sort(key=assembly_level, reverse=True)
+        for a in m['assemblies']:
+            md += gen_assembly(m,a)
+
+
+    print("  Saving markdown")
+    mdfilename = md_filename(m['title'] +'AssemblyGuide')
+    mdpath = target_dir + '/' +mdfilename
+    with open(mdpath,'w') as f:
+        f.write(md)
+
+    print("  Generating htm")
+    htmfilename = htm_filename(m['title'] +'AssemblyGuide')
+    htmpath = target_dir + '/' + htmfilename
+    with open(htmpath, 'w') as f:
+        for line in open(guide_template, "r").readlines():
+            line = line.replace("{{mdfilename}}", mdfilename)
+            f.write(line)
+
+    return {'title':m['title']+ ' Assembly Guide', 'mdfilename':mdfilename, 'htmfilename':htmfilename}
+
+
+def gen_printing_guide(m, target_dir, guide_template):
+    print(m['title'])
+
+    if len(m['printed']) == 0:
+        return {};
+
+    md = ''
+
+    md += '# '+m['title'] + '\n'
+    md += '# Printing Guide\n\n'
+
+    vol = 0
+    weight = 0
+    qty = 0
+    m['printed'].sort(key=printed_call, reverse=False)
+
+    for v in m['printed']:
+        md += '### '+v['title']+'\n\n'
+
+        md += 'Metric | Value \n'
+        md += '--- | --- \n'
+        md += 'Quantity | ' + str(v['qty']) + '\n'
+        qty += v['qty']
+        md += 'STL | ' + '['+v['title']+'](../printedparts/stl/'+ openscad.stl_filename(v['title']) +')\n'
+
+        if 'plasticWeight' in v:
+            w = v['qty'] * v['plasticWeight']
+            weight += w
+            vol += v['qty'] * v['plasticVolume']
+            md += 'Plastic (Kg) | ' + str(round(w,2)) + '\n'
+            md += 'Plastic (cm3) | ' + str(round(v['qty'] * v['plasticVolume'],1)) + '\n'
+            md += 'Approx Plastic Cost | '+str(round(w * 15,2))+' GBP\n';
+
+        md += '\n'
+        md += '![](../printedparts/images/'+views.view_filename(v['title']+'_view') + ')\n'
+        md += '\n'
+
+        if 'markdown' in v and len(v['markdown']) > 0:
+            md += '**Notes**\n\n'
+            for note in v['markdown']:
+                if 'markdown' in note:
+                    md += ' * ' + note['markdown'] + '\n'
+
+        md += '\n\n'
+
+    md += '\n\n'
+
+    md += '## Summary\n\n'
+    md += '### Statistics\n\n'
+    md += 'Metric | Value \n'
+    md += '--- | --- \n'
+    md += 'Total Parts | ' + str(qty) + '\n'
+    md += 'Total Plastic (Kg) | ' +str(round(weight,2))+'KG\n'
+    md += 'Total Plastic (cm3) | ' +str(round(vol,1))+'cm3\n'
+    md += 'Approx Plastic Cost | '+str(round(weight * 15,2))+' GBP\n'
+    md += '\n\n'
+
+    print("  Saving markdown")
+    mdfilename = md_filename(m['title'] +'PrintingGuide')
+    mdpath = target_dir + '/' +mdfilename
+    with open(mdpath,'w') as f:
+        f.write(md)
+
+    print("  Generating htm")
+    htmfilename = htm_filename(m['title'] +'PrintingGuide')
+    htmpath = target_dir + '/' + htmfilename
+    with open(htmpath, 'w') as f:
+        for line in open(guide_template, "r").readlines():
+            line = line.replace("{{mdfilename}}", mdfilename)
+            f.write(line)
+
+    return {'title':m['title'] + ' Printing Guide', 'mdfilename':mdfilename, 'htmfilename':htmfilename}
+
+
+def load_sources():
+    print "Loading sourcing info..."
+
+    src_dir = "../vitamins"
+
+    for filename in os.listdir(src_dir):
+        if filename[-4:] == '.csv':
+            print("  Parsing: "+filename)
+            csvfn = os.path.join(src_dir, filename)
+
+            with open(csvfn, 'rb') as csvfile:
+                rdr = csv.DictReader(csvfile)
+                for row in rdr:
+                    vn = row['Vitamin']
+                    if vn not in sourcing:
+                        sourcing[vn] = []
+                    sourcing[vn].append({"Cost":row['Cost'], "Source":row['Source'], 'Notes':row['Notes']});
+
+
+
+def gen_sourcing_guide(m, target_dir, guide_template):
+    print(m['title'])
+
+    if len(m['vitamins']) == 0:
+        return {};
+
+    md = ''
+
+    md += '# '+m['title'] + '\n'
+    md += '# Sourcing Guide\n\n'
+
+    cost = 0
+    qty = 0
+    m['vitamins'].sort(key=vitamin_call, reverse=False)
+
+    for v in m['vitamins']:
+        vn = v['title']
+        md += '### '+str(v['qty']) + 'x ' + vn+'\n\n'
+        qty += v['qty']
+
+
+        # table of sources and effective cost for qty required
+        if vn in sourcing:
+            md += 'Unit Cost | Source | Notes \n'
+            md += '--- | --- | --- \n'
+
+            # calc cheapest option and add to running total
+            lc = 0
+            for src in sourcing[vn]:
+                tc = float(src['Cost'])
+                if tc < lc or lc == 0:
+                    lc = tc
+                md += src['Cost'] + ' | '
+                link = src['Source']
+                if link[:7] == 'http://':
+                    md += '[link]('+link+') | '
+                else:
+                    md += link + ' | '
+                md += src['Notes'] + '\n'
+
+            cost += lc * v['qty']
+
+        else:
+            md += 'No sources found\n'
+
+
+
+        md += '\n'
+        md += '![](../vitamins/images/'+views.view_filename(v['title']+'_view') + ') \n'
+        md += '\n'
+
+        if 'markdown' in v and len(v['markdown']) > 0:
+            md += '**Notes**\n\n'
+            for note in v['markdown']:
+                if 'markdown' in note:
+                    md += ' * ' + note['markdown'] + '\n'
+
+        md += '\n\n'
+
+    md += '\n'
+
+    md += '\n\n'
+
+    md += '## Summary\n\n'
+    md += '### Total Costs\n\n'
+    md += 'Metric | Value \n'
+    md += '--- | --- \n'
+    md += 'Total Vitamins | ' + str(qty) + '\n'
+    md += 'Total Cost (cheapest) | '+str(round(cost,2))+' GBP\n'
+    md += '\n\n'
+
+    print("  Saving markdown")
+    mdfilename = md_filename(m['title'] +'SourcingGuide')
+    mdpath = target_dir + '/' +mdfilename
+    with open(mdpath,'w') as f:
+        f.write(md)
+
+    print("  Generating htm")
+    htmfilename = htm_filename(m['title'] +'SourcingGuide')
+    htmpath = target_dir + '/' + htmfilename
+    with open(htmpath, 'w') as f:
+        for line in open(guide_template, "r").readlines():
+            line = line.replace("{{mdfilename}}", mdfilename)
+            f.write(line)
+
+    return {'title':m['title'] + ' Sourcing Guide', 'mdfilename':mdfilename, 'htmfilename':htmfilename}
+
+
+
+def gen_index(jso, index_file, index_template):
+    # Generate index file
+
+    # build object
+    indexObj = { 'machines': [] };
+    for m in jso:
+        if type(m) is DictType and m['type'] == 'machine':
+
+            # tack in a view filename
+            m['viewFilename'] = views.view_filename(m['title'] + '_view')
+
+            indexObj['machines'].append(m)
+
+    print("Saving index")
+    with open(index_file,'w') as o:
+        with open(index_template,'r') as i:
+            o.write(pystache.render(i.read(), indexObj))
+
+
+
 def guides():
     print("Guides")
     print("------")
@@ -212,84 +477,38 @@ def guides():
     if not os.path.isdir(target_dir):
         os.makedirs(target_dir)
 
-    guide_template = target_dir + "/templates/AssemblyGuide.htm"
-    index_template = target_dir + "/templates/index.htm"
-    index_file = target_dir + '/index.htm'
+    assembly_guide_template = os.path.join(target_dir, "templates/AssemblyGuide.htm")
+    printing_guide_template = os.path.join(target_dir, "templates/PrintingGuide.htm")
+    sourcing_guide_template = os.path.join(target_dir, "templates/SourcingGuide.htm")
+    index_template = os.path.join(target_dir, "templates/index.htm")
+    index_file = os.path.join(target_dir, 'index.htm')
 
     # load hardware.json
     jf = open("hardware.json","r")
     jso = json.load(jf)
     jf.close()
 
-    dl = {'type':'docs', 'guides':[] }
+    # load sourcing info
+    load_sources()
+
+    dl = {'type':'docs', 'assemblyGuides':[], 'printingGuides':[] }
     jso.append(dl)
 
     # for each machine
     for m in jso:
         if type(m) is DictType and m['type'] == 'machine':
-            print(m['title'])
 
-            md = ''
+            if 'guides' not in m:
+                m['guides'] = []
 
-            md += '# '+m['title'] + '\n'
-            md += '# Assembly Guide\n\n'
+            m['guides'].append(gen_assembly_guide(m, target_dir, assembly_guide_template))
 
-            # machine views
-            for c in m['children']:
-                if type(c) is DictType and c['type'] == 'view' and 'filepath' in c:
-                    view = c
-                    md += '!['+view['caption']+']('+ view['filepath'] +')\n\n'
+            m['guides'].append(gen_printing_guide(m, target_dir, printing_guide_template))
 
-            # intro
-            md += gen_intro(m)
+            m['guides'].append(gen_sourcing_guide(m, target_dir, sourcing_guide_template))
 
 
-            # BOM
-            md += gen_bom(m)
-
-            # Cut Parts
-            if len(m['cut']) > 0:
-                md += '# Cutting Instructions\n\n'
-
-                # Cut Parts
-                m['cut'].sort(key=cut_call, reverse=False)
-                for c in m['cut']:
-                    md += gen_cut(m,c)
-
-            # Assemblies
-            if len(m['assemblies']) > 0:
-                md += '# Assembly Instructions\n\n'
-
-                # Assemblies
-                # sort by level desc
-                m['assemblies'].sort(key=assembly_level, reverse=True)
-                for a in m['assemblies']:
-                    md += gen_assembly(m,a)
-
-
-            print("  Saving markdown")
-            mdfilename = md_filename(m['title'] +'AssemblyGuide')
-            mdpath = target_dir + '/' +mdfilename
-            with open(mdpath,'w') as f:
-                f.write(md)
-
-            print("  Generating htm")
-            htmfilename = htm_filename(m['title'] +'AssemblyGuide')
-            htmpath = target_dir + '/' + htmfilename
-            with open(htmpath, 'w') as f:
-                for line in open(guide_template, "r").readlines():
-                    line = line.replace("{{mdfilename}}", mdfilename)
-                    f.write(line)
-
-            dl['guides'].append({'title':m['title'], 'mdfilename':mdfilename, 'htmfilename':htmfilename})
-
-
-    # Generate index file
-    print("Saving index")
-    with open(index_file,'w') as o:
-        with open(index_template,'r') as i:
-            o.write(pystache.render(i.read(), dl))
-
+    gen_index(jso, index_file, index_template)
 
 
     return 0
