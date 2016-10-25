@@ -141,7 +141,7 @@ module FinalAssembly () {
                 TowerProSG90Driver();
         }
 
-        step(5, "Install battery") {
+        step(6, "Install battery") {
             FinalAssembly_DefView();
 
             // battery
@@ -149,7 +149,7 @@ module FinalAssembly () {
                 TurnigyNanoTech120mAh2S25C();
         }
 
-        step(5, "Fit lid") {
+        step(7, "Fit lid") {
             FinalAssembly_DefView();
 
             // lid

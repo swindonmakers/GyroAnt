@@ -615,6 +615,60 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "desc": "Install battery",
+                        "num": 6,
+                        "views": [
+                            {
+                                "rotate": [
+                                    66,
+                                    0,
+                                    238
+                                ],
+                                "dist": 140,
+                                "filepath": "../assemblies/GyroAnt/Final_step6_view.png",
+                                "title": "view",
+                                "caption": "view",
+                                "translate": [
+                                    0,
+                                    0,
+                                    16
+                                ],
+                                "type": "view",
+                                "size": [
+                                    400,
+                                    300
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "desc": "Fit lid",
+                        "num": 7,
+                        "views": [
+                            {
+                                "rotate": [
+                                    66,
+                                    0,
+                                    238
+                                ],
+                                "dist": 140,
+                                "filepath": "../assemblies/GyroAnt/Final_step7_view.png",
+                                "title": "view",
+                                "caption": "view",
+                                "translate": [
+                                    0,
+                                    0,
+                                    16
+                                ],
+                                "type": "view",
+                                "size": [
+                                    400,
+                                    300
+                                ]
+                            }
+                        ]
                     }
                 ],
                 "level": 0
@@ -1645,7 +1699,7 @@
                         "desc": "Wire up Rx, ESCs and motors"
                     },
                     {
-                        "num": 5,
+                        "num": 6,
                         "type": "step",
                         "children": [
                             {
@@ -1701,7 +1755,7 @@
                         "desc": "Install battery"
                     },
                     {
-                        "num": 5,
+                        "num": 7,
                         "type": "step",
                         "children": [
                             {

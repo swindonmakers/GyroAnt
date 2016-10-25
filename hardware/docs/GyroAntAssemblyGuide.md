@@ -79,5 +79,9 @@ Qty | Part Name | Image
 ![](../assemblies/GyroAnt/Final_step4_view.png)
 5. Wire up Rx, ESCs and motors
 ![](../assemblies/GyroAnt/Final_step5_view.png)
+6. Install battery
+![](../assemblies/GyroAnt/Final_step6_view.png)
+7. Fit lid
+![](../assemblies/GyroAnt/Final_step7_view.png)
 
 
