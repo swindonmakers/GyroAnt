@@ -38,6 +38,9 @@ module FinalAssembly_DefView() {
 module FinalAssembly_View2() {
     view(t=[0,0,0], r=[10, 0,358], d=250);
 }
+module FinalAssembly_View3() {
+    view(t=[0,0,0], r=[130, 0,358], d=250);
+}
 
 module FinalAssembly () {
 
@@ -51,9 +54,10 @@ module FinalAssembly () {
             FinalAssembly_DefView();
 
             // left motor and wheel
-            attach(Con_LM, N20DCGearMotor_Con_Def)
+            attach(DefConDown, DefConDown, ExplodeSpacing=30)  // dummy attach to ensure correct explode vector
+                attach(Con_LM, N20DCGearMotor_Con_Def)
                 N20DCGearMotor(ShaftLength=10);
-            attach(Con_LW, DefConDown) {
+            attach(Con_LW, DefConDown, ExplodeSpacing=30) {
                 Wheel_STL();
                 // axle
                 color("silver")
@@ -63,9 +67,10 @@ module FinalAssembly () {
 
 
             // right motor and wheel
-            attach(Con_RM, N20DCGearMotor_Con_Def)
+            attach(DefConDown, DefConDown, ExplodeSpacing=30)  // dummy attach to ensure correct explode vector
+                attach(Con_RM, N20DCGearMotor_Con_Def)
                 N20DCGearMotor(ShaftLength=10);
-            attach(Con_RW, DefConDown){
+            attach(Con_RW, DefConDown, ExplodeSpacing=30){
                 Wheel_STL();
                 // axle
                 color("silver")
@@ -77,51 +82,58 @@ module FinalAssembly () {
         //weapon outrunner
         step(2, "Fit weapon outrunner") {
             FinalAssembly_DefView();
-            attach(Con_M3, DefConDown)
+            attach(Con_M3, DefConDown, ExplodeSpacing=25)
                 C2020BrushlessOutrunner();
         }
 
         // weapon ring
-        step(3, "Slide weapon ring over base") {
+        step(3, "Slide weapon ring over base, along with v bearings") {
             FinalAssembly_DefView();
             translate([0,0,WheelOD/2]) {
-                attach(DefConDown, DefConDown)
+                attach(DefConDown, DefConDown, ExplodeSpacing=30) {
                     WeaponRing_STL();
 
-                // teeth
-                for (i=[0,1])
-                    rotate([0,0,i*180 + 45]) {
-                        translate([WeaponOR,-1 , -(WheelOD - 2*GroundClearance)/2])
-                            color([0.9,0.9,0.9,1])
-                            cube([6, 1, (WheelOD - 2*GroundClearance)]);
+                    // teeth
+                    for (i=[0,1])
+                        rotate([0,0,i*180 + 45]) {
+                            translate([WeaponOR,-1 , -(WheelOD - 2*GroundClearance)/2])
+                                color([0.9,0.9,0.9,1])
+                                cube([6, 1, (WheelOD - 2*GroundClearance)]);
 
-                        for (j=[-1,1])
-                            translate([WeaponOR + 3, -1 , j*7])
-                            rotate([90,0,0])
-                            rotate([0,0,30])
-                            screw(M3_hex_screw, 8);
-                    }
+                            for (j=[-1,1])
+                                translate([WeaponOR + 3, -1 , j*7])
+                                rotate([90,0,0])
+                                rotate([0,0,30])
+                                screw(M3_hex_screw, 8);
+                        }
+                }
             }
+
+            for (i=BearingAngles)
+                rotate([0,0,i]) {
+                    // bearing
+                    attach(DefConDown, DefConDown, ExplodeSpacing=30)
+                        translate([BearingOffset,0, BearingHeight - 2.5])
+                        VGrooveBearing();
+                }
         }
 
 
-        step(4, "Fit bearings for weapon ring") {
-            FinalAssembly_View2();
+        step(4, "Secure bearings for weapon ring") {
+            FinalAssembly_View3();
 
             // bearings, screws, nuts
             for (i=BearingAngles)
                 rotate([0,0,i]) {
-                    // bearing
-                    translate([BearingOffset,0, BearingHeight - 2.5])
-                        VGrooveBearing();
-
                     // screw
-                    translate([BearingOffset,0, GroundClearance + 2])
+                    attach(DefConUp, DefConUp, ExplodeSpacing=30)
+                        translate([BearingOffset,0, GroundClearance + 2])
                         rotate([180,0,0])
                         screw(M4_hex_screw, i<180 ? 19 : 15);
 
                     // nut lower
-                    translate([BearingOffset,0, GroundClearance + 9])
+                    attach(DefConDown, DefConDown)
+                        translate([BearingOffset,0, GroundClearance + 9])
                         rotate([0,0,30])
                         nut(M4_nut);
                 }
@@ -165,6 +177,7 @@ module FinalAssembly () {
                 rotate([0,0,i]) {
                     // nut upper
                     if (i<180)
+                        attach(DefConDown, DefConDown, ExplodeSpacing=20)
                         translate([BearingOffset,0, WheelOD-5])
                         rotate([0,0,30])
                         nut(M4_nut);

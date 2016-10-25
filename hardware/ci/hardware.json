@@ -534,13 +534,13 @@
                             }
                         ],
                         "num": 3,
-                        "desc": "Slide weapon ring over base"
+                        "desc": "Slide weapon ring over base, along with v bearings"
                     },
                     {
                         "views": [
                             {
                                 "rotate": [
-                                    10,
+                                    130,
                                     0,
                                     358
                                 ],
@@ -560,7 +560,7 @@
                             }
                         ],
                         "num": 4,
-                        "desc": "Fit bearings for weapon ring"
+                        "desc": "Secure bearings for weapon ring"
                     },
                     {
                         "views": [
@@ -1173,9 +1173,93 @@
                                 ],
                                 "file": "vitamins/screw.scad",
                                 "title": "M3 hex screw x 8mm"
+                            },
+                            {
+                                "type": "vitamin",
+                                "call": "VGrooveBearing(VGrooveBearing_624VV)",
+                                "children": [
+                                    {
+                                        "rotate": [
+                                            72,
+                                            0,
+                                            33
+                                        ],
+                                        "dist": 200,
+                                        "title": "view",
+                                        "caption": "view",
+                                        "translate": [
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "type": "view",
+                                        "size": [
+                                            400,
+                                            300
+                                        ]
+                                    }
+                                ],
+                                "file": "vitamins/VGrooveBearing.scad",
+                                "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing"
+                            },
+                            {
+                                "type": "vitamin",
+                                "call": "VGrooveBearing(VGrooveBearing_624VV)",
+                                "children": [
+                                    {
+                                        "rotate": [
+                                            72,
+                                            0,
+                                            33
+                                        ],
+                                        "dist": 200,
+                                        "title": "view",
+                                        "caption": "view",
+                                        "translate": [
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "type": "view",
+                                        "size": [
+                                            400,
+                                            300
+                                        ]
+                                    }
+                                ],
+                                "file": "vitamins/VGrooveBearing.scad",
+                                "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing"
+                            },
+                            {
+                                "type": "vitamin",
+                                "call": "VGrooveBearing(VGrooveBearing_624VV)",
+                                "children": [
+                                    {
+                                        "rotate": [
+                                            72,
+                                            0,
+                                            33
+                                        ],
+                                        "dist": 200,
+                                        "title": "view",
+                                        "caption": "view",
+                                        "translate": [
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "type": "view",
+                                        "size": [
+                                            400,
+                                            300
+                                        ]
+                                    }
+                                ],
+                                "file": "vitamins/VGrooveBearing.scad",
+                                "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing"
                             }
                         ],
-                        "desc": "Slide weapon ring over base"
+                        "desc": "Slide weapon ring over base, along with v bearings"
                     },
                     {
                         "num": 4,
@@ -1183,7 +1267,7 @@
                         "children": [
                             {
                                 "rotate": [
-                                    10,
+                                    130,
                                     0,
                                     358
                                 ],
@@ -1203,34 +1287,6 @@
                             },
                             {
                                 "type": "vitamin",
-                                "call": "VGrooveBearing(VGrooveBearing_624VV)",
-                                "children": [
-                                    {
-                                        "rotate": [
-                                            72,
-                                            0,
-                                            33
-                                        ],
-                                        "dist": 200,
-                                        "title": "view",
-                                        "caption": "view",
-                                        "translate": [
-                                            0,
-                                            0,
-                                            0
-                                        ],
-                                        "type": "view",
-                                        "size": [
-                                            400,
-                                            300
-                                        ]
-                                    }
-                                ],
-                                "file": "vitamins/VGrooveBearing.scad",
-                                "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing"
-                            },
-                            {
-                                "type": "vitamin",
                                 "call": "screw(type=M4_hex_screw,length=19, hob_point=0 )",
                                 "children": [
                                     {
@@ -1287,34 +1343,6 @@
                             },
                             {
                                 "type": "vitamin",
-                                "call": "VGrooveBearing(VGrooveBearing_624VV)",
-                                "children": [
-                                    {
-                                        "rotate": [
-                                            72,
-                                            0,
-                                            33
-                                        ],
-                                        "dist": 200,
-                                        "title": "view",
-                                        "caption": "view",
-                                        "translate": [
-                                            0,
-                                            0,
-                                            0
-                                        ],
-                                        "type": "view",
-                                        "size": [
-                                            400,
-                                            300
-                                        ]
-                                    }
-                                ],
-                                "file": "vitamins/VGrooveBearing.scad",
-                                "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing"
-                            },
-                            {
-                                "type": "vitamin",
                                 "call": "screw(type=M4_hex_screw,length=19, hob_point=0 )",
                                 "children": [
                                     {
@@ -1368,34 +1396,6 @@
                                 ],
                                 "file": "vitamins/nut.scad",
                                 "title": "M4 Nut"
-                            },
-                            {
-                                "type": "vitamin",
-                                "call": "VGrooveBearing(VGrooveBearing_624VV)",
-                                "children": [
-                                    {
-                                        "rotate": [
-                                            72,
-                                            0,
-                                            33
-                                        ],
-                                        "dist": 200,
-                                        "title": "view",
-                                        "caption": "view",
-                                        "translate": [
-                                            0,
-                                            0,
-                                            0
-                                        ],
-                                        "type": "view",
-                                        "size": [
-                                            400,
-                                            300
-                                        ]
-                                    }
-                                ],
-                                "file": "vitamins/VGrooveBearing.scad",
-                                "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing"
                             },
                             {
                                 "type": "vitamin",
@@ -1454,7 +1454,7 @@
                                 "title": "M4 Nut"
                             }
                         ],
-                        "desc": "Fit bearings for weapon ring"
+                        "desc": "Secure bearings for weapon ring"
                     },
                     {
                         "num": 5,

@@ -14,6 +14,9 @@ import copy
 from types import *
 from math import floor
 import subprocess
+from PIL import Image
+from PIL import ImageFont
+from PIL import ImageDraw
 
 import views
 
@@ -101,7 +104,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                     print("Generating transition move...")
 
                                     # prep tween view
-                                    tv = copy.copy(view)
+                                    tv = copy.deepcopy(view)
 
                                     # iterate over frames
                                     for frame in range(0, framesPerStep):
@@ -126,6 +129,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                         f.write("DebugConnectors = false;\n");
                                         f.write("DebugCoordinateFrames = false;\n");
                                         f.write("$Explode = false;\n");
+                                        f.write("$AnimateExplode = false;\n");
                                         f.write("$ShowStep = "+ str(ShowStep) +";\n");
                                         f.write(a['call'] + ";\n");
                                         f.close()
@@ -159,20 +163,36 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                 f.write("$AnimateExplode = true;\n");
                                 f.write("$ShowStep = "+ str(ShowStep) +";\n");
                                 f.write("$AnimateExplodeT = "+ str(AnimateExplodeT) +";\n");
-                                #f.write("rotate([0,"+str(mapRange(t,0,1.0,0,-10))+","+str(mapRange(t,0,1.0,0,90))+"])")
                                 f.write(a['call'] + ";\n");
                                 f.close()
 
                                 # Views
                                 views.PolishTransparentBackground = False
                                 views.PolishCrop = False
+                                fn = view_dir + "/" +prefix + format(frameNum, '03') + "_" +view['title']+".png"
                                 views.render_view_using_file(prefix + format(frameNum, '03'), temp_name, view_dir, view, hashchanged, h)
                                 frameNum = frameNum + 1
+
+                                if frame == 0:
+                                    # Annotate and extend first frame with step info
+                                    img = Image.open(fn)
+                                    draw = ImageDraw.Draw(img)
+                                    font = ImageFont.truetype("tahoma.ttf", 12)
+                                    draw.ellipse((5, 5, 25, 25), fill = (255,140,50), outline =(255,140,50))
+                                    draw.text((12,8),str(step['num']),(255,255,255),font=font)
+                                    draw.text((30,10),step['desc'],(0,0,0),font=font)
+                                    img.save(fn)
+
+                                    # extend a bit
+                                    for extra in range(0, 2*framesPerStep):
+                                        fn = view_dir + "/" +prefix + format(frameNum, '03') + "_" +view['title']+".png"
+                                        frameNum = frameNum + 1
+                                        img.save(fn)
 
 
                         # final turntable, using last view as starting point
                         print("Generating final turntable")
-                        tv = copy.copy(view)
+                        tv = copy.deepcopy(view)
                         for frame in range(0, framesPerStep*2):
                             t = frame / ((framesPerStep*2.0)-1.0);
                             ShowStep = 100
@@ -182,6 +202,8 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                             tv['rotate'][2] = view['rotate'][2] + r
                             if tv['rotate'][2] > 360:
                                 tv['rotate'][2] = tv['rotate'][2] - 360
+
+                            #print("t: "+str(t) +", r:"+str(r))
 
                             # Generate step file
                             f = open(temp_name, "w")
