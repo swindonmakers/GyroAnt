@@ -24,3 +24,10 @@ tw 				= ThickWall;
 
 
 // Global design parameters
+WheelOD = 25;
+WeaponOR = 72/2;
+RingThickness = 2;
+GroundClearance = 2;
+BearingAngles = [46, 134, 270];
+BearingOffset = WeaponOR-RingThickness-7;
+BearingHeight = 8; // from ground plane

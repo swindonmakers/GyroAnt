@@ -44,12 +44,13 @@ ColourScheme = 1;
 
 ColourSchemes = [
     [[1, 0.5, 0],     [1, 0.6, 0.2]],   // 0 = Axford
-    [[0.2, 0.5, 0.2], [0.3, 0.9, 0.3]],    //  1 = Gyrobot
+    [[0.2, 0.5, 0.2], [0.3, 0.9, 0.3], [0.4, 0.5, 0.4]],    //  1 = Gyrobot
     [[0.6, 0.5, 0.4],     [0.7, 0.6, 0.5]]     // 2 = subdued
 ];
 
 Level2PlasticColor				= ColourSchemes[ColourScheme][0];
 Level3PlasticColor 				= ColourSchemes[ColourScheme][1];
+Level4PlasticColor 				= ColourSchemes[ColourScheme][2];
 
 // Material Color aliases
 // For compatibility with 3rd party libraries
