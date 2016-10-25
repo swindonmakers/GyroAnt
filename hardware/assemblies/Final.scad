@@ -33,7 +33,7 @@ Sub-total       46g
 */
 
 module FinalAssembly_DefView() {
-    view(t=[0,0,16], r=[66, 0, 238], d=140);
+    view(t=[0,0,16], r=[66, 0, 238], d=250);
 }
 
 module FinalAssembly () {
