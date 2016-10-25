@@ -78,6 +78,8 @@ module printedPart(file, title, call, customAttrs=false) {
         attr("file",file);
         attr("title",title);
         attr("call",call);
+        // turn off explosions in children
+        $Explode = false;
         if (customAttrs) {
             children();
         } else {
@@ -96,6 +98,8 @@ module cutPart(file, title, call, completeCall, finalStep, showComplete=false, c
         attr("title",title);
         attr("call",call);
         attr("completeCall",completeCall);
+        // turn off explosions in children
+        $Explode = false;
         if (customAttrs) {
             children();
         } else {

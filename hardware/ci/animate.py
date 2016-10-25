@@ -10,6 +10,7 @@ import c14n_stl
 import re
 import json
 import jsontools
+import copy
 from types import *
 from math import floor
 import subprocess
@@ -34,7 +35,7 @@ def mapRange(value, leftMin, leftMax, rightMin, rightMax):
     return rightMin + (valueScaled * rightSpan)
 
 
-def animateAssembly(mname, aname, prefix, numFrames):
+def animateAssembly(mname, aname, prefix, framesPerStep):
     print("Animate Assembly")
     print("----------------")
 
@@ -74,57 +75,147 @@ def animateAssembly(mname, aname, prefix, numFrames):
                         hashchanged = ('hash' in a and h != a['hash']) or (not 'hash' in a)
 
                         numSteps = 0
+                        frameNum = 0
 
                         # Calc number of steps, and grab first view
-                        view = {}
+                        view = {
+                            'size': [200,150],
+                            'dist': 140,
+                            'rotate': [0,0,0],
+                            'translate': [0,0,0],
+                            'title': 'view'
+                        }
+                        firstView = True
                         for step in a['steps']:
-                            if step['num'] == 1:
-                                view = step['views'][0]
-                            if step['num'] > numSteps:
-                                numSteps = step['num']
-                        print("Animating " + str(numSteps) + " steps over "+str(numFrames)+" frames...")
+                            print("Step: "+str(step['num']))
 
-                        # iterate over frames
-                        for frame in range(0, numFrames):
-                            t = frame / (numFrames-1.0);
-                            ShowStep = floor(mapRange(t, 0, 1.0, 1.0, numSteps+1));
-                            AnimateExplodeT = mapRange(t, 0,1.0, 1.0, numSteps+1) - ShowStep;
+                            # generate a transition move?
+                            if len(step['views']) > 0:
+                                # see if new view is diff from current
+                                nv = step['views'][0]
 
-                            print("t: "+str(t) +", s: "+str(ShowStep)+", a:"+str(AnimateExplodeT))
+                                if firstView:
+                                    view['size'] = nv['size']
+
+                                if ((nv['size'] != view['size']) or (nv['dist'] != view['dist']) or (nv['rotate'] != view['rotate']) or (nv['translate'] != view['translate'])) and (not firstView):
+                                    print("Generating transition move...")
+
+                                    # prep tween view
+                                    tv = copy.copy(view)
+
+                                    # iterate over frames
+                                    for frame in range(0, framesPerStep):
+                                        t = frame / (framesPerStep-1.0);
+                                        # show previous step during transition
+                                        ShowStep = step['num']-1
+
+                                        # tween between view and nv
+                                        tv['dist'] = mapRange(t,0,1.0, view['dist'], nv['dist']);
+                                        tv['translate'][0] = mapRange(t,0,1.0, view['translate'][0], nv['translate'][0]);
+                                        tv['translate'][1] = mapRange(t,0,1.0, view['translate'][1], nv['translate'][1]);
+                                        tv['translate'][2] = mapRange(t,0,1.0, view['translate'][2], nv['translate'][2]);
+                                        tv['rotate'][0] = mapRange(t,0,1.0, view['rotate'][0], nv['rotate'][0]);
+                                        tv['rotate'][1] = mapRange(t,0,1.0, view['rotate'][1], nv['rotate'][1]);
+                                        tv['rotate'][2] = mapRange(t,0,1.0, view['rotate'][2], nv['rotate'][2]);
+
+                                        #print("t: "+str(t) +", s: "+str(ShowStep)+", a:"+str(AnimateExplodeT))
+
+                                        # Generate step file
+                                        f = open(temp_name, "w")
+                                        f.write("include <../config/config.scad>\n")
+                                        f.write("DebugConnectors = false;\n");
+                                        f.write("DebugCoordinateFrames = false;\n");
+                                        f.write("$Explode = false;\n");
+                                        f.write("$ShowStep = "+ str(ShowStep) +";\n");
+                                        f.write(a['call'] + ";\n");
+                                        f.close()
+
+                                        # Views
+                                        views.PolishTransparentBackground = False
+                                        views.PolishCrop = False
+                                        views.render_view_using_file(prefix + format(frameNum, '03'), temp_name, view_dir, tv, hashchanged, h)
+                                        frameNum = frameNum + 1
+
+                                view['dist'] = nv['dist']
+                                view['translate'] = nv['translate']
+                                view['rotate'] = nv['rotate']
+                                firstView = False
+
+                            # iterate over frames
+                            for frame in range(0, framesPerStep):
+
+                                t = frame / (framesPerStep-1.0);
+                                ShowStep = step['num']
+                                AnimateExplodeT = t;
+
+                                #print("t: "+str(t) +", s: "+str(ShowStep)+", a:"+str(AnimateExplodeT))
+
+                                # Generate step file
+                                f = open(temp_name, "w")
+                                f.write("include <../config/config.scad>\n")
+                                f.write("DebugConnectors = false;\n");
+                                f.write("DebugCoordinateFrames = false;\n");
+                                f.write("$Explode = true;\n");
+                                f.write("$AnimateExplode = true;\n");
+                                f.write("$ShowStep = "+ str(ShowStep) +";\n");
+                                f.write("$AnimateExplodeT = "+ str(AnimateExplodeT) +";\n");
+                                #f.write("rotate([0,"+str(mapRange(t,0,1.0,0,-10))+","+str(mapRange(t,0,1.0,0,90))+"])")
+                                f.write(a['call'] + ";\n");
+                                f.close()
+
+                                # Views
+                                views.PolishTransparentBackground = False
+                                views.PolishCrop = False
+                                views.render_view_using_file(prefix + format(frameNum, '03'), temp_name, view_dir, view, hashchanged, h)
+                                frameNum = frameNum + 1
+
+
+                        # final turntable, using last view as starting point
+                        print("Generating final turntable")
+                        tv = copy.copy(view)
+                        for frame in range(0, framesPerStep*2):
+                            t = frame / ((framesPerStep*2.0)-1.0);
+                            ShowStep = 100
+
+                            # tween between view and nv
+                            r = mapRange(t,0,1.0, 0, 360)
+                            tv['rotate'][2] = view['rotate'][2] + r
+                            if tv['rotate'][2] > 360:
+                                tv['rotate'][2] = tv['rotate'][2] - 360
 
                             # Generate step file
                             f = open(temp_name, "w")
                             f.write("include <../config/config.scad>\n")
                             f.write("DebugConnectors = false;\n");
                             f.write("DebugCoordinateFrames = false;\n");
-                            f.write("$Explode = true;\n");
-                            f.write("$AnimateExplode = true;\n");
+                            f.write("$Explode = false;\n");
                             f.write("$ShowStep = "+ str(ShowStep) +";\n");
-                            f.write("$AnimateExplodeT = "+ str(AnimateExplodeT) +";\n");
-                            f.write("rotate([0,"+str(mapRange(t,0,1.0,0,-10))+","+str(mapRange(t,0,1.0,0,90))+"])")
                             f.write(a['call'] + ";\n");
                             f.close()
 
                             # Views
                             views.PolishTransparentBackground = False
                             views.PolishCrop = False
-                            views.render_view_using_file(prefix + format(frame, '03'), temp_name, view_dir, view, hashchanged, h)
+                            views.render_view_using_file(prefix + format(frameNum, '03'), temp_name, view_dir, tv, hashchanged, h)
+                            frameNum = frameNum + 1
+
+
+                        numFrames = frameNum
 
                         # build video
-                        # ffmpeg -f image2 -r 1/5 -i img%03d.png -c:v libx264 -pix_fmt yuv420p out.mp4
-                        cmd = "ffmpeg -r 25 -y -i "+view_dir + "/" + prefix+"%03d_"+view['title']+".png -vcodec libx264 -pix_fmt yuv420p "+view_dir + "/" + prefix+".mp4"
+                        cmd = "ffmpeg -r 10 -y -i "+view_dir + "/" + prefix+"%03d_"+view['title']+".png -vcodec libx264 -pix_fmt yuv420p "+view_dir + "/" + prefix+".mp4"
                         print("Encoding video with: "+cmd)
                         os.system(cmd)
 
                         # clean up temporary images
-                        for frame in range(0, numFrames):
-                            os.remove(view_dir + "/" +prefix + format(frame, '03') + "_" +view['title']+".png");
+                        #for frame in range(0, numFrames):
+                        #    os.remove(view_dir + "/" +prefix + format(frame, '03') + "_" +view['title']+".png");
 
                         print("Done")
 
                         try:
                             if sys.platform == "darwin":
-                                check_output(['osascript','-e','display notification "Animation Complete" with title "Animation"'])
+                                subprocess.check_output(['osascript','-e','display notification "Animation Complete" with title "Animation"'])
                         except:
                             print("Exception running osascript")
 
@@ -138,5 +229,5 @@ if __name__ == '__main__':
     if len(sys.argv) == 5:
         animateAssembly(sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4]) )
     else:
-        print("Usage: ./animate.py <machine> <assembly> <output prefix> <numFrames>")
-        print("Example: ./animate.py House Window windowAnim 100");
+        print("Usage: ./animate.py <machine> <assembly> <output prefix> <framesPerStep>")
+        print("Example: ./animate.py House Window windowAnim 20");

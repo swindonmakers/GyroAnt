@@ -540,9 +540,9 @@
                         "views": [
                             {
                                 "rotate": [
-                                    66,
+                                    10,
                                     0,
-                                    238
+                                    358
                                 ],
                                 "dist": 250,
                                 "title": "view",
@@ -550,7 +550,7 @@
                                 "translate": [
                                     0,
                                     0,
-                                    16
+                                    0
                                 ],
                                 "type": "view",
                                 "size": [
@@ -566,9 +566,9 @@
                         "views": [
                             {
                                 "rotate": [
-                                    66,
+                                    10,
                                     0,
-                                    238
+                                    358
                                 ],
                                 "dist": 250,
                                 "title": "view",
@@ -576,7 +576,7 @@
                                 "translate": [
                                     0,
                                     0,
-                                    16
+                                    0
                                 ],
                                 "type": "view",
                                 "size": [
@@ -592,9 +592,9 @@
                         "views": [
                             {
                                 "rotate": [
-                                    66,
+                                    10,
                                     0,
-                                    238
+                                    358
                                 ],
                                 "dist": 250,
                                 "title": "view",
@@ -602,7 +602,7 @@
                                 "translate": [
                                     0,
                                     0,
-                                    16
+                                    0
                                 ],
                                 "type": "view",
                                 "size": [
@@ -1183,9 +1183,9 @@
                         "children": [
                             {
                                 "rotate": [
-                                    66,
+                                    10,
                                     0,
-                                    238
+                                    358
                                 ],
                                 "dist": 250,
                                 "title": "view",
@@ -1193,7 +1193,7 @@
                                 "translate": [
                                     0,
                                     0,
-                                    16
+                                    0
                                 ],
                                 "type": "view",
                                 "size": [
@@ -1462,9 +1462,9 @@
                         "children": [
                             {
                                 "rotate": [
-                                    66,
+                                    10,
                                     0,
-                                    238
+                                    358
                                 ],
                                 "dist": 250,
                                 "title": "view",
@@ -1472,7 +1472,7 @@
                                 "translate": [
                                     0,
                                     0,
-                                    16
+                                    0
                                 ],
                                 "type": "view",
                                 "size": [
@@ -1601,9 +1601,9 @@
                         "children": [
                             {
                                 "rotate": [
-                                    66,
+                                    10,
                                     0,
-                                    238
+                                    358
                                 ],
                                 "dist": 250,
                                 "title": "view",
@@ -1611,7 +1611,7 @@
                                 "translate": [
                                     0,
                                     0,
-                                    16
+                                    0
                                 ],
                                 "type": "view",
                                 "size": [

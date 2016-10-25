@@ -35,6 +35,9 @@ Sub-total       46g
 module FinalAssembly_DefView() {
     view(t=[0,0,16], r=[66, 0, 238], d=250);
 }
+module FinalAssembly_View2() {
+    view(t=[0,0,0], r=[10, 0,358], d=250);
+}
 
 module FinalAssembly () {
 
@@ -82,7 +85,8 @@ module FinalAssembly () {
         step(3, "Slide weapon ring over base") {
             FinalAssembly_DefView();
             translate([0,0,WheelOD/2]) {
-                WeaponRing_STL();
+                attach(DefConDown, DefConDown)
+                    WeaponRing_STL();
 
                 // teeth
                 for (i=[0,1])
@@ -102,7 +106,7 @@ module FinalAssembly () {
 
 
         step(4, "Fit bearings for weapon ring") {
-            FinalAssembly_DefView();
+            FinalAssembly_View2();
 
             // bearings, screws, nuts
             for (i=BearingAngles)
@@ -124,7 +128,7 @@ module FinalAssembly () {
         }
 
         step(5, "Wire up Rx, ESCs and motors") {
-            FinalAssembly_DefView();
+            FinalAssembly_View2();
 
             // rx
             attach(Con_Rx, DefConDown)
@@ -142,7 +146,7 @@ module FinalAssembly () {
         }
 
         step(6, "Install battery") {
-            FinalAssembly_DefView();
+            FinalAssembly_View2();
 
             // battery
             attach(Con_Bat, DefConDown)
