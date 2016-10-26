@@ -17,6 +17,7 @@ import subprocess
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
+import textwrap
 
 import views
 
@@ -82,7 +83,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
 
                         # Calc number of steps, and grab first view
                         view = {
-                            'size': [200,150],
+                            'size': [400,300],
                             'dist': 140,
                             'rotate': [0,0,0],
                             'translate': [0,0,0],
@@ -176,11 +177,21 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                 if frame == 0:
                                     # Annotate and extend first frame with step info
                                     img = Image.open(fn)
-                                    draw = ImageDraw.Draw(img)
-                                    font = ImageFont.truetype("tahoma.ttf", 12)
+                                    draw = ImageDraw.Draw(img, "RGBA")
+                                    font = ImageFont.truetype("Tahoma.ttf", 12)
+                                    draw.rectangle((0, 0, view['size'][0], 30), fill = (240,240,240))
+                                    margin = 30
+                                    offset = 10
+                                    for line in textwrap.wrap(step['desc'], width=((view['size'][0]-2*margin) / (draw.textsize("abcdefghij")[0]/10))):
+                                        draw.rectangle((0, offset, view['size'][0], offset + 20), fill = (240,240,240))
+                                        draw.rectangle((0, offset+20, view['size'][0], offset + 22), fill = (200,200,200))
+                                        draw.text((margin, offset), line, (0,0,0), font=font)
+                                        offset += font.getsize(line)[1]
+
+                                    # draw step number
                                     draw.ellipse((5, 5, 25, 25), fill = (255,140,50), outline =(255,140,50))
-                                    draw.text((12,8),str(step['num']),(255,255,255),font=font)
-                                    draw.text((30,10),step['desc'],(0,0,0),font=font)
+                                    draw.text((11,8),str(step['num']),(255,255,255),font=font)
+
                                     img.save(fn)
 
                                     # extend a bit
