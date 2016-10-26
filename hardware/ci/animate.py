@@ -38,6 +38,9 @@ def mapRange(value, leftMin, leftMax, rightMin, rightMax):
     # Convert the 0-1 range into a value in the right range.
     return rightMin + (valueScaled * rightSpan)
 
+def easeInOut(t):
+    # cubic ease in/out of t in range 0..1
+    return t*t * (3.0 - 2.0 * t);
 
 def animateAssembly(mname, aname, prefix, framesPerStep):
     print("Animate Assembly")
@@ -80,6 +83,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
 
                         numSteps = 0
                         frameNum = 0
+                        lfn = ""  # last frame filename
 
                         # Calc number of steps, and grab first view
                         view = {
@@ -109,7 +113,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
 
                                     # iterate over frames
                                     for frame in range(0, framesPerStep):
-                                        t = frame / (framesPerStep-1.0);
+                                        t = easeInOut(frame / (framesPerStep-1.0));
                                         # show previous step during transition
                                         ShowStep = step['num']-1
 
@@ -138,6 +142,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                         # Views
                                         views.PolishTransparentBackground = False
                                         views.PolishCrop = False
+                                        lfn = view_dir + "/" +prefix + format(frameNum, '03') + "_" +view['title']+".png"
                                         views.render_view_using_file(prefix + format(frameNum, '03'), temp_name, view_dir, tv, hashchanged, h)
                                         frameNum = frameNum + 1
 
@@ -149,7 +154,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                             # iterate over frames
                             for frame in range(0, framesPerStep):
 
-                                t = frame / (framesPerStep-1.0);
+                                t = easeInOut(frame / (framesPerStep-1.0));
                                 ShowStep = step['num']
                                 AnimateExplodeT = t;
 
@@ -175,37 +180,48 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                 frameNum = frameNum + 1
 
                                 if frame == 0:
+                                    # load previous image for cross-fade
+                                    if lfn != "":
+                                        imgPrev = Image.open(lfn)
+
                                     # Annotate and extend first frame with step info
                                     img = Image.open(fn)
-                                    draw = ImageDraw.Draw(img, "RGBA")
-                                    font = ImageFont.truetype("Tahoma.ttf", 12)
-                                    draw.rectangle((0, 0, view['size'][0], 30), fill = (240,240,240))
-                                    margin = 30
-                                    offset = 10
-                                    for line in textwrap.wrap(step['desc'], width=((view['size'][0]-2*margin) / (draw.textsize("abcdefghij")[0]/10))):
-                                        draw.rectangle((0, offset, view['size'][0], offset + 20), fill = (240,240,240))
-                                        draw.rectangle((0, offset+20, view['size'][0], offset + 22), fill = (200,200,200))
-                                        draw.text((margin, offset), line, (0,0,0), font=font)
-                                        offset += font.getsize(line)[1]
-
-                                    # draw step number
-                                    draw.ellipse((5, 5, 25, 25), fill = (255,140,50), outline =(255,140,50))
-                                    draw.text((11,8),str(step['num']),(255,255,255),font=font)
-
-                                    img.save(fn)
+                                    imgNew = img.copy()
 
                                     # extend a bit
                                     for extra in range(0, 2*framesPerStep):
+                                        if lfn != "":
+                                            alpha = extra / (2.0*framesPerStep)
+                                            print("Blending: "+str(alpha) +", "+str(frameNum))
+                                            imgNew = Image.blend(imgPrev,img,alpha)
+
+                                        draw = ImageDraw.Draw(imgNew, "RGBA")
+                                        font = ImageFont.truetype("Tahoma.ttf", 12)
+                                        draw.rectangle((0, 0, view['size'][0], 30), fill = (240,240,240))
+                                        margin = 30
+                                        offset = 10
+                                        for line in textwrap.wrap(step['desc'], width=((view['size'][0]-2*margin) / (draw.textsize("abcdefghij")[0]/10))):
+                                            draw.rectangle((0, offset, view['size'][0], offset + 20), fill = (240,240,240))
+                                            draw.rectangle((0, offset+20, view['size'][0], offset + 22), fill = (200,200,200))
+                                            draw.text((margin, offset), line, (0,0,0), font=font)
+                                            offset += font.getsize(line)[1]
+
+                                        # draw step number
+                                        draw.ellipse((5, 5, 25, 25), fill = (255,140,50), outline =(255,140,50))
+                                        draw.text((11,8),str(step['num']),(255,255,255),font=font)
+
                                         fn = view_dir + "/" +prefix + format(frameNum, '03') + "_" +view['title']+".png"
                                         frameNum = frameNum + 1
-                                        img.save(fn)
+                                        imgNew.save(fn)
+
+                                lfn = fn
 
 
                         # final turntable, using last view as starting point
                         print("Generating final turntable")
                         tv = copy.deepcopy(view)
                         for frame in range(0, framesPerStep*2):
-                            t = frame / ((framesPerStep*2.0)-1.0);
+                            t = easeInOut(frame / ((framesPerStep*2.0)-1.0));
                             ShowStep = 100
 
                             # tween between view and nv
