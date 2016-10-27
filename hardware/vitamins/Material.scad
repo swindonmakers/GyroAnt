@@ -24,7 +24,8 @@ Material_Alu = ["Alu",       "Aluminium",                          [0.7,0.7,0.7]
 //Material_Alu6082T6
 //Material_Alu6063T6
 //Material_SS304
-//Material_SS
+
+Material_SS = ["SS",     "Stainless steel", [0.8,0.8,0.8]];
 
 //              TypeSuffix,  Description,                          Colour
 Material_SUJ2 = ["SUJ2",     "High carbon chromium bearing steel", [0.8,0.8,0.8]];

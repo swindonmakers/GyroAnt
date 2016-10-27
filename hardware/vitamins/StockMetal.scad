@@ -83,6 +83,7 @@ StockMetal_Channel_4x2x1d8x1d8i = ["Channel_4x2x1d8x1d8i",   "Channel 4x2x1/8x1/
 //TODO: StockMetal_HexBar
 
 //                           TypeSuffix,         Description,      ProfileType,         Fixed Dimensions, Units
+StockMetal_RoundBar_2      = ["RoundBar_2",     "Round Bar 2mm",   StockMetal_RoundBar, [2],              StockMetal_Metric  ];
 StockMetal_RoundBar_6      = ["RoundBar_6",     "Round Bar 6mm",   StockMetal_RoundBar, [6],              StockMetal_Metric  ];
 StockMetal_RoundBar_8      = ["RoundBar_8",     "Round Bar 8mm",   StockMetal_RoundBar, [8],              StockMetal_Metric  ];
 StockMetal_RoundBar_10     = ["RoundBar_10",    "Round Bar 10mm",  StockMetal_RoundBar, [10],             StockMetal_Metric  ];
@@ -111,6 +112,7 @@ StockMetal_Types = [
     StockMetal_Channel_4x1x1d8x1d8i,
     StockMetal_Channel_4x2x1d8x1d8i,
 
+    StockMetal_RoundBar_2,
     StockMetal_RoundBar_6,
     StockMetal_RoundBar_8,
     StockMetal_RoundBar_10,

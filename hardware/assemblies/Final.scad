@@ -61,9 +61,8 @@ module FinalAssembly () {
             // axle
             attach(DefConRight, DefConRight, ExplodeSpacing=15)  // dummy attach to ensure correct explode vector
                 attach(Con_LW, DefConDown, ExplodeSpacing=30)
-                color("silver")
                 translate([0,0,-4])
-                cylinder(r=2/2, h=14);
+                Axle(true);
 
 
 
@@ -74,9 +73,8 @@ module FinalAssembly () {
             // axle
             attach(DefConLeft, DefConLeft, ExplodeSpacing=15)  // dummy attach to ensure correct explode vector
                 attach(Con_RW, DefConDown, ExplodeSpacing=30)
-                color("silver")
                 translate([0,0,-4])
-                cylinder(r=2/2, h=14);
+                Axle(true);
 
         }
 

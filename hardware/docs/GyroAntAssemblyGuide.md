@@ -16,6 +16,7 @@ Qty | Vitamin | Image
 1 | [DasMikro Ultra Mini 8CH PPM Receiver]() | ![](../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png) | 
 2 | [N20DCGearMotor]() | ![](../vitamins/images/N20DCGearMotor_view.png) | 
 2 | [O-Ring 2x10]() | ![](../vitamins/images/ORing2x10_view.png) | 
+2 | [Stainless steel Round Bar 2mm x 100mm]() | ![](../vitamins/images/StainlesssteelRoundBar2mmx100mm_view.png) | 
 2 | [TowerPro SG90 Driver]() | ![](../vitamins/images/TowerProSG90Driver_view.png) | 
 1 | [Turnigy Nano-Tech 120mAh 2S 25C Lipo Pack E-Flite Compatible]() | ![](../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png) | 
 3 | [624VV 4x13x6mm V Groove Sealed Ball Bearing]() | ![](../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png) | 
@@ -23,6 +24,12 @@ Qty | Vitamin | Image
 4 | [M3 hex screw x 8mm]() | ![](../vitamins/images/M3hexscrewx8mm_view.png) | 
 1 | [M4 hex screw x 15mm]() | ![](../vitamins/images/M4hexscrewx15mm_view.png) | 
 2 | [M4 hex screw x 19mm]() | ![](../vitamins/images/M4hexscrewx19mm_view.png) | 
+
+### Cut Parts
+
+Qty | Part Name | Image
+--- | --- | ---
+2 | Axle | ![](../cutparts/images/Axle_view.png) | 
 
 ### Printed Parts
 
@@ -37,6 +44,24 @@ Qty | Part Name | Image
 **Plastic Required**
 
 21.0cm3, 0.03KG,  approx: 0.34 GBP
+
+
+# Cutting Instructions
+
+## Axle (x2)
+
+### Vitamins
+
+Qty | Vitamin | Image
+--- | --- | ---
+2 | [Stainless steel Round Bar 2mm x 100mm]() | ![](../vitamins/images/StainlesssteelRoundBar2mmx100mm_view.png) | 
+
+### Fabrication Steps
+
+1. Start with rod of 2mm steel or similar
+![](../cutparts/images/Axle_step1_view.png)
+2. Cut off a 14mm length
+![](../cutparts/images/Axle_step2_view.png)
 
 
 # Assembly Instructions

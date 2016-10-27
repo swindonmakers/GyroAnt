@@ -41,6 +41,14 @@ No sources found
 
 
 
+### 2x Stainless steel Round Bar 2mm x 100mm
+
+No sources found
+
+![](../vitamins/images/StainlesssteelRoundBar2mmx100mm_view.png) 
+
+
+
 ### 2x TowerPro SG90 Driver
 
 No sources found
@@ -106,7 +114,7 @@ No sources found
 
 Metric | Value 
 --- | --- 
-Total Vitamins | 25
+Total Vitamins | 27
 Total Cost (cheapest) | 0.0 GBP
 
 

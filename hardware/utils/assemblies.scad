@@ -167,8 +167,9 @@ module step(num=1, desc="") {
     attrArray("children", false);
 
     if (num <= $ShowStep) {
-        assign($Explode= (num == $ShowStep ? $Explode : false), $ShowStep=100 )
-            children();
+        $Explode= (num == $ShowStep ? $Explode : false);
+        $ShowStep=100;
+        children();
     }
 
     end();

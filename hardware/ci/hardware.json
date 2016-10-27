@@ -1,8 +1,115 @@
 [
     {
-        "cut": [],
-        "hash": "6c3b843f63f631c1066489797a460b74",
+        "cut": [
+            {
+                "completeCall": "Axle(true)",
+                "hash": "1af81d81ed46048a1b7b3df618f0b00e",
+                "vitamins": [
+                    {
+                        "title": "Stainless steel Round Bar 2mm x 100mm",
+                        "views": [],
+                        "qty": 2,
+                        "parts": [],
+                        "call": "StockMetal(type=StockMetal_RoundBar_2, size=100, material=Material_SS)",
+                        "file": "vitamins/StockMetal.scad"
+                    }
+                ],
+                "title": "Axle",
+                "views": [],
+                "qty": 2,
+                "steps": [
+                    {
+                        "desc": "Start with rod of 2mm steel or similar",
+                        "num": 1,
+                        "views": [
+                            {
+                                "rotate": [
+                                    55,
+                                    0,
+                                    25
+                                ],
+                                "dist": 500,
+                                "filepath": "../cutparts/images/Axle_step1_view.png",
+                                "title": "view",
+                                "caption": "view",
+                                "translate": [
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "type": "view",
+                                "size": [
+                                    400,
+                                    300
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "desc": "Cut off a 14mm length",
+                        "num": 2,
+                        "views": [
+                            {
+                                "rotate": [
+                                    55,
+                                    0,
+                                    25
+                                ],
+                                "dist": 500,
+                                "filepath": "../cutparts/images/Axle_step2_view.png",
+                                "title": "view",
+                                "caption": "view",
+                                "translate": [
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "type": "view",
+                                "size": [
+                                    400,
+                                    300
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "file": "cutparts/Axle.scad",
+                "call": "Axle()"
+            }
+        ],
+        "hash": "f997078310425081ac2b29bf044ad669",
         "vitamins": [
+            {
+                "hash": "e796c872a1fba15f27b7f9f0575e1d43",
+                "title": "Stainless steel Round Bar 2mm x 100mm",
+                "views": [
+                    {
+                        "rotate": [
+                            170,
+                            0,
+                            90
+                        ],
+                        "dist": 400,
+                        "title": "view",
+                        "filepath": "../vitamins/images/StainlesssteelRoundBar2mmx100mm_view.png",
+                        "caption": "view",
+                        "translate": [
+                            20,
+                            25,
+                            35
+                        ],
+                        "type": "view",
+                        "size": [
+                            400,
+                            300
+                        ]
+                    }
+                ],
+                "qty": 2,
+                "parts": [],
+                "call": "StockMetal(type=StockMetal_RoundBar_2, size=100, material=Material_SS)",
+                "file": "vitamins/StockMetal.scad"
+            },
             {
                 "hash": "b49c54a7b142cee2bccc7ed61025b176",
                 "title": "N20DCGearMotor",
@@ -14,8 +121,8 @@
                             33
                         ],
                         "dist": 280,
-                        "title": "view",
                         "filepath": "../vitamins/images/N20DCGearMotor_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -45,8 +152,8 @@
                             33
                         ],
                         "dist": 280,
-                        "title": "view",
                         "filepath": "../vitamins/images/ORing2x10_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -76,8 +183,8 @@
                             33
                         ],
                         "dist": 280,
-                        "title": "view",
                         "filepath": "../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -107,8 +214,8 @@
                             25
                         ],
                         "dist": 200,
-                        "title": "view",
                         "filepath": "../vitamins/images/M3hexscrewx8mm_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             0,
@@ -138,8 +245,8 @@
                             33
                         ],
                         "dist": 200,
-                        "title": "view",
                         "filepath": "../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             0,
@@ -169,8 +276,8 @@
                             25
                         ],
                         "dist": 200,
-                        "title": "view",
                         "filepath": "../vitamins/images/M4hexscrewx19mm_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             0,
@@ -200,8 +307,8 @@
                             25
                         ],
                         "dist": 200,
-                        "title": "view",
                         "filepath": "../vitamins/images/M4Nut_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             0,
@@ -231,8 +338,8 @@
                             25
                         ],
                         "dist": 200,
-                        "title": "view",
                         "filepath": "../vitamins/images/M4hexscrewx15mm_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             0,
@@ -262,8 +369,8 @@
                             33
                         ],
                         "dist": 280,
-                        "title": "view",
                         "filepath": "../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -293,8 +400,8 @@
                             33
                         ],
                         "dist": 280,
-                        "title": "view",
                         "filepath": "../vitamins/images/DYSBLHeli16AESC_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -324,8 +431,8 @@
                             33
                         ],
                         "dist": 280,
-                        "title": "view",
                         "filepath": "../vitamins/images/TowerProSG90Driver_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -355,8 +462,8 @@
                             33
                         ],
                         "dist": 280,
-                        "title": "view",
                         "filepath": "../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -380,7 +487,7 @@
         "assemblies": [
             {
                 "cut": [],
-                "hash": "e5e8207039c31a01c003f6cf19aa3032",
+                "hash": "92ddf665948af6c34910e2f61cb82b23",
                 "vitamins": [
                     {
                         "title": "N20DCGearMotor",
@@ -766,8 +873,8 @@
                             130
                         ],
                         "dist": 400,
-                        "title": "view",
                         "filepath": "../printedparts/images/Base_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             0,
@@ -813,8 +920,8 @@
                             130
                         ],
                         "dist": 400,
-                        "title": "view",
                         "filepath": "../printedparts/images/Wheel_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             0,
@@ -860,8 +967,8 @@
                             130
                         ],
                         "dist": 400,
-                        "title": "view",
                         "filepath": "../printedparts/images/WeaponRing_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             0,
@@ -907,8 +1014,8 @@
                             130
                         ],
                         "dist": 400,
-                        "title": "view",
                         "filepath": "../printedparts/images/Lid_view.png",
+                        "title": "view",
                         "caption": "view",
                         "translate": [
                             0,
@@ -969,6 +1076,7 @@
                                     130
                                 ],
                                 "dist": 400,
+                                "filepath": "../printedparts/images/Base_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -1021,6 +1129,7 @@
                                             130
                                         ],
                                         "dist": 400,
+                                        "filepath": "../printedparts/images/Wheel_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1037,6 +1146,97 @@
                                 ],
                                 "file": "printedparts/Wheel.scad",
                                 "title": "Wheel"
+                            },
+                            {
+                                "completeCall": "Axle(true)",
+                                "title": "Axle",
+                                "call": "Axle()",
+                                "file": "cutparts/Axle.scad",
+                                "type": "cut",
+                                "children": [
+                                    {
+                                        "num": 1,
+                                        "type": "step",
+                                        "children": [
+                                            {
+                                                "rotate": [
+                                                    55,
+                                                    0,
+                                                    25
+                                                ],
+                                                "dist": 500,
+                                                "title": "view",
+                                                "caption": "view",
+                                                "translate": [
+                                                    0,
+                                                    0,
+                                                    0
+                                                ],
+                                                "type": "view",
+                                                "size": [
+                                                    400,
+                                                    300
+                                                ]
+                                            },
+                                            {
+                                                "call": "StockMetal(type=StockMetal_RoundBar_2, size=100, material=Material_SS)",
+                                                "type": "vitamin",
+                                                "children": [
+                                                    {
+                                                        "rotate": [
+                                                            170,
+                                                            0,
+                                                            90
+                                                        ],
+                                                        "dist": 400,
+                                                        "title": "view",
+                                                        "caption": "view",
+                                                        "translate": [
+                                                            20,
+                                                            25,
+                                                            35
+                                                        ],
+                                                        "type": "view",
+                                                        "size": [
+                                                            400,
+                                                            300
+                                                        ]
+                                                    }
+                                                ],
+                                                "file": "vitamins/StockMetal.scad",
+                                                "title": "Stainless steel Round Bar 2mm x 100mm"
+                                            }
+                                        ],
+                                        "desc": "Start with rod of 2mm steel or similar"
+                                    },
+                                    {
+                                        "num": 2,
+                                        "type": "step",
+                                        "children": [
+                                            {
+                                                "rotate": [
+                                                    55,
+                                                    0,
+                                                    25
+                                                ],
+                                                "dist": 500,
+                                                "title": "view",
+                                                "caption": "view",
+                                                "translate": [
+                                                    0,
+                                                    0,
+                                                    0
+                                                ],
+                                                "type": "view",
+                                                "size": [
+                                                    400,
+                                                    300
+                                                ]
+                                            }
+                                        ],
+                                        "desc": "Cut off a 14mm length"
+                                    }
+                                ]
                             },
                             {
                                 "call": "Wheel_STL()",
@@ -1065,6 +1265,97 @@
                                 ],
                                 "file": "printedparts/Wheel.scad",
                                 "title": "Wheel"
+                            },
+                            {
+                                "completeCall": "Axle(true)",
+                                "title": "Axle",
+                                "call": "Axle()",
+                                "file": "cutparts/Axle.scad",
+                                "type": "cut",
+                                "children": [
+                                    {
+                                        "num": 1,
+                                        "type": "step",
+                                        "children": [
+                                            {
+                                                "rotate": [
+                                                    55,
+                                                    0,
+                                                    25
+                                                ],
+                                                "dist": 500,
+                                                "title": "view",
+                                                "caption": "view",
+                                                "translate": [
+                                                    0,
+                                                    0,
+                                                    0
+                                                ],
+                                                "type": "view",
+                                                "size": [
+                                                    400,
+                                                    300
+                                                ]
+                                            },
+                                            {
+                                                "call": "StockMetal(type=StockMetal_RoundBar_2, size=100, material=Material_SS)",
+                                                "type": "vitamin",
+                                                "children": [
+                                                    {
+                                                        "rotate": [
+                                                            170,
+                                                            0,
+                                                            90
+                                                        ],
+                                                        "dist": 400,
+                                                        "title": "view",
+                                                        "caption": "view",
+                                                        "translate": [
+                                                            20,
+                                                            25,
+                                                            35
+                                                        ],
+                                                        "type": "view",
+                                                        "size": [
+                                                            400,
+                                                            300
+                                                        ]
+                                                    }
+                                                ],
+                                                "file": "vitamins/StockMetal.scad",
+                                                "title": "Stainless steel Round Bar 2mm x 100mm"
+                                            }
+                                        ],
+                                        "desc": "Start with rod of 2mm steel or similar"
+                                    },
+                                    {
+                                        "num": 2,
+                                        "type": "step",
+                                        "children": [
+                                            {
+                                                "rotate": [
+                                                    55,
+                                                    0,
+                                                    25
+                                                ],
+                                                "dist": 500,
+                                                "title": "view",
+                                                "caption": "view",
+                                                "translate": [
+                                                    0,
+                                                    0,
+                                                    0
+                                                ],
+                                                "type": "view",
+                                                "size": [
+                                                    400,
+                                                    300
+                                                ]
+                                            }
+                                        ],
+                                        "desc": "Cut off a 14mm length"
+                                    }
+                                ]
                             }
                         ],
                         "desc": "Locate wheels and insert axles"
@@ -1104,6 +1395,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/N20DCGearMotor_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1132,6 +1424,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/ORing2x10_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1243,6 +1536,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1298,6 +1592,7 @@
                                             130
                                         ],
                                         "dist": 400,
+                                        "filepath": "../printedparts/images/WeaponRing_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1326,6 +1621,7 @@
                                             25
                                         ],
                                         "dist": 200,
+                                        "filepath": "../vitamins/images/M3hexscrewx8mm_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1438,6 +1734,7 @@
                                             33
                                         ],
                                         "dist": 200,
+                                        "filepath": "../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1549,6 +1846,7 @@
                                             25
                                         ],
                                         "dist": 200,
+                                        "filepath": "../vitamins/images/M4hexscrewx19mm_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1577,6 +1875,7 @@
                                             25
                                         ],
                                         "dist": 200,
+                                        "filepath": "../vitamins/images/M4Nut_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1661,6 +1960,7 @@
                                             25
                                         ],
                                         "dist": 200,
+                                        "filepath": "../vitamins/images/M4hexscrewx15mm_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1744,6 +2044,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1772,6 +2073,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/DYSBLHeli16AESC_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1800,6 +2102,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/TowerProSG90Driver_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1883,6 +2186,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1938,6 +2242,7 @@
                                             130
                                         ],
                                         "dist": 400,
+                                        "filepath": "../printedparts/images/Lid_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2037,6 +2342,14 @@
             {
                 "type": "file",
                 "file": "printedparts/Wheel.scad"
+            },
+            {
+                "type": "file",
+                "file": "cutparts/Axle.scad"
+            },
+            {
+                "type": "file",
+                "file": "vitamins/StockMetal.scad"
             },
             {
                 "type": "file",
