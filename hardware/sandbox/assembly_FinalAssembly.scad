@@ -3,7 +3,7 @@ UseSTL=false;
 UseVitaminSTL=true;
 DebugConnectors=true;
 DebugCoordinateFrames=true;
-$ShowStep=1;
-$Explode = true;
+$ShowStep=3;
+$Explode = false;
 
 FinalAssembly();

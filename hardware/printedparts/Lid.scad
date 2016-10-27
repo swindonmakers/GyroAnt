@@ -40,15 +40,6 @@ module Lid_Model()
                     if (i<180)
                         translate([0,0,-4])
                         cylinder(r=6, h=4);
-
-                    // cable protection
-                    *difference() {
-                        tube(br +0.5+perim, br + 0.5, i<180 ? h : 12, center=false);
-
-                        rotate([0,0,-70])
-                            sector3D(50, 140, 50, center = true);
-                    }
-
                 }
         }
 
@@ -70,9 +61,10 @@ module Lid_Model()
         for (i=BearingAngles)
             rotate([0,0,i])
             translate([BearingOffset,0,-3]) {
-                // screw clearance
+                // screw clearance - drill this after printing to avoid need for support
                 if (i<180)
-                    cylinder(r=4.5/2, h=100, center=true);
+                    translate([0,0,-10 - 0.6])
+                    cylinder(r=4.5/2, h=10);
 
                 // nut clearance
                 if (i<180)

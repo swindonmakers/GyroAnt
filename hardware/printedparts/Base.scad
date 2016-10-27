@@ -36,6 +36,9 @@ module Base_Model()
             // base plate
             cylinder(r=WeaponOR-RingThickness-1, h=0.6, center=false);
 
+            // thicken base under the outrunner?
+
+
             // bearing stuff
             for (i=BearingAngles)
                 rotate([0,0,i])
@@ -153,7 +156,9 @@ module Base_Model()
         for (i=BearingAngles)
             rotate([0,0,i])
             translate([BearingOffset,0,-1]) {
-                cylinder(r=4/2, h=10);
+                // clearance
+                translate([0,0,BearingHeight - GroundClearance-2.7+0.5]) cylinder(r=4/2, h=10);
+                // nut trap
                 cylinder(r=screw_head_radius(M4_hex_screw)+0.3, h=nut_thickness(M4_nut), $fn=6);
             }
 
