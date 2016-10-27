@@ -134,9 +134,9 @@ module screw(type=M4_cap_screw, length=20, hob_point = 0) {
 
     {
         if(head_type == hs_cap) {
-            assign(head_height = rad * 2,
-                   socket_rad = type[5] / cos(30) / 2,
-                   socket_depth = 2 * rad / 3)
+            head_height = rad * 2;
+            socket_rad = type[5] / cos(30) / 2;
+            socket_depth = 2 * rad / 3;
             color(screw_cap_color) render() difference() {
                 union() {
                     cylinder(r = head_rad, h = head_height);
@@ -148,8 +148,8 @@ module screw(type=M4_cap_screw, length=20, hob_point = 0) {
             }
         }
         if(head_type == hs_grub) {
-            assign(socket_rad = type[4] / 2,
-                   socket_depth = type[5])
+            socket_rad = type[4] / 2;
+            socket_depth = type[5];
             color(screw_grub_color) render() difference() {
                 translate([0, 0, -length])
                     cylinder(r = rad, h = length);
@@ -158,7 +158,7 @@ module screw(type=M4_cap_screw, length=20, hob_point = 0) {
             }
         }
         if(head_type == hs_hex) {
-            assign(head_height =type[5])
+            head_height =type[5];
             color(screw_hex_color) render() union() {
                 cylinder(r = head_rad, h = head_height, $fn = 6);
                 translate([0,0, - length + eta])
@@ -166,9 +166,9 @@ module screw(type=M4_cap_screw, length=20, hob_point = 0) {
             }
         }
         if(head_type == hs_pan) {
-            assign(head_height = type[5],
-                   socket_rad = 0.6 * head_rad,
-                   socket_depth = 0.5 * type[5])
+            head_height = type[5];
+            socket_rad = 0.6 * head_rad;
+            socket_depth = 0.5 * type[5];
             color(screw_pan_color) render() difference() {
                 union() {
                     roundedCylinder(r = head_rad, h = head_height, r2 = head_height / 2);
@@ -182,10 +182,10 @@ module screw(type=M4_cap_screw, length=20, hob_point = 0) {
             }
         }
         if(head_type == hs_cs) {
-            assign(head_height = head_rad,
-                   socket_rad = 0.6 * head_rad,
-                   socket_depth = 0.3 * head_rad,
-                   socket_width = 1)
+            head_height = head_rad;
+            socket_rad = 0.6 * head_rad;
+            socket_depth = 0.3 * head_rad;
+            socket_width = 1;
             color(screw_cs_color) render() difference() {
                 union() {
                     translate([0,0, -head_height])
