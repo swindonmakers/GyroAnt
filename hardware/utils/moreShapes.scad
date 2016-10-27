@@ -350,6 +350,27 @@ module fillet(r, h) {
 		}
 }
 
+module cylindricalFillet(cylR, filletR, outside=true) {
+	// ready to be unioned onto another part, eta fudge included
+	// extends along x, y, z
+
+	if (outside) {
+		difference() {
+			translate([0,0,-eta])
+				tube(cylR + filletR, cylR-eta, filletR + eta, center=false);
+			translate([0,0,filletR])
+				torus(cylR + filletR, filletR);
+		}
+	} else {
+		difference() {
+			translate([0,0,-eta])
+				tube(cylR + eta, cylR-filletR, filletR + eta, center=false);
+			translate([0,0,filletR])
+				torus(cylR - filletR, filletR);
+		}
+	}
+}
+
 module right_triangle(width, height, h, center = true) {
 	linear_extrude(height = h, center = center)
 		rightTriangle(width,height,center=center);

@@ -27,14 +27,16 @@ module Base_STL() {
 
 module Base_Model()
 {
+    BaseThickness = 0.6;
     br = VGrooveBearing_OD(VGrooveBearing_624VV)/2;
     ir = WeaponOR - RingThickness-3.5;
-    h = WheelOD-2*GroundClearance-0.6;
+    h = WheelOD-2*GroundClearance-BaseThickness;
+    filletR = 2;
 
     difference() {
         union() {
             // base plate
-            cylinder(r=WeaponOR-RingThickness-1, h=0.6, center=false);
+            cylinder(r=WeaponOR-RingThickness-1, h=BaseThickness, center=false);
 
             // thicken base under the outrunner?
 
@@ -48,7 +50,14 @@ module Base_Model()
 
                     // cable protection
                     difference() {
-                        tube(br +0.5+perim, br + 0.5, i<180 ? h : 12, center=false);
+                        union() {
+                            tube(br +0.5+perim, br + 0.5, i<180 ? h : 12, center=false);
+                            // fillet
+                            translate([0,0,BaseThickness])
+                                cylindricalFillet(br +0.5+perim, filletR, outside=true);
+                            translate([0,0,BaseThickness])
+                                cylindricalFillet(br +0.5, filletR, outside=false);
+                        }
 
                         rotate([0,0,-70])
                             sector3D(50, 140, 50, center = true);
@@ -60,18 +69,42 @@ module Base_Model()
             for (i=[0,1])
                 mirror([i,0,0])
                 rotate([0,0,207])
-                tubeSector(ir, ir-perim, 50, h, center = false);
+                union() {
+                    tubeSector(ir, ir-perim, 50, h, center = false);
+
+                    intersection() {
+                        union() {
+                            translate([0,0,BaseThickness])
+                                cylindricalFillet(ir, filletR, outside=true);
+
+                            translate([0,0,BaseThickness])
+                                cylindricalFillet(ir-perim, filletR, outside=false);
+                        }
+
+                        sector3D(ir+5, 50, 50, center = true);
+                    }
+                }
+
 
             // outer supports for wheels
             for (i=[0,1])
                 mirror([i,0,0])
                 translate([28,0,0])
-                hull() {
-                    translate([0,-5,0]) cube([2, 10, 1]);
-                    translate([0,0,11])
-                        rotate([0,90,0])
-                        cylinder(r=3, h=2);
+                union() {
+                    hull() {
+                        translate([0,-5,0]) cube([2, 10, 1]);
+                        translate([0,0,11])
+                            rotate([0,90,0])
+                            cylinder(r=3, h=2);
+                    }
+
+                    // fillet
+                    translate([2, 0, BaseThickness])
+                        rotate([0,-90,-90])
+                        fillet(filletR, 9);
                 }
+
+
 
             // inner supports for wheels
             for (i=[0,1])
@@ -84,6 +117,18 @@ module Base_Model()
                     translate([0,-3,0]) cube([1, 6, 14]);
                     // join to curved back section
                     translate([0.5,-14,0]) cube([8.6, 0.5, h]);
+                    // fillet
+                    translate([4.6, -14+0.5, BaseThickness])
+                        rotate([0,-90,0])
+                        fillet(filletR, 8.6);
+                    // fillet
+                    translate([1, -1, BaseThickness])
+                        rotate([0,-90,-90])
+                        fillet(filletR, 26);
+                    // fillet
+                    translate([0.5, -1, BaseThickness])
+                        rotate([0,-90,90])
+                        fillet(filletR, 26);
                 }
 
             // motor retainers
@@ -99,6 +144,11 @@ module Base_Model()
                     cube([5,3.5,10]);
             }
 
+            // front fillet
+            translate([0, 10.3 + 0.5, BaseThickness])
+                rotate([0,-90,0])
+                fillet(filletR, 28);
+
             // back
             difference() {
                 translate([-37/2, -10.3-0.5, 0])
@@ -110,6 +160,11 @@ module Base_Model()
                     translate([14,-12,0])
                     cube([5,3.5,10]);
             }
+
+            // back fillet
+            translate([0, -10.3 - 0.5, BaseThickness])
+                rotate([0,-90,180])
+                fillet(filletR, 28);
 
             // left/right locating bars
             for (i=[0,1])
