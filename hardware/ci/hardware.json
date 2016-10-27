@@ -77,7 +77,7 @@
                 "call": "Axle()"
             }
         ],
-        "hash": "c2d77d418d461007913fc66118e96cd8",
+        "hash": "e4f2f7a7652f8e4bf5c79c4ef0db51d6",
         "vitamins": [
             {
                 "hash": "e796c872a1fba15f27b7f9f0575e1d43",
@@ -1046,7 +1046,7 @@
                     0,
                     238
                 ],
-                "dist": 140,
+                "dist": 250,
                 "title": "view",
                 "filepath": "../images/GyroAnt_view.png",
                 "caption": "view",
