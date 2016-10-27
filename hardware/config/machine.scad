@@ -31,3 +31,4 @@ GroundClearance = 2;
 BearingAngles = [46, 134, 270];
 BearingOffset = WeaponOR-RingThickness-7;
 BearingHeight = 8; // from ground plane
+ToothScrewSpacing = 14;

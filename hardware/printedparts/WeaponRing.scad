@@ -71,7 +71,7 @@ module WeaponRing_Model()
     {
         union()
             for (i=[0,1])
-            rotate([0,0, 45 + 180*i])
+            rotate([0,0, 180*i])
             translate([WeaponOR-1,0,-(WheelOD-2*GroundClearance)/2 ])
             linear_extrude(WheelOD - 2*GroundClearance)
             polygon([[0,0], [-4,17], [7,2], [7,0]]);
@@ -83,7 +83,7 @@ module WeaponRing_Model()
 
         // m3 fixings
         for (i=[0,1], j=[-1,1])
-            rotate([0,0, 45 + 180*i])
+            rotate([0,0, 180*i])
             translate([WeaponOR + 3, -1 , j*7])
             rotate([90,0,0])
             cylinder(r=3.2/2, h=30, center=true, $fn=12);

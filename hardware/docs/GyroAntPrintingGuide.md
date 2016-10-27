@@ -8,8 +8,8 @@ Metric | Value
 Quantity | 1
 STL | [Base](../printedparts/stl/Base.stl)
 Plastic (Kg) | 0.01
-Plastic (cm3) | 5.9
-Approx Plastic Cost | 0.11 GBP
+Plastic (cm3) | 6.3
+Approx Plastic Cost | 0.12 GBP
 
 ![](../printedparts/images/Base_view.png)
 
@@ -67,7 +67,7 @@ Metric | Value
 --- | --- 
 Total Parts | 5
 Total Plastic (Kg) | 0.03KG
-Total Plastic (cm3) | 21.0cm3
-Approx Plastic Cost | 0.39 GBP
+Total Plastic (cm3) | 21.4cm3
+Approx Plastic Cost | 0.4 GBP
 
 

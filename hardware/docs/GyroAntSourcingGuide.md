@@ -41,11 +41,19 @@ No sources found
 
 
 
-### 2x Stainless steel Round Bar 2mm x 100mm
+### 2x Stainless steel Flat Bar 6x1mm x 21mm
 
 No sources found
 
-![](../vitamins/images/StainlesssteelRoundBar2mmx100mm_view.png) 
+![](../vitamins/images/StainlesssteelFlatBar6x1mmx21mm_view.png) 
+
+
+
+### 2x Stainless steel Round Bar 2mm x 14mm
+
+No sources found
+
+![](../vitamins/images/StainlesssteelRoundBar2mmx14mm_view.png) 
 
 
 
@@ -114,7 +122,7 @@ No sources found
 
 Metric | Value 
 --- | --- 
-Total Vitamins | 27
+Total Vitamins | 29
 Total Cost (cheapest) | 0.0 GBP
 
 

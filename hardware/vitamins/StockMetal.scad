@@ -76,8 +76,8 @@ StockMetal_Channel_4x1x1d8x1d8i = ["Channel_4x1x1d8x1d8i",   "Channel 4x1x1/8x1/
 StockMetal_Channel_4x2x1d8x1d8i = ["Channel_4x2x1d8x1d8i",   "Channel 4x2x1/8x1/8 in", StockMetal_Channel, [101.6,50.8,3.18,3.18],       StockMetal_Imperial  ];
 
 
-//                           TypeSuffix,         Description,             ProfileType,      Fixed Dimensions, Units
-//TODO: StockMetal_FlatBar
+//                           TypeSuffix,         Description,             ProfileType,         Fixed Dimensions, Units
+StockMetal_FlatBar_6x1 =    ["FlatBar_6x1",     "Flat Bar 6x1mm",        StockMetal_FlatBar,  [6,1],            StockMetal_Metric  ];
 
 //                           TypeSuffix,         Description,             ProfileType,      Fixed Dimensions, Units
 //TODO: StockMetal_HexBar
@@ -107,6 +107,8 @@ StockMetal_Types = [
     StockMetal_Angle_30x20x1p5,
 
     StockMetal_Box_30x30x3,
+
+    StockMetal_FlatBar_6x1,
 
     StockMetal_Channel_40x25x3x3,
     StockMetal_Channel_4x1x1d8x1d8i,
@@ -153,6 +155,8 @@ module StockMetal(type=StockMetal_Angle_20x20x3, size=100, material=Material_Alu
                 StockMetal_Angle_Model(type, sizer, material);
             } else if (p == StockMetal_Box) {
                 StockMetal_Box_Model(type, sizer, material);
+            } else if (p == StockMetal_FlatBar) {
+                StockMetal_FlatBar_Model(type, sizer, material);
             } else if (p == StockMetal_Channel) {
                 StockMetal_Channel_Model(type, sizer, material);
             } else if (p == StockMetal_RoundBar) {
@@ -189,6 +193,18 @@ module StockMetal_Box_Model(type, size, material) {
     if (p == StockMetal_Box) {
         linear_extrude(size)
             hollowSquare([d[0],d[1]], [d[0]-2*d[2], d[1]-2*d[2]], center=true);
+    } else {
+        debug("ERROR: StockMetal - Unknown profile type!");
+    }
+}
+
+module StockMetal_FlatBar_Model(type, size, material) {
+    p = StockMetal_Profile(type);
+    d = StockMetal_Dims(type);
+
+    if (p == StockMetal_FlatBar) {
+        linear_extrude(size)
+            square([d[0],d[1]], center=true);
     } else {
         debug("ERROR: StockMetal - Unknown profile type!");
     }

@@ -2,24 +2,24 @@
     {
         "cut": [
             {
-                "completeCall": "Axle(true)",
-                "hash": "1af81d81ed46048a1b7b3df618f0b00e",
+                "completeCall": "HammerPlate(true)",
+                "hash": "e48117a66b54e1db5a84071bd5ad994a",
                 "vitamins": [
                     {
-                        "title": "Stainless steel Round Bar 2mm x 100mm",
+                        "title": "Stainless steel Flat Bar 6x1mm x 21mm",
                         "views": [],
                         "qty": 2,
                         "parts": [],
-                        "call": "StockMetal(type=StockMetal_RoundBar_2, size=100, material=Material_SS)",
+                        "call": "StockMetal(type=StockMetal_FlatBar_6x1, size=21, material=Material_SS)",
                         "file": "vitamins/StockMetal.scad"
                     }
                 ],
-                "title": "Axle",
+                "title": "HammerPlate",
                 "views": [],
                 "qty": 2,
                 "steps": [
                     {
-                        "desc": "Start with rod of 2mm steel or similar",
+                        "desc": "Cut a small piece of 1mm steel plate to size",
                         "num": 1,
                         "views": [
                             {
@@ -29,7 +29,7 @@
                                     25
                                 ],
                                 "dist": 500,
-                                "filepath": "../cutparts/images/Axle_step1_view.png",
+                                "filepath": "../cutparts/images/HammerPlate_step1_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -46,7 +46,7 @@
                         ]
                     },
                     {
-                        "desc": "Cut off a 14mm length",
+                        "desc": "Drill two 3mm dia holes at 14mm spacing",
                         "num": 2,
                         "views": [
                             {
@@ -56,7 +56,7 @@
                                     25
                                 ],
                                 "dist": 500,
-                                "filepath": "../cutparts/images/Axle_step2_view.png",
+                                "filepath": "../cutparts/images/HammerPlate_step2_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -73,15 +73,15 @@
                         ]
                     }
                 ],
-                "file": "cutparts/Axle.scad",
-                "call": "Axle()"
+                "file": "cutparts/HammerPlate.scad",
+                "call": "HammerPlate()"
             }
         ],
-        "hash": "e4f2f7a7652f8e4bf5c79c4ef0db51d6",
+        "hash": "06f407fcef6196d1e5c7bb735d87a585",
         "vitamins": [
             {
-                "hash": "e796c872a1fba15f27b7f9f0575e1d43",
-                "title": "Stainless steel Round Bar 2mm x 100mm",
+                "hash": "1c1e83a50971e512214f28d513848442",
+                "title": "Stainless steel Round Bar 2mm x 14mm",
                 "views": [
                     {
                         "rotate": [
@@ -90,8 +90,8 @@
                             90
                         ],
                         "dist": 400,
-                        "filepath": "../vitamins/images/StainlesssteelRoundBar2mmx100mm_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/StainlesssteelRoundBar2mmx14mm_view.png",
                         "caption": "view",
                         "translate": [
                             20,
@@ -107,7 +107,7 @@
                 ],
                 "qty": 2,
                 "parts": [],
-                "call": "StockMetal(type=StockMetal_RoundBar_2, size=100, material=Material_SS)",
+                "call": "StockMetal(type=StockMetal_RoundBar_2, size=14, material=Material_SS)",
                 "file": "vitamins/StockMetal.scad"
             },
             {
@@ -121,8 +121,8 @@
                             33
                         ],
                         "dist": 280,
-                        "filepath": "../vitamins/images/N20DCGearMotor_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/N20DCGearMotor_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -152,8 +152,8 @@
                             33
                         ],
                         "dist": 280,
-                        "filepath": "../vitamins/images/ORing2x10_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/ORing2x10_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -183,8 +183,8 @@
                             33
                         ],
                         "dist": 280,
-                        "filepath": "../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -204,7 +204,7 @@
                 "file": "vitamins/C2020BrushlessOutrunner.scad"
             },
             {
-                "hash": "8331d2758eed59c7149b77d5fc636d49",
+                "hash": "3097c6da12fc50a687bdda7f01f06fe8",
                 "title": "M3 hex screw x 8mm",
                 "views": [
                     {
@@ -214,8 +214,8 @@
                             25
                         ],
                         "dist": 200,
-                        "filepath": "../vitamins/images/M3hexscrewx8mm_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/M3hexscrewx8mm_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -235,6 +235,37 @@
                 "file": "vitamins/screw.scad"
             },
             {
+                "hash": "2dd0fc2e5c85720edf3ff5d97515fe6e",
+                "title": "Stainless steel Flat Bar 6x1mm x 21mm",
+                "views": [
+                    {
+                        "rotate": [
+                            170,
+                            0,
+                            90
+                        ],
+                        "dist": 400,
+                        "title": "view",
+                        "filepath": "../vitamins/images/StainlesssteelFlatBar6x1mmx21mm_view.png",
+                        "caption": "view",
+                        "translate": [
+                            20,
+                            25,
+                            35
+                        ],
+                        "type": "view",
+                        "size": [
+                            400,
+                            300
+                        ]
+                    }
+                ],
+                "qty": 2,
+                "parts": [],
+                "call": "StockMetal(type=StockMetal_FlatBar_6x1, size=21, material=Material_SS)",
+                "file": "vitamins/StockMetal.scad"
+            },
+            {
                 "hash": "aecf92fd6a27d35f362a44faeb2cea30",
                 "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing",
                 "views": [
@@ -245,8 +276,8 @@
                             33
                         ],
                         "dist": 200,
-                        "filepath": "../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -266,7 +297,7 @@
                 "file": "vitamins/VGrooveBearing.scad"
             },
             {
-                "hash": "125a7a5d9678f53f1203942ac1c5b89f",
+                "hash": "f2c2f7b270be12e99198924c890cf20e",
                 "title": "M4 hex screw x 19mm",
                 "views": [
                     {
@@ -276,8 +307,8 @@
                             25
                         ],
                         "dist": 200,
-                        "filepath": "../vitamins/images/M4hexscrewx19mm_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/M4hexscrewx19mm_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -307,8 +338,8 @@
                             25
                         ],
                         "dist": 200,
-                        "filepath": "../vitamins/images/M4Nut_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/M4Nut_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -328,7 +359,7 @@
                 "file": "vitamins/nut.scad"
             },
             {
-                "hash": "cf381980de7312787ee7a5b5e48301fd",
+                "hash": "57a898122e755d8fcc453ad6a464cceb",
                 "title": "M4 hex screw x 15mm",
                 "views": [
                     {
@@ -338,8 +369,8 @@
                             25
                         ],
                         "dist": 200,
-                        "filepath": "../vitamins/images/M4hexscrewx15mm_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/M4hexscrewx15mm_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -369,8 +400,8 @@
                             33
                         ],
                         "dist": 280,
-                        "filepath": "../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -400,8 +431,8 @@
                             33
                         ],
                         "dist": 280,
-                        "filepath": "../vitamins/images/DYSBLHeli16AESC_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/DYSBLHeli16AESC_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -431,8 +462,8 @@
                             33
                         ],
                         "dist": 280,
-                        "filepath": "../vitamins/images/TowerProSG90Driver_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/TowerProSG90Driver_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -462,8 +493,8 @@
                             33
                         ],
                         "dist": 280,
-                        "filepath": "../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -487,8 +518,16 @@
         "assemblies": [
             {
                 "cut": [],
-                "hash": "c9b17ea03f33ecd4aee0e7fb86f7dc8a",
+                "hash": "abe09876e0c110a0de2314f03fb1eb44",
                 "vitamins": [
+                    {
+                        "title": "Stainless steel Round Bar 2mm x 14mm",
+                        "views": [],
+                        "qty": 2,
+                        "parts": [],
+                        "call": "StockMetal(type=StockMetal_RoundBar_2, size=14, material=Material_SS)",
+                        "file": "vitamins/StockMetal.scad"
+                    },
                     {
                         "title": "N20DCGearMotor",
                         "views": [],
@@ -512,14 +551,6 @@
                         "parts": [],
                         "call": "C2020BrushlessOutrunner()",
                         "file": "vitamins/C2020BrushlessOutrunner.scad"
-                    },
-                    {
-                        "title": "M3 hex screw x 8mm",
-                        "views": [],
-                        "qty": 4,
-                        "parts": [],
-                        "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
-                        "file": "vitamins/screw.scad"
                     },
                     {
                         "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing",
@@ -587,7 +618,21 @@
                     }
                 ],
                 "views": [],
-                "assemblies": [],
+                "assemblies": [
+                    {
+                        "cut": [],
+                        "vitamins": [],
+                        "views": [],
+                        "assemblies": [],
+                        "title": "WeaponRing",
+                        "qty": 1,
+                        "call": "WeaponRingAssembly()",
+                        "printed": [],
+                        "file": "assemblies/WeaponRing.scad",
+                        "steps": [],
+                        "level": 1
+                    }
+                ],
                 "title": "Final",
                 "qty": 1,
                 "call": "FinalAssembly()",
@@ -607,14 +652,6 @@
                         "qty": 2,
                         "call": "Wheel_STL()",
                         "file": "printedparts/Wheel.scad"
-                    },
-                    {
-                        "markdown": [],
-                        "title": "WeaponRing",
-                        "views": [],
-                        "qty": 1,
-                        "call": "WeaponRing_STL()",
-                        "file": "printedparts/WeaponRing.scad"
                     },
                     {
                         "markdown": [],
@@ -845,26 +882,74 @@
                     }
                 ],
                 "level": 0
+            },
+            {
+                "cut": [],
+                "hash": "a49950eae1ba120f296d2508f506aa37",
+                "vitamins": [
+                    {
+                        "title": "M3 hex screw x 8mm",
+                        "views": [],
+                        "qty": 4,
+                        "parts": [],
+                        "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
+                        "file": "vitamins/screw.scad"
+                    }
+                ],
+                "views": [],
+                "assemblies": [],
+                "title": "WeaponRing",
+                "qty": 1,
+                "call": "WeaponRingAssembly()",
+                "printed": [
+                    {
+                        "markdown": [],
+                        "title": "WeaponRing",
+                        "views": [],
+                        "qty": 1,
+                        "call": "WeaponRing_STL()",
+                        "file": "printedparts/WeaponRing.scad"
+                    }
+                ],
+                "file": "assemblies/WeaponRing.scad",
+                "steps": [
+                    {
+                        "desc": "Screw the hammer plates onto the weapon ring",
+                        "num": 1,
+                        "views": [
+                            {
+                                "rotate": [
+                                    52,
+                                    0,
+                                    218
+                                ],
+                                "dist": 400,
+                                "filepath": "../assemblies/GyroAnt/WeaponRing_step1_view.png",
+                                "title": "view",
+                                "caption": "view",
+                                "translate": [
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "type": "view",
+                                "size": [
+                                    400,
+                                    300
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "level": 2
             }
         ],
         "printed": [
             {
                 "markdown": [],
                 "hash": "023737bd941cce39de8b588096f36c15",
-                "plasticWeight": 0.007375,
+                "plasticWeight": 0.007875,
                 "title": "Base",
-                "aabb": [
-                    [
-                        -33.0,
-                        -33.0,
-                        0.0
-                    ],
-                    [
-                        33.0,
-                        33.0,
-                        20.4
-                    ]
-                ],
                 "views": [
                     {
                         "rotate": [
@@ -873,8 +958,8 @@
                             130
                         ],
                         "dist": 400,
-                        "filepath": "../printedparts/images/Base_view.png",
                         "title": "view",
+                        "filepath": "../printedparts/images/Base_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -889,9 +974,7 @@
                     }
                 ],
                 "qty": 1,
-                "volume": 4966.386342714158,
-                "area": 16850.470009312547,
-                "plasticVolume": 5.9,
+                "plasticVolume": 6.3,
                 "call": "Base_STL()",
                 "file": "printedparts/Base.scad"
             },
@@ -900,18 +983,6 @@
                 "hash": "0b2f86d07d8c99109ecab706b0e36da3",
                 "plasticWeight": 0.001625,
                 "title": "Wheel",
-                "aabb": [
-                    [
-                        -12.5,
-                        -12.5,
-                        0.0
-                    ],
-                    [
-                        12.5,
-                        12.5,
-                        7.0
-                    ]
-                ],
                 "views": [
                     {
                         "rotate": [
@@ -920,8 +991,8 @@
                             130
                         ],
                         "dist": 400,
-                        "filepath": "../printedparts/images/Wheel_view.png",
                         "title": "view",
+                        "filepath": "../printedparts/images/Wheel_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -936,25 +1007,23 @@
                     }
                 ],
                 "qty": 2,
-                "volume": 1111.2517110186632,
-                "area": 1555.7339901056228,
                 "plasticVolume": 1.3,
                 "call": "Wheel_STL()",
                 "file": "printedparts/Wheel.scad"
             },
             {
                 "markdown": [],
-                "hash": "894ba5ee978b34db41cfc79ea227731e",
+                "hash": "cef9d00838c3f8dd7fc63e28cd0d29a6",
                 "plasticWeight": 0.01275,
                 "title": "WeaponRing",
                 "aabb": [
                     [
-                        -36.0,
+                        -42.0,
                         -36.0,
                         -10.5
                     ],
                     [
-                        36.0,
+                        42.0,
                         36.0,
                         10.5
                     ]
@@ -967,8 +1036,8 @@
                             130
                         ],
                         "dist": 400,
-                        "filepath": "../printedparts/images/WeaponRing_view.png",
                         "title": "view",
+                        "filepath": "../printedparts/images/WeaponRing_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -983,8 +1052,8 @@
                     }
                 ],
                 "qty": 1,
-                "volume": 8863.345286205542,
-                "area": 12095.9709813139,
+                "volume": 8863.350814569983,
+                "area": 12095.962819545013,
                 "plasticVolume": 10.2,
                 "call": "WeaponRing_STL()",
                 "file": "printedparts/WeaponRing.scad"
@@ -994,18 +1063,6 @@
                 "hash": "912502f39db3d6d70a0aa7a022b65f54",
                 "plasticWeight": 0.002875,
                 "title": "Lid",
-                "aabb": [
-                    [
-                        -33.0,
-                        -33.0,
-                        -4.0
-                    ],
-                    [
-                        33.0,
-                        33.0,
-                        0.299999
-                    ]
-                ],
                 "views": [
                     {
                         "rotate": [
@@ -1014,8 +1071,8 @@
                             130
                         ],
                         "dist": 400,
-                        "filepath": "../printedparts/images/Lid_view.png",
                         "title": "view",
+                        "filepath": "../printedparts/images/Lid_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -1030,8 +1087,6 @@
                     }
                 ],
                 "qty": 1,
-                "volume": 2047.6865246064249,
-                "area": 6914.1422235500195,
                 "plasticVolume": 2.3,
                 "call": "Lid_STL()",
                 "file": "printedparts/Lid.scad"
@@ -1076,7 +1131,6 @@
                                     130
                                 ],
                                 "dist": 400,
-                                "filepath": "../printedparts/images/Base_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -1129,7 +1183,6 @@
                                             130
                                         ],
                                         "dist": 400,
-                                        "filepath": "../printedparts/images/Wheel_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1148,96 +1201,32 @@
                                 "title": "Wheel"
                             },
                             {
-                                "completeCall": "Axle(true)",
-                                "title": "Axle",
-                                "call": "Axle()",
-                                "file": "cutparts/Axle.scad",
-                                "type": "cut",
+                                "call": "StockMetal(type=StockMetal_RoundBar_2, size=14, material=Material_SS)",
+                                "type": "vitamin",
                                 "children": [
                                     {
-                                        "num": 1,
-                                        "type": "step",
-                                        "children": [
-                                            {
-                                                "rotate": [
-                                                    55,
-                                                    0,
-                                                    25
-                                                ],
-                                                "dist": 500,
-                                                "title": "view",
-                                                "caption": "view",
-                                                "translate": [
-                                                    0,
-                                                    0,
-                                                    0
-                                                ],
-                                                "type": "view",
-                                                "size": [
-                                                    400,
-                                                    300
-                                                ]
-                                            },
-                                            {
-                                                "call": "StockMetal(type=StockMetal_RoundBar_2, size=100, material=Material_SS)",
-                                                "type": "vitamin",
-                                                "children": [
-                                                    {
-                                                        "rotate": [
-                                                            170,
-                                                            0,
-                                                            90
-                                                        ],
-                                                        "dist": 400,
-                                                        "filepath": "../vitamins/images/StainlesssteelRoundBar2mmx100mm_view.png",
-                                                        "title": "view",
-                                                        "caption": "view",
-                                                        "translate": [
-                                                            20,
-                                                            25,
-                                                            35
-                                                        ],
-                                                        "type": "view",
-                                                        "size": [
-                                                            400,
-                                                            300
-                                                        ]
-                                                    }
-                                                ],
-                                                "file": "vitamins/StockMetal.scad",
-                                                "title": "Stainless steel Round Bar 2mm x 100mm"
-                                            }
+                                        "rotate": [
+                                            170,
+                                            0,
+                                            90
                                         ],
-                                        "desc": "Start with rod of 2mm steel or similar"
-                                    },
-                                    {
-                                        "num": 2,
-                                        "type": "step",
-                                        "children": [
-                                            {
-                                                "rotate": [
-                                                    55,
-                                                    0,
-                                                    25
-                                                ],
-                                                "dist": 500,
-                                                "title": "view",
-                                                "caption": "view",
-                                                "translate": [
-                                                    0,
-                                                    0,
-                                                    0
-                                                ],
-                                                "type": "view",
-                                                "size": [
-                                                    400,
-                                                    300
-                                                ]
-                                            }
+                                        "dist": 400,
+                                        "title": "view",
+                                        "caption": "view",
+                                        "translate": [
+                                            20,
+                                            25,
+                                            35
                                         ],
-                                        "desc": "Cut off a 14mm length"
+                                        "type": "view",
+                                        "size": [
+                                            400,
+                                            300
+                                        ]
                                     }
-                                ]
+                                ],
+                                "file": "vitamins/StockMetal.scad",
+                                "title": "Stainless steel Round Bar 2mm x 14mm"
                             },
                             {
                                 "call": "Wheel_STL()",
@@ -1268,95 +1257,32 @@
                                 "title": "Wheel"
                             },
                             {
-                                "completeCall": "Axle(true)",
-                                "title": "Axle",
-                                "call": "Axle()",
-                                "file": "cutparts/Axle.scad",
-                                "type": "cut",
+                                "call": "StockMetal(type=StockMetal_RoundBar_2, size=14, material=Material_SS)",
+                                "type": "vitamin",
                                 "children": [
                                     {
-                                        "num": 1,
-                                        "type": "step",
-                                        "children": [
-                                            {
-                                                "rotate": [
-                                                    55,
-                                                    0,
-                                                    25
-                                                ],
-                                                "dist": 500,
-                                                "title": "view",
-                                                "caption": "view",
-                                                "translate": [
-                                                    0,
-                                                    0,
-                                                    0
-                                                ],
-                                                "type": "view",
-                                                "size": [
-                                                    400,
-                                                    300
-                                                ]
-                                            },
-                                            {
-                                                "call": "StockMetal(type=StockMetal_RoundBar_2, size=100, material=Material_SS)",
-                                                "type": "vitamin",
-                                                "children": [
-                                                    {
-                                                        "rotate": [
-                                                            170,
-                                                            0,
-                                                            90
-                                                        ],
-                                                        "dist": 400,
-                                                        "title": "view",
-                                                        "caption": "view",
-                                                        "translate": [
-                                                            20,
-                                                            25,
-                                                            35
-                                                        ],
-                                                        "type": "view",
-                                                        "size": [
-                                                            400,
-                                                            300
-                                                        ]
-                                                    }
-                                                ],
-                                                "file": "vitamins/StockMetal.scad",
-                                                "title": "Stainless steel Round Bar 2mm x 100mm"
-                                            }
+                                        "rotate": [
+                                            170,
+                                            0,
+                                            90
                                         ],
-                                        "desc": "Start with rod of 2mm steel or similar"
-                                    },
-                                    {
-                                        "num": 2,
-                                        "type": "step",
-                                        "children": [
-                                            {
-                                                "rotate": [
-                                                    55,
-                                                    0,
-                                                    25
-                                                ],
-                                                "dist": 500,
-                                                "title": "view",
-                                                "caption": "view",
-                                                "translate": [
-                                                    0,
-                                                    0,
-                                                    0
-                                                ],
-                                                "type": "view",
-                                                "size": [
-                                                    400,
-                                                    300
-                                                ]
-                                            }
+                                        "dist": 400,
+                                        "title": "view",
+                                        "caption": "view",
+                                        "translate": [
+                                            20,
+                                            25,
+                                            35
                                         ],
-                                        "desc": "Cut off a 14mm length"
+                                        "type": "view",
+                                        "size": [
+                                            400,
+                                            300
+                                        ]
                                     }
-                                ]
+                                ],
+                                "file": "vitamins/StockMetal.scad",
+                                "title": "Stainless steel Round Bar 2mm x 14mm"
                             }
                         ],
                         "desc": "Locate wheels and insert axles"
@@ -1396,7 +1322,6 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/N20DCGearMotor_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1425,7 +1350,6 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/ORing2x10_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1537,7 +1461,6 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1583,146 +1506,361 @@
                                 ]
                             },
                             {
-                                "call": "WeaponRing_STL()",
-                                "type": "printed",
+                                "call": "WeaponRingAssembly()",
+                                "type": "assembly",
                                 "children": [
                                     {
-                                        "rotate": [
-                                            72,
-                                            0,
-                                            130
+                                        "call": "WeaponRing_STL()",
+                                        "type": "printed",
+                                        "children": [
+                                            {
+                                                "rotate": [
+                                                    72,
+                                                    0,
+                                                    130
+                                                ],
+                                                "dist": 400,
+                                                "title": "view",
+                                                "caption": "view",
+                                                "translate": [
+                                                    0,
+                                                    0,
+                                                    0
+                                                ],
+                                                "type": "view",
+                                                "size": [
+                                                    400,
+                                                    300
+                                                ]
+                                            }
                                         ],
-                                        "dist": 400,
-                                        "filepath": "../printedparts/images/WeaponRing_view.png",
-                                        "title": "view",
-                                        "caption": "view",
-                                        "translate": [
-                                            0,
-                                            0,
-                                            0
+                                        "file": "printedparts/WeaponRing.scad",
+                                        "title": "WeaponRing"
+                                    },
+                                    {
+                                        "num": 1,
+                                        "type": "step",
+                                        "children": [
+                                            {
+                                                "rotate": [
+                                                    52,
+                                                    0,
+                                                    218
+                                                ],
+                                                "dist": 400,
+                                                "title": "view",
+                                                "caption": "view",
+                                                "translate": [
+                                                    0,
+                                                    0,
+                                                    0
+                                                ],
+                                                "type": "view",
+                                                "size": [
+                                                    400,
+                                                    300
+                                                ]
+                                            },
+                                            {
+                                                "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
+                                                "type": "vitamin",
+                                                "children": [
+                                                    {
+                                                        "rotate": [
+                                                            55,
+                                                            0,
+                                                            25
+                                                        ],
+                                                        "dist": 200,
+                                                        "title": "view",
+                                                        "caption": "view",
+                                                        "translate": [
+                                                            0,
+                                                            0,
+                                                            0
+                                                        ],
+                                                        "type": "view",
+                                                        "size": [
+                                                            400,
+                                                            300
+                                                        ]
+                                                    }
+                                                ],
+                                                "file": "vitamins/screw.scad",
+                                                "title": "M3 hex screw x 8mm"
+                                            },
+                                            {
+                                                "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
+                                                "type": "vitamin",
+                                                "children": [
+                                                    {
+                                                        "rotate": [
+                                                            55,
+                                                            0,
+                                                            25
+                                                        ],
+                                                        "dist": 200,
+                                                        "title": "view",
+                                                        "caption": "view",
+                                                        "translate": [
+                                                            0,
+                                                            0,
+                                                            0
+                                                        ],
+                                                        "type": "view",
+                                                        "size": [
+                                                            400,
+                                                            300
+                                                        ]
+                                                    }
+                                                ],
+                                                "file": "vitamins/screw.scad",
+                                                "title": "M3 hex screw x 8mm"
+                                            },
+                                            {
+                                                "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
+                                                "type": "vitamin",
+                                                "children": [
+                                                    {
+                                                        "rotate": [
+                                                            55,
+                                                            0,
+                                                            25
+                                                        ],
+                                                        "dist": 200,
+                                                        "title": "view",
+                                                        "caption": "view",
+                                                        "translate": [
+                                                            0,
+                                                            0,
+                                                            0
+                                                        ],
+                                                        "type": "view",
+                                                        "size": [
+                                                            400,
+                                                            300
+                                                        ]
+                                                    }
+                                                ],
+                                                "file": "vitamins/screw.scad",
+                                                "title": "M3 hex screw x 8mm"
+                                            },
+                                            {
+                                                "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
+                                                "type": "vitamin",
+                                                "children": [
+                                                    {
+                                                        "rotate": [
+                                                            55,
+                                                            0,
+                                                            25
+                                                        ],
+                                                        "dist": 200,
+                                                        "title": "view",
+                                                        "caption": "view",
+                                                        "translate": [
+                                                            0,
+                                                            0,
+                                                            0
+                                                        ],
+                                                        "type": "view",
+                                                        "size": [
+                                                            400,
+                                                            300
+                                                        ]
+                                                    }
+                                                ],
+                                                "file": "vitamins/screw.scad",
+                                                "title": "M3 hex screw x 8mm"
+                                            },
+                                            {
+                                                "completeCall": "HammerPlate(true)",
+                                                "title": "HammerPlate",
+                                                "call": "HammerPlate()",
+                                                "file": "cutparts/HammerPlate.scad",
+                                                "type": "cut",
+                                                "children": [
+                                                    {
+                                                        "num": 1,
+                                                        "type": "step",
+                                                        "children": [
+                                                            {
+                                                                "rotate": [
+                                                                    55,
+                                                                    0,
+                                                                    25
+                                                                ],
+                                                                "dist": 500,
+                                                                "title": "view",
+                                                                "caption": "view",
+                                                                "translate": [
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "type": "view",
+                                                                "size": [
+                                                                    400,
+                                                                    300
+                                                                ]
+                                                            },
+                                                            {
+                                                                "call": "StockMetal(type=StockMetal_FlatBar_6x1, size=21, material=Material_SS)",
+                                                                "type": "vitamin",
+                                                                "children": [
+                                                                    {
+                                                                        "rotate": [
+                                                                            170,
+                                                                            0,
+                                                                            90
+                                                                        ],
+                                                                        "dist": 400,
+                                                                        "title": "view",
+                                                                        "caption": "view",
+                                                                        "translate": [
+                                                                            20,
+                                                                            25,
+                                                                            35
+                                                                        ],
+                                                                        "type": "view",
+                                                                        "size": [
+                                                                            400,
+                                                                            300
+                                                                        ]
+                                                                    }
+                                                                ],
+                                                                "file": "vitamins/StockMetal.scad",
+                                                                "title": "Stainless steel Flat Bar 6x1mm x 21mm"
+                                                            }
+                                                        ],
+                                                        "desc": "Cut a small piece of 1mm steel plate to size"
+                                                    },
+                                                    {
+                                                        "num": 2,
+                                                        "type": "step",
+                                                        "children": [
+                                                            {
+                                                                "rotate": [
+                                                                    55,
+                                                                    0,
+                                                                    25
+                                                                ],
+                                                                "dist": 500,
+                                                                "title": "view",
+                                                                "caption": "view",
+                                                                "translate": [
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "type": "view",
+                                                                "size": [
+                                                                    400,
+                                                                    300
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "desc": "Drill two 3mm dia holes at 14mm spacing"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "completeCall": "HammerPlate(true)",
+                                                "title": "HammerPlate",
+                                                "call": "HammerPlate()",
+                                                "file": "cutparts/HammerPlate.scad",
+                                                "type": "cut",
+                                                "children": [
+                                                    {
+                                                        "num": 1,
+                                                        "type": "step",
+                                                        "children": [
+                                                            {
+                                                                "rotate": [
+                                                                    55,
+                                                                    0,
+                                                                    25
+                                                                ],
+                                                                "dist": 500,
+                                                                "title": "view",
+                                                                "caption": "view",
+                                                                "translate": [
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "type": "view",
+                                                                "size": [
+                                                                    400,
+                                                                    300
+                                                                ]
+                                                            },
+                                                            {
+                                                                "call": "StockMetal(type=StockMetal_FlatBar_6x1, size=21, material=Material_SS)",
+                                                                "type": "vitamin",
+                                                                "children": [
+                                                                    {
+                                                                        "rotate": [
+                                                                            170,
+                                                                            0,
+                                                                            90
+                                                                        ],
+                                                                        "dist": 400,
+                                                                        "title": "view",
+                                                                        "caption": "view",
+                                                                        "translate": [
+                                                                            20,
+                                                                            25,
+                                                                            35
+                                                                        ],
+                                                                        "type": "view",
+                                                                        "size": [
+                                                                            400,
+                                                                            300
+                                                                        ]
+                                                                    }
+                                                                ],
+                                                                "file": "vitamins/StockMetal.scad",
+                                                                "title": "Stainless steel Flat Bar 6x1mm x 21mm"
+                                                            }
+                                                        ],
+                                                        "desc": "Cut a small piece of 1mm steel plate to size"
+                                                    },
+                                                    {
+                                                        "num": 2,
+                                                        "type": "step",
+                                                        "children": [
+                                                            {
+                                                                "rotate": [
+                                                                    55,
+                                                                    0,
+                                                                    25
+                                                                ],
+                                                                "dist": 500,
+                                                                "title": "view",
+                                                                "caption": "view",
+                                                                "translate": [
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "type": "view",
+                                                                "size": [
+                                                                    400,
+                                                                    300
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "desc": "Drill two 3mm dia holes at 14mm spacing"
+                                                    }
+                                                ]
+                                            }
                                         ],
-                                        "type": "view",
-                                        "size": [
-                                            400,
-                                            300
-                                        ]
+                                        "desc": "Screw the hammer plates onto the weapon ring"
                                     }
                                 ],
-                                "file": "printedparts/WeaponRing.scad",
+                                "file": "assemblies/WeaponRing.scad",
                                 "title": "WeaponRing"
-                            },
-                            {
-                                "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
-                                "type": "vitamin",
-                                "children": [
-                                    {
-                                        "rotate": [
-                                            55,
-                                            0,
-                                            25
-                                        ],
-                                        "dist": 200,
-                                        "filepath": "../vitamins/images/M3hexscrewx8mm_view.png",
-                                        "title": "view",
-                                        "caption": "view",
-                                        "translate": [
-                                            0,
-                                            0,
-                                            0
-                                        ],
-                                        "type": "view",
-                                        "size": [
-                                            400,
-                                            300
-                                        ]
-                                    }
-                                ],
-                                "file": "vitamins/screw.scad",
-                                "title": "M3 hex screw x 8mm"
-                            },
-                            {
-                                "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
-                                "type": "vitamin",
-                                "children": [
-                                    {
-                                        "rotate": [
-                                            55,
-                                            0,
-                                            25
-                                        ],
-                                        "dist": 200,
-                                        "title": "view",
-                                        "caption": "view",
-                                        "translate": [
-                                            0,
-                                            0,
-                                            0
-                                        ],
-                                        "type": "view",
-                                        "size": [
-                                            400,
-                                            300
-                                        ]
-                                    }
-                                ],
-                                "file": "vitamins/screw.scad",
-                                "title": "M3 hex screw x 8mm"
-                            },
-                            {
-                                "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
-                                "type": "vitamin",
-                                "children": [
-                                    {
-                                        "rotate": [
-                                            55,
-                                            0,
-                                            25
-                                        ],
-                                        "dist": 200,
-                                        "title": "view",
-                                        "caption": "view",
-                                        "translate": [
-                                            0,
-                                            0,
-                                            0
-                                        ],
-                                        "type": "view",
-                                        "size": [
-                                            400,
-                                            300
-                                        ]
-                                    }
-                                ],
-                                "file": "vitamins/screw.scad",
-                                "title": "M3 hex screw x 8mm"
-                            },
-                            {
-                                "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
-                                "type": "vitamin",
-                                "children": [
-                                    {
-                                        "rotate": [
-                                            55,
-                                            0,
-                                            25
-                                        ],
-                                        "dist": 200,
-                                        "title": "view",
-                                        "caption": "view",
-                                        "translate": [
-                                            0,
-                                            0,
-                                            0
-                                        ],
-                                        "type": "view",
-                                        "size": [
-                                            400,
-                                            300
-                                        ]
-                                    }
-                                ],
-                                "file": "vitamins/screw.scad",
-                                "title": "M3 hex screw x 8mm"
                             },
                             {
                                 "call": "VGrooveBearing(VGrooveBearing_624VV)",
@@ -1735,7 +1873,6 @@
                                             33
                                         ],
                                         "dist": 200,
-                                        "filepath": "../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1847,7 +1984,6 @@
                                             25
                                         ],
                                         "dist": 200,
-                                        "filepath": "../vitamins/images/M4hexscrewx19mm_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1876,7 +2012,6 @@
                                             25
                                         ],
                                         "dist": 200,
-                                        "filepath": "../vitamins/images/M4Nut_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1961,7 +2096,6 @@
                                             25
                                         ],
                                         "dist": 200,
-                                        "filepath": "../vitamins/images/M4hexscrewx15mm_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2045,7 +2179,6 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2074,7 +2207,6 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/DYSBLHeli16AESC_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2103,7 +2235,6 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/TowerProSG90Driver_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2187,7 +2318,6 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2243,7 +2373,6 @@
                                             130
                                         ],
                                         "dist": 400,
-                                        "filepath": "../printedparts/images/Lid_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2346,10 +2475,6 @@
             },
             {
                 "type": "file",
-                "file": "cutparts/Axle.scad"
-            },
-            {
-                "type": "file",
                 "file": "vitamins/StockMetal.scad"
             },
             {
@@ -2366,11 +2491,19 @@
             },
             {
                 "type": "file",
+                "file": "assemblies/WeaponRing.scad"
+            },
+            {
+                "type": "file",
                 "file": "printedparts/WeaponRing.scad"
             },
             {
                 "type": "file",
                 "file": "vitamins/screw.scad"
+            },
+            {
+                "type": "file",
+                "file": "cutparts/HammerPlate.scad"
             },
             {
                 "type": "file",

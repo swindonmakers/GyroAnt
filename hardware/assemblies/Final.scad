@@ -115,23 +115,9 @@ module FinalAssembly () {
         step(4, "Slide weapon ring over base, along with v bearings") {
             FinalAssembly_DefView();
             translate([0,0,WheelOD/2]) {
-                attach(DefConDown, DefConDown, ExplodeSpacing=30) {
-                    WeaponRing_STL();
-
-                    // teeth
-                    for (i=[0,1])
-                        rotate([0,0,i*180 + 45]) {
-                            translate([WeaponOR,-1 , -(WheelOD - 2*GroundClearance)/2])
-                                color([0.9,0.9,0.9,1])
-                                cube([6, 1, (WheelOD - 2*GroundClearance)]);
-
-                            for (j=[-1,1])
-                                translate([WeaponOR + 3, -1 , j*7])
-                                rotate([90,0,0])
-                                rotate([0,0,30])
-                                screw(M3_hex_screw, 8);
-                        }
-                }
+                attach(DefConDown, DefConDown, ExplodeSpacing=30)
+                rotate([0,0,45])
+                WeaponRingAssembly();
             }
 
             for (i=BearingAngles)

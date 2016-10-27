@@ -4,4 +4,4 @@ DebugCoordinateFrames = false;
 UseSTL=true;
 $Explode = false;
 $ShowStep = 100;
-FinalAssembly();
+WeaponRingAssembly();
