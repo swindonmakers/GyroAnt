@@ -1,9 +1,9 @@
 include <../config/config.scad>
-UseSTL=false;
+UseSTL=true;
 UseVitaminSTL=true;
 DebugConnectors=true;
 DebugCoordinateFrames=true;
-$ShowStep=3;
+$ShowStep=7;
 $Explode = false;
 
 FinalAssembly();

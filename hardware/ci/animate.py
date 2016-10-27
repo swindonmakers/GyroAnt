@@ -134,6 +134,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                         f.write("DebugConnectors = false;\n");
                                         f.write("DebugCoordinateFrames = false;\n");
                                         f.write("$Explode = false;\n");
+                                        f.write("UseSTL=true;\n");
                                         f.write("$AnimateExplode = false;\n");
                                         f.write("$ShowStep = "+ str(ShowStep) +";\n");
                                         f.write(a['call'] + ";\n");
@@ -166,6 +167,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                 f.write("DebugConnectors = false;\n");
                                 f.write("DebugCoordinateFrames = false;\n");
                                 f.write("$Explode = true;\n");
+                                f.write("UseSTL=true;\n");
                                 f.write("$AnimateExplode = true;\n");
                                 f.write("$ShowStep = "+ str(ShowStep) +";\n");
                                 f.write("$AnimateExplodeT = "+ str(AnimateExplodeT) +";\n");
@@ -244,6 +246,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                             f.write("include <../config/config.scad>\n")
                             f.write("DebugConnectors = false;\n");
                             f.write("DebugCoordinateFrames = false;\n");
+                            f.write("UseSTL=true;\n");
                             f.write("$Explode = false;\n");
                             f.write("$ShowStep = "+ str(ShowStep) +";\n");
                             f.write(a['call'] + ";\n");

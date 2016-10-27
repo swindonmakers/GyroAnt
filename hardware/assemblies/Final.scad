@@ -62,7 +62,7 @@ module FinalAssembly () {
             attach(DefConRight, DefConRight, ExplodeSpacing=15)  // dummy attach to ensure correct explode vector
                 attach(Con_LW, DefConDown, ExplodeSpacing=30)
                 translate([0,0,-4])
-                Axle(true);
+                StockMetal(StockMetal_RoundBar_2, 14, Material_SS);
 
 
 
@@ -74,7 +74,7 @@ module FinalAssembly () {
             attach(DefConLeft, DefConLeft, ExplodeSpacing=15)  // dummy attach to ensure correct explode vector
                 attach(Con_RW, DefConDown, ExplodeSpacing=30)
                 translate([0,0,-4])
-                Axle(true);
+                StockMetal(StockMetal_RoundBar_2, 14, Material_SS);
 
         }
 
