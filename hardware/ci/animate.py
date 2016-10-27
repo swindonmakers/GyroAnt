@@ -263,6 +263,11 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                         print("Encoding video with: "+cmd)
                         os.system(cmd)
 
+                        # build animated gif
+                        cmd = "convert "+view_dir + "/" + prefix+".mp4 "+view_dir + "/" + prefix+".gif"
+                        print("Creating GIF with: "+cmd)
+                        os.system(cmd)
+
                         # clean up temporary images
                         #for frame in range(0, numFrames):
                         #    os.remove(view_dir + "/" +prefix + format(frame, '03') + "_" +view['title']+".png");
