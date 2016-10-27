@@ -10,8 +10,8 @@
 
 // Connectors
 
-N20DCGearMotor_Con_Def				= [ [0,0,0], [0,0,-1], 0, 0, 0];
-N20DCGearMotor_Con_Shaft			= [ [0,0,2], [0,0,-1], 0, 0, 0];
+N20DCGearMotor_Con_Def				= [ [0,0,0], [0,0,-1], 0, 0, 3];
+N20DCGearMotor_Con_Shaft			= [ [0,0,2], [0,0,-1], 0, 0, 3];
 N20DCGearMotor_Con_Fixing1				= [ [4.5,0,0], [0,0,-1], 0, 0, 0];
 N20DCGearMotor_Con_Fixing2				= [ [-4.5,0,0], [0,0,-1], 0, 0, 0];
 

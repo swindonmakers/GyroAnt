@@ -151,7 +151,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                 view['rotate'] = nv['rotate']
                                 firstView = False
 
-                            # iterate over frames
+                            # iterate over frames to animate the assembly step
                             for frame in range(0, framesPerStep):
 
                                 t = easeInOut(frame / (framesPerStep-1.0));
@@ -176,6 +176,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                 views.PolishTransparentBackground = False
                                 views.PolishCrop = False
                                 fn = view_dir + "/" +prefix + format(frameNum, '03') + "_" +view['title']+".png"
+                                print("Rendering: "+fn)
                                 views.render_view_using_file(prefix + format(frameNum, '03'), temp_name, view_dir, view, hashchanged, h)
                                 frameNum = frameNum + 1
 
@@ -188,10 +189,15 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                     img = Image.open(fn)
                                     imgNew = img.copy()
 
+                                    # go back one to overwrite first frame
+                                    frameNum = frameNum - 1
+
                                     # extend a bit
                                     for extra in range(0, 2*framesPerStep):
                                         if lfn != "":
-                                            alpha = extra / (2.0*framesPerStep)
+                                            alpha = extra / (1.0*framesPerStep)
+                                            if (alpha > 1.0):
+                                                alpha = 1.0
                                             print("Blending: "+str(alpha) +", "+str(frameNum))
                                             imgNew = Image.blend(imgPrev,img,alpha)
 
@@ -212,6 +218,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
 
                                         fn = view_dir + "/" +prefix + format(frameNum, '03') + "_" +view['title']+".png"
                                         frameNum = frameNum + 1
+                                        print("Saving: "+fn)
                                         imgNew.save(fn)
 
                                 lfn = fn
@@ -252,7 +259,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                         numFrames = frameNum
 
                         # build video
-                        cmd = "ffmpeg -r 10 -y -i "+view_dir + "/" + prefix+"%03d_"+view['title']+".png -vcodec libx264 -pix_fmt yuv420p "+view_dir + "/" + prefix+".mp4"
+                        cmd = "ffmpeg -r "+str(framesPerStep)+" -y -i "+view_dir + "/" + prefix+"%03d_"+view['title']+".png -vcodec libx264 -pix_fmt yuv420p "+view_dir + "/" + prefix+".mp4"
                         print("Encoding video with: "+cmd)
                         os.system(cmd)
 

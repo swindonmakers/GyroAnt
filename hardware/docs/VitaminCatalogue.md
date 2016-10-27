@@ -21,6 +21,7 @@
  * [Microswitch.scad ](#microswitchscad)
  * [N20DCGearMotor.scad ](#n20dcgearmotorscad)
  * [NeopixelRing.scad ](#neopixelringscad)
+ * [ORing.scad ](#oringscad)
  * [StepperMotor.scad ](#steppermotorscad)
  * [StockMetal.scad ](#stockmetalscad)
  * [TowerProSG90Driver.scad ](#towerprosg90driverscad)
@@ -166,6 +167,12 @@ N20DCGearMotor | `N20DCGearMotor()` | ![N20DCGearMotor](../vitamins/images/N20DC
 Title | Call | Image
 --- | --- | ---
 Neopixel Ring 16 | `NeopixelRing()` | ![Neopixel Ring 16](../vitamins/images/NeopixelRing16_view.png)
+
+## ORing.scad
+
+Title | Call | Image
+--- | --- | ---
+O-Ring 2x10 | `ORing(section=2, bore=10)` | ![O-Ring 2x10](../vitamins/images/ORing2x10_view.png)
 
 ## StepperMotor.scad
 

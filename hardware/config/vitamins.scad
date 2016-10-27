@@ -9,3 +9,4 @@ include <../vitamins/DYS16AESC.scad>
 include <../vitamins/TurnigyNanoTech120mAh2S25C.scad>
 include <../vitamins/TowerProSG90Driver.scad>
 include <../vitamins/DasMikroReceiver.scad>
+include <../vitamins/ORing.scad>
