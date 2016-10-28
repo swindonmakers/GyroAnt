@@ -46,6 +46,9 @@ module FinalAssembly () {
 
     assembly("assemblies/Final.scad", "Final", str("FinalAssembly()")) {
 
+        // generate an animation video for this assembly
+        animation(title="GyroAnt",framesPerStep=10);
+
         // base
         translate([0,0, GroundClearance])
             Base_STL();

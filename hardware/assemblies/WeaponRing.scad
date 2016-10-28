@@ -11,7 +11,7 @@ module WeaponRingAssembly () {
 
     assembly("assemblies/WeaponRing.scad", "WeaponRing", str("WeaponRingAssembly()")) {
 
-        // animation
+        // generate an animation video for this assembly
         animation(title="WeaponRing",framesPerStep=10);
 
         // base part

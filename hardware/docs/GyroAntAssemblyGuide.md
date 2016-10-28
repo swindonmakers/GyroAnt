@@ -81,6 +81,10 @@ Qty | Part Name | Image
 --- | --- | ---
 1 | [WeaponRing](../printedparts/stl/WeaponRing.stl) | ![](../printedparts/images/WeaponRing_view.png) | 
 
+### Assembly Animation
+
+![](../assemblies/GyroAnt/WeaponRing.gif)
+
 ### Assembly Steps
 
 1. Screw the hammer plates onto the weapon ring
@@ -119,6 +123,10 @@ Qty | Part Name | Image
 Qty | Name 
 --- | --- 
 1 | WeaponRing
+
+### Assembly Animation
+
+![](../assemblies/GyroAnt/GyroAnt.gif)
 
 ### Assembly Steps
 

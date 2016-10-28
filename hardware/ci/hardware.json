@@ -77,7 +77,7 @@
                 "call": "HammerPlate()"
             }
         ],
-        "hash": "d8dd0b4bec40e8a2add295cb1ac33dba",
+        "hash": "f6d90d538b8762b884e39b44ce78f3f9",
         "vitamins": [
             {
                 "hash": "1c1e83a50971e512214f28d513848442",
@@ -518,7 +518,7 @@
         "assemblies": [
             {
                 "cut": [],
-                "hash": "bbc794ac479ce2f5c2be4040c231c1ab",
+                "hash": "b3f99c7f50235faf715ffad2669ca235",
                 "vitamins": [
                     {
                         "title": "Stainless steel Round Bar 2mm x 14mm",
@@ -664,7 +664,13 @@
                     }
                 ],
                 "file": "assemblies/Final.scad",
-                "animations": [],
+                "animations": [
+                    {
+                        "framesPerStep": 10,
+                        "type": "animation",
+                        "title": "GyroAnt"
+                    }
+                ],
                 "steps": [
                     {
                         "desc": "Locate wheels and insert axles",
@@ -1115,6 +1121,11 @@
                 "call": "FinalAssembly()",
                 "type": "assembly",
                 "children": [
+                    {
+                        "framesPerStep": 10,
+                        "type": "animation",
+                        "title": "GyroAnt"
+                    },
                     {
                         "call": "Base_STL()",
                         "type": "printed",
