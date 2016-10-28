@@ -6,19 +6,21 @@
                 "hash": "e48117a66b54e1db5a84071bd5ad994a",
                 "vitamins": [
                     {
-                        "views": [],
                         "title": "Stainless steel Flat Bar 6x1mm x 21mm",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "StockMetal(type=StockMetal_FlatBar_6x1, size=21, material=Material_SS)",
                         "file": "vitamins/StockMetal.scad"
                     }
                 ],
-                "views": [],
                 "title": "HammerPlate",
+                "views": [],
                 "qty": 2,
                 "steps": [
                     {
+                        "desc": "Cut a small piece of 1mm steel plate to size",
+                        "num": 1,
                         "views": [
                             {
                                 "rotate": [
@@ -27,8 +29,8 @@
                                     25
                                 ],
                                 "dist": 500,
-                                "title": "view",
                                 "filepath": "../cutparts/images/HammerPlate_step1_view.png",
+                                "title": "view",
                                 "caption": "view",
                                 "translate": [
                                     0,
@@ -41,11 +43,11 @@
                                     300
                                 ]
                             }
-                        ],
-                        "num": 1,
-                        "desc": "Cut a small piece of 1mm steel plate to size"
+                        ]
                     },
                     {
+                        "desc": "Drill two 3mm dia holes at 14mm spacing",
+                        "num": 2,
                         "views": [
                             {
                                 "rotate": [
@@ -54,8 +56,8 @@
                                     25
                                 ],
                                 "dist": 500,
-                                "title": "view",
                                 "filepath": "../cutparts/images/HammerPlate_step2_view.png",
+                                "title": "view",
                                 "caption": "view",
                                 "translate": [
                                     0,
@@ -68,9 +70,7 @@
                                     300
                                 ]
                             }
-                        ],
-                        "num": 2,
-                        "desc": "Drill two 3mm dia holes at 14mm spacing"
+                        ]
                     }
                 ],
                 "file": "cutparts/HammerPlate.scad",
@@ -81,6 +81,7 @@
         "vitamins": [
             {
                 "hash": "1c1e83a50971e512214f28d513848442",
+                "title": "Stainless steel Round Bar 2mm x 14mm",
                 "views": [
                     {
                         "rotate": [
@@ -104,7 +105,6 @@
                         ]
                     }
                 ],
-                "title": "Stainless steel Round Bar 2mm x 14mm",
                 "qty": 2,
                 "parts": [],
                 "call": "StockMetal(type=StockMetal_RoundBar_2, size=14, material=Material_SS)",
@@ -112,6 +112,7 @@
             },
             {
                 "hash": "b49c54a7b142cee2bccc7ed61025b176",
+                "title": "N20DCGearMotor",
                 "views": [
                     {
                         "rotate": [
@@ -135,7 +136,6 @@
                         ]
                     }
                 ],
-                "title": "N20DCGearMotor",
                 "qty": 2,
                 "parts": [],
                 "call": "N20DCGearMotor()",
@@ -143,6 +143,7 @@
             },
             {
                 "hash": "84a9e41adb685eed8f277ac321e03ae0",
+                "title": "O-Ring 2x10",
                 "views": [
                     {
                         "rotate": [
@@ -166,7 +167,6 @@
                         ]
                     }
                 ],
-                "title": "O-Ring 2x10",
                 "qty": 2,
                 "parts": [],
                 "call": "ORing(section=2, bore=10)",
@@ -174,6 +174,7 @@
             },
             {
                 "hash": "ec4fc06503eb0095b142981907992f17",
+                "title": "C2020 Micro Brushless Outrunner 3500kv 11g",
                 "views": [
                     {
                         "rotate": [
@@ -197,7 +198,6 @@
                         ]
                     }
                 ],
-                "title": "C2020 Micro Brushless Outrunner 3500kv 11g",
                 "qty": 1,
                 "parts": [],
                 "call": "C2020BrushlessOutrunner()",
@@ -205,6 +205,7 @@
             },
             {
                 "hash": "3097c6da12fc50a687bdda7f01f06fe8",
+                "title": "M3 hex screw x 8mm",
                 "views": [
                     {
                         "rotate": [
@@ -228,7 +229,6 @@
                         ]
                     }
                 ],
-                "title": "M3 hex screw x 8mm",
                 "qty": 4,
                 "parts": [],
                 "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
@@ -236,6 +236,7 @@
             },
             {
                 "hash": "2dd0fc2e5c85720edf3ff5d97515fe6e",
+                "title": "Stainless steel Flat Bar 6x1mm x 21mm",
                 "views": [
                     {
                         "rotate": [
@@ -259,7 +260,6 @@
                         ]
                     }
                 ],
-                "title": "Stainless steel Flat Bar 6x1mm x 21mm",
                 "qty": 2,
                 "parts": [],
                 "call": "StockMetal(type=StockMetal_FlatBar_6x1, size=21, material=Material_SS)",
@@ -267,6 +267,7 @@
             },
             {
                 "hash": "aecf92fd6a27d35f362a44faeb2cea30",
+                "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing",
                 "views": [
                     {
                         "rotate": [
@@ -290,7 +291,6 @@
                         ]
                     }
                 ],
-                "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing",
                 "qty": 3,
                 "parts": [],
                 "call": "VGrooveBearing(VGrooveBearing_624VV)",
@@ -298,6 +298,7 @@
             },
             {
                 "hash": "f2c2f7b270be12e99198924c890cf20e",
+                "title": "M4 hex screw x 19mm",
                 "views": [
                     {
                         "rotate": [
@@ -321,7 +322,6 @@
                         ]
                     }
                 ],
-                "title": "M4 hex screw x 19mm",
                 "qty": 2,
                 "parts": [],
                 "call": "screw(type=M4_hex_screw,length=19, hob_point=0 )",
@@ -329,6 +329,7 @@
             },
             {
                 "hash": "8e5a3a952e49561c6a484e81e35815c1",
+                "title": "M4 Nut",
                 "views": [
                     {
                         "rotate": [
@@ -352,7 +353,6 @@
                         ]
                     }
                 ],
-                "title": "M4 Nut",
                 "qty": 5,
                 "parts": [],
                 "call": "nut(type=M4_nut,nyloc=false,brass=false )",
@@ -360,6 +360,7 @@
             },
             {
                 "hash": "57a898122e755d8fcc453ad6a464cceb",
+                "title": "M4 hex screw x 15mm",
                 "views": [
                     {
                         "rotate": [
@@ -383,7 +384,6 @@
                         ]
                     }
                 ],
-                "title": "M4 hex screw x 15mm",
                 "qty": 1,
                 "parts": [],
                 "call": "screw(type=M4_hex_screw,length=15, hob_point=0 )",
@@ -391,6 +391,7 @@
             },
             {
                 "hash": "686db6cef9f4399a92f26877f8da61ae",
+                "title": "DasMikro Ultra Mini 8CH PPM Receiver",
                 "views": [
                     {
                         "rotate": [
@@ -414,7 +415,6 @@
                         ]
                     }
                 ],
-                "title": "DasMikro Ultra Mini 8CH PPM Receiver",
                 "qty": 1,
                 "parts": [],
                 "call": "DasMikroReceiver()",
@@ -422,6 +422,7 @@
             },
             {
                 "hash": "179f902ff604162ee77b0f5ebfb85bbc",
+                "title": "DYS BLHeli 16A ESC",
                 "views": [
                     {
                         "rotate": [
@@ -445,7 +446,6 @@
                         ]
                     }
                 ],
-                "title": "DYS BLHeli 16A ESC",
                 "qty": 1,
                 "parts": [],
                 "call": "DYS16AESC()",
@@ -453,6 +453,7 @@
             },
             {
                 "hash": "37b7025e85318ca624ffc75c6028f2ec",
+                "title": "TowerPro SG90 Driver",
                 "views": [
                     {
                         "rotate": [
@@ -476,7 +477,6 @@
                         ]
                     }
                 ],
-                "title": "TowerPro SG90 Driver",
                 "qty": 2,
                 "parts": [],
                 "call": "TowerProSG90Driver()",
@@ -484,6 +484,7 @@
             },
             {
                 "hash": "bad585b1a8fb566b0384fd4426a6e6dc",
+                "title": "Turnigy Nano-Tech 120mAh 2S 25C Lipo Pack E-Flite Compatible",
                 "views": [
                     {
                         "rotate": [
@@ -507,7 +508,6 @@
                         ]
                     }
                 ],
-                "title": "Turnigy Nano-Tech 120mAh 2S 25C Lipo Pack E-Flite Compatible",
                 "qty": 1,
                 "parts": [],
                 "call": "TurnigyNanoTech120mAh2S25C()",
@@ -521,110 +521,110 @@
                 "hash": "bbc794ac479ce2f5c2be4040c231c1ab",
                 "vitamins": [
                     {
-                        "views": [],
                         "title": "Stainless steel Round Bar 2mm x 14mm",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "StockMetal(type=StockMetal_RoundBar_2, size=14, material=Material_SS)",
                         "file": "vitamins/StockMetal.scad"
                     },
                     {
-                        "views": [],
                         "title": "N20DCGearMotor",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "N20DCGearMotor()",
                         "file": "vitamins/N20DCGearMotor.scad"
                     },
                     {
-                        "views": [],
                         "title": "O-Ring 2x10",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "ORing(section=2, bore=10)",
                         "file": "vitamins/ORing.scad"
                     },
                     {
-                        "views": [],
                         "title": "C2020 Micro Brushless Outrunner 3500kv 11g",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "C2020BrushlessOutrunner()",
                         "file": "vitamins/C2020BrushlessOutrunner.scad"
                     },
                     {
-                        "views": [],
                         "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing",
+                        "views": [],
                         "qty": 3,
                         "parts": [],
                         "call": "VGrooveBearing(VGrooveBearing_624VV)",
                         "file": "vitamins/VGrooveBearing.scad"
                     },
                     {
-                        "views": [],
                         "title": "M4 hex screw x 19mm",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "screw(type=M4_hex_screw,length=19, hob_point=0 )",
                         "file": "vitamins/screw.scad"
                     },
                     {
-                        "views": [],
                         "title": "M4 Nut",
+                        "views": [],
                         "qty": 5,
                         "parts": [],
                         "call": "nut(type=M4_nut,nyloc=false,brass=false )",
                         "file": "vitamins/nut.scad"
                     },
                     {
-                        "views": [],
                         "title": "M4 hex screw x 15mm",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "screw(type=M4_hex_screw,length=15, hob_point=0 )",
                         "file": "vitamins/screw.scad"
                     },
                     {
-                        "views": [],
                         "title": "DasMikro Ultra Mini 8CH PPM Receiver",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "DasMikroReceiver()",
                         "file": "vitamins/DasMikroReceiver.scad"
                     },
                     {
-                        "views": [],
                         "title": "DYS BLHeli 16A ESC",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "DYS16AESC()",
                         "file": "vitamins/DYS16AESC.scad"
                     },
                     {
-                        "views": [],
                         "title": "TowerPro SG90 Driver",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "TowerProSG90Driver()",
                         "file": "vitamins/TowerProSG90Driver.scad"
                     },
                     {
-                        "views": [],
                         "title": "Turnigy Nano-Tech 120mAh 2S 25C Lipo Pack E-Flite Compatible",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "TurnigyNanoTech120mAh2S25C()",
                         "file": "vitamins/TurnigyNanoTech120mAh2S25C.scad"
                     }
                 ],
-                "title": "Final",
+                "views": [],
                 "assemblies": [
                     {
                         "cut": [],
                         "vitamins": [],
-                        "title": "WeaponRing",
-                        "assemblies": [],
                         "views": [],
+                        "assemblies": [],
+                        "title": "WeaponRing",
                         "qty": 1,
                         "call": "WeaponRingAssembly()",
                         "printed": [],
@@ -634,30 +634,30 @@
                         "level": 1
                     }
                 ],
-                "views": [],
+                "title": "Final",
                 "qty": 1,
                 "call": "FinalAssembly()",
                 "printed": [
                     {
                         "markdown": [],
-                        "views": [],
                         "title": "Base",
+                        "views": [],
                         "qty": 1,
                         "call": "Base_STL()",
                         "file": "printedparts/Base.scad"
                     },
                     {
                         "markdown": [],
-                        "views": [],
                         "title": "Wheel",
+                        "views": [],
                         "qty": 2,
                         "call": "Wheel_STL()",
                         "file": "printedparts/Wheel.scad"
                     },
                     {
                         "markdown": [],
-                        "views": [],
                         "title": "Lid",
+                        "views": [],
                         "qty": 1,
                         "call": "Lid_STL()",
                         "file": "printedparts/Lid.scad"
@@ -667,32 +667,8 @@
                 "animations": [],
                 "steps": [
                     {
-                        "views": [
-                            {
-                                "rotate": [
-                                    66,
-                                    0,
-                                    238
-                                ],
-                                "dist": 250,
-                                "title": "view",
-                                "caption": "view",
-                                "translate": [
-                                    0,
-                                    0,
-                                    16
-                                ],
-                                "type": "view",
-                                "size": [
-                                    400,
-                                    300
-                                ]
-                            }
-                        ],
+                        "desc": "Locate wheels and insert axles",
                         "num": 1,
-                        "desc": "Locate wheels and insert axles"
-                    },
-                    {
                         "views": [
                             {
                                 "rotate": [
@@ -701,6 +677,7 @@
                                     238
                                 ],
                                 "dist": 250,
+                                "filepath": "../assemblies/GyroAnt/Final_step1_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -714,11 +691,11 @@
                                     300
                                 ]
                             }
-                        ],
+                        ]
+                    },
+                    {
+                        "desc": "Fit motors and o-rings",
                         "num": 2,
-                        "desc": "Fit motors and o-rings"
-                    },
-                    {
                         "views": [
                             {
                                 "rotate": [
@@ -727,6 +704,7 @@
                                     238
                                 ],
                                 "dist": 250,
+                                "filepath": "../assemblies/GyroAnt/Final_step2_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -740,11 +718,11 @@
                                     300
                                 ]
                             }
-                        ],
+                        ]
+                    },
+                    {
+                        "desc": "Fit weapon outrunner",
                         "num": 3,
-                        "desc": "Fit weapon outrunner"
-                    },
-                    {
                         "views": [
                             {
                                 "rotate": [
@@ -753,6 +731,7 @@
                                     238
                                 ],
                                 "dist": 250,
+                                "filepath": "../assemblies/GyroAnt/Final_step3_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -766,11 +745,38 @@
                                     300
                                 ]
                             }
-                        ],
-                        "num": 4,
-                        "desc": "Slide weapon ring over base, along with v bearings"
+                        ]
                     },
                     {
+                        "desc": "Slide weapon ring over base, along with v bearings",
+                        "num": 4,
+                        "views": [
+                            {
+                                "rotate": [
+                                    66,
+                                    0,
+                                    238
+                                ],
+                                "dist": 250,
+                                "filepath": "../assemblies/GyroAnt/Final_step4_view.png",
+                                "title": "view",
+                                "caption": "view",
+                                "translate": [
+                                    0,
+                                    0,
+                                    16
+                                ],
+                                "type": "view",
+                                "size": [
+                                    400,
+                                    300
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "desc": "Secure bearings for weapon ring",
+                        "num": 5,
                         "views": [
                             {
                                 "rotate": [
@@ -779,6 +785,7 @@
                                     358
                                 ],
                                 "dist": 250,
+                                "filepath": "../assemblies/GyroAnt/Final_step5_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -792,37 +799,11 @@
                                     300
                                 ]
                             }
-                        ],
-                        "num": 5,
-                        "desc": "Secure bearings for weapon ring"
+                        ]
                     },
                     {
-                        "views": [
-                            {
-                                "rotate": [
-                                    10,
-                                    0,
-                                    358
-                                ],
-                                "dist": 250,
-                                "title": "view",
-                                "caption": "view",
-                                "translate": [
-                                    0,
-                                    0,
-                                    0
-                                ],
-                                "type": "view",
-                                "size": [
-                                    400,
-                                    300
-                                ]
-                            }
-                        ],
+                        "desc": "Wire up Rx, ESCs and motors",
                         "num": 6,
-                        "desc": "Wire up Rx, ESCs and motors"
-                    },
-                    {
                         "views": [
                             {
                                 "rotate": [
@@ -831,6 +812,7 @@
                                     358
                                 ],
                                 "dist": 250,
+                                "filepath": "../assemblies/GyroAnt/Final_step6_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -844,11 +826,38 @@
                                     300
                                 ]
                             }
-                        ],
-                        "num": 7,
-                        "desc": "Install battery"
+                        ]
                     },
                     {
+                        "desc": "Install battery",
+                        "num": 7,
+                        "views": [
+                            {
+                                "rotate": [
+                                    10,
+                                    0,
+                                    358
+                                ],
+                                "dist": 250,
+                                "filepath": "../assemblies/GyroAnt/Final_step7_view.png",
+                                "title": "view",
+                                "caption": "view",
+                                "translate": [
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "type": "view",
+                                "size": [
+                                    400,
+                                    300
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "desc": "Fit lid",
+                        "num": 8,
                         "views": [
                             {
                                 "rotate": [
@@ -857,6 +866,7 @@
                                     238
                                 ],
                                 "dist": 250,
+                                "filepath": "../assemblies/GyroAnt/Final_step8_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -870,9 +880,7 @@
                                     300
                                 ]
                             }
-                        ],
-                        "num": 8,
-                        "desc": "Fit lid"
+                        ]
                     }
                 ],
                 "level": 0
@@ -882,24 +890,24 @@
                 "hash": "fa01c3fb40dc9dbf2632d7ce1a47cee7",
                 "vitamins": [
                     {
-                        "views": [],
                         "title": "M3 hex screw x 8mm",
+                        "views": [],
                         "qty": 4,
                         "parts": [],
                         "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
                         "file": "vitamins/screw.scad"
                     }
                 ],
-                "title": "WeaponRing",
-                "assemblies": [],
                 "views": [],
+                "assemblies": [],
+                "title": "WeaponRing",
                 "qty": 1,
                 "call": "WeaponRingAssembly()",
                 "printed": [
                     {
                         "markdown": [],
-                        "views": [],
                         "title": "WeaponRing",
+                        "views": [],
                         "qty": 1,
                         "call": "WeaponRing_STL()",
                         "file": "printedparts/WeaponRing.scad"
@@ -908,13 +916,15 @@
                 "file": "assemblies/WeaponRing.scad",
                 "animations": [
                     {
-                        "type": "animation",
                         "framesPerStep": 10,
+                        "type": "animation",
                         "title": "WeaponRing"
                     }
                 ],
                 "steps": [
                     {
+                        "desc": "Screw the hammer plates onto the weapon ring",
+                        "num": 1,
                         "views": [
                             {
                                 "rotate": [
@@ -923,6 +933,7 @@
                                     218
                                 ],
                                 "dist": 240,
+                                "filepath": "../assemblies/GyroAnt/WeaponRing_step1_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -936,9 +947,7 @@
                                     300
                                 ]
                             }
-                        ],
-                        "num": 1,
-                        "desc": "Screw the hammer plates onto the weapon ring"
+                        ]
                     }
                 ],
                 "level": 2
@@ -949,6 +958,7 @@
                 "markdown": [],
                 "hash": "023737bd941cce39de8b588096f36c15",
                 "plasticWeight": 0.007875,
+                "title": "Base",
                 "views": [
                     {
                         "rotate": [
@@ -972,7 +982,6 @@
                         ]
                     }
                 ],
-                "title": "Base",
                 "qty": 1,
                 "plasticVolume": 6.3,
                 "call": "Base_STL()",
@@ -982,6 +991,7 @@
                 "markdown": [],
                 "hash": "0b2f86d07d8c99109ecab706b0e36da3",
                 "plasticWeight": 0.001625,
+                "title": "Wheel",
                 "views": [
                     {
                         "rotate": [
@@ -1005,7 +1015,6 @@
                         ]
                     }
                 ],
-                "title": "Wheel",
                 "qty": 2,
                 "plasticVolume": 1.3,
                 "call": "Wheel_STL()",
@@ -1015,6 +1024,7 @@
                 "markdown": [],
                 "hash": "cef9d00838c3f8dd7fc63e28cd0d29a6",
                 "plasticWeight": 0.01275,
+                "title": "WeaponRing",
                 "views": [
                     {
                         "rotate": [
@@ -1038,7 +1048,6 @@
                         ]
                     }
                 ],
-                "title": "WeaponRing",
                 "qty": 1,
                 "plasticVolume": 10.2,
                 "call": "WeaponRing_STL()",
@@ -1048,6 +1057,7 @@
                 "markdown": [],
                 "hash": "912502f39db3d6d70a0aa7a022b65f54",
                 "plasticWeight": 0.002875,
+                "title": "Lid",
                 "views": [
                     {
                         "rotate": [
@@ -1071,7 +1081,6 @@
                         ]
                     }
                 ],
-                "title": "Lid",
                 "qty": 1,
                 "plasticVolume": 2.3,
                 "call": "Lid_STL()",
@@ -1103,12 +1112,12 @@
                 ]
             },
             {
-                "type": "assembly",
                 "call": "FinalAssembly()",
+                "type": "assembly",
                 "children": [
                     {
-                        "type": "printed",
                         "call": "Base_STL()",
+                        "type": "printed",
                         "children": [
                             {
                                 "rotate": [
@@ -1117,6 +1126,7 @@
                                     130
                                 ],
                                 "dist": 400,
+                                "filepath": "../printedparts/images/Base_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -1159,8 +1169,8 @@
                                 ]
                             },
                             {
-                                "type": "printed",
                                 "call": "Wheel_STL()",
+                                "type": "printed",
                                 "children": [
                                     {
                                         "rotate": [
@@ -1169,6 +1179,7 @@
                                             130
                                         ],
                                         "dist": 400,
+                                        "filepath": "../printedparts/images/Wheel_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1187,8 +1198,8 @@
                                 "title": "Wheel"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "StockMetal(type=StockMetal_RoundBar_2, size=14, material=Material_SS)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -1197,6 +1208,7 @@
                                             90
                                         ],
                                         "dist": 400,
+                                        "filepath": "../vitamins/images/StainlesssteelRoundBar2mmx14mm_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1215,8 +1227,8 @@
                                 "title": "Stainless steel Round Bar 2mm x 14mm"
                             },
                             {
-                                "type": "printed",
                                 "call": "Wheel_STL()",
+                                "type": "printed",
                                 "children": [
                                     {
                                         "rotate": [
@@ -1243,8 +1255,8 @@
                                 "title": "Wheel"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "StockMetal(type=StockMetal_RoundBar_2, size=14, material=Material_SS)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -1298,8 +1310,8 @@
                                 ]
                             },
                             {
-                                "type": "vitamin",
                                 "call": "N20DCGearMotor()",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -1308,6 +1320,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/N20DCGearMotor_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1326,8 +1339,8 @@
                                 "title": "N20DCGearMotor"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "ORing(section=2, bore=10)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -1336,6 +1349,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/ORing2x10_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1354,8 +1368,8 @@
                                 "title": "O-Ring 2x10"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "N20DCGearMotor()",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -1382,8 +1396,8 @@
                                 "title": "N20DCGearMotor"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "ORing(section=2, bore=10)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -1437,8 +1451,8 @@
                                 ]
                             },
                             {
-                                "type": "vitamin",
                                 "call": "C2020BrushlessOutrunner()",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -1447,6 +1461,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1492,17 +1507,17 @@
                                 ]
                             },
                             {
-                                "type": "assembly",
                                 "call": "WeaponRingAssembly()",
+                                "type": "assembly",
                                 "children": [
                                     {
-                                        "type": "animation",
                                         "framesPerStep": 10,
+                                        "type": "animation",
                                         "title": "WeaponRing"
                                     },
                                     {
-                                        "type": "printed",
                                         "call": "WeaponRing_STL()",
+                                        "type": "printed",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -1511,6 +1526,7 @@
                                                     130
                                                 ],
                                                 "dist": 400,
+                                                "filepath": "../printedparts/images/WeaponRing_view.png",
                                                 "title": "view",
                                                 "caption": "view",
                                                 "translate": [
@@ -1553,8 +1569,37 @@
                                                 ]
                                             },
                                             {
-                                                "type": "vitamin",
                                                 "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
+                                                "type": "vitamin",
+                                                "children": [
+                                                    {
+                                                        "rotate": [
+                                                            55,
+                                                            0,
+                                                            25
+                                                        ],
+                                                        "dist": 200,
+                                                        "filepath": "../vitamins/images/M3hexscrewx8mm_view.png",
+                                                        "title": "view",
+                                                        "caption": "view",
+                                                        "translate": [
+                                                            0,
+                                                            0,
+                                                            0
+                                                        ],
+                                                        "type": "view",
+                                                        "size": [
+                                                            400,
+                                                            300
+                                                        ]
+                                                    }
+                                                ],
+                                                "file": "vitamins/screw.scad",
+                                                "title": "M3 hex screw x 8mm"
+                                            },
+                                            {
+                                                "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
+                                                "type": "vitamin",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -1581,8 +1626,8 @@
                                                 "title": "M3 hex screw x 8mm"
                                             },
                                             {
-                                                "type": "vitamin",
                                                 "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
+                                                "type": "vitamin",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -1609,36 +1654,8 @@
                                                 "title": "M3 hex screw x 8mm"
                                             },
                                             {
-                                                "type": "vitamin",
                                                 "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
-                                                "children": [
-                                                    {
-                                                        "rotate": [
-                                                            55,
-                                                            0,
-                                                            25
-                                                        ],
-                                                        "dist": 200,
-                                                        "title": "view",
-                                                        "caption": "view",
-                                                        "translate": [
-                                                            0,
-                                                            0,
-                                                            0
-                                                        ],
-                                                        "type": "view",
-                                                        "size": [
-                                                            400,
-                                                            300
-                                                        ]
-                                                    }
-                                                ],
-                                                "file": "vitamins/screw.scad",
-                                                "title": "M3 hex screw x 8mm"
-                                            },
-                                            {
                                                 "type": "vitamin",
-                                                "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -1696,8 +1713,8 @@
                                                                 ]
                                                             },
                                                             {
-                                                                "type": "vitamin",
                                                                 "call": "StockMetal(type=StockMetal_FlatBar_6x1, size=21, material=Material_SS)",
+                                                                "type": "vitamin",
                                                                 "children": [
                                                                     {
                                                                         "rotate": [
@@ -1706,6 +1723,7 @@
                                                                             90
                                                                         ],
                                                                         "dist": 400,
+                                                                        "filepath": "../vitamins/images/StainlesssteelFlatBar6x1mmx21mm_view.png",
                                                                         "title": "view",
                                                                         "caption": "view",
                                                                         "translate": [
@@ -1787,8 +1805,8 @@
                                                                 ]
                                                             },
                                                             {
-                                                                "type": "vitamin",
                                                                 "call": "StockMetal(type=StockMetal_FlatBar_6x1, size=21, material=Material_SS)",
+                                                                "type": "vitamin",
                                                                 "children": [
                                                                     {
                                                                         "rotate": [
@@ -1854,8 +1872,37 @@
                                 "title": "WeaponRing"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "VGrooveBearing(VGrooveBearing_624VV)",
+                                "type": "vitamin",
+                                "children": [
+                                    {
+                                        "rotate": [
+                                            72,
+                                            0,
+                                            33
+                                        ],
+                                        "dist": 200,
+                                        "filepath": "../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png",
+                                        "title": "view",
+                                        "caption": "view",
+                                        "translate": [
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "type": "view",
+                                        "size": [
+                                            400,
+                                            300
+                                        ]
+                                    }
+                                ],
+                                "file": "vitamins/VGrooveBearing.scad",
+                                "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing"
+                            },
+                            {
+                                "call": "VGrooveBearing(VGrooveBearing_624VV)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -1882,36 +1929,8 @@
                                 "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "VGrooveBearing(VGrooveBearing_624VV)",
-                                "children": [
-                                    {
-                                        "rotate": [
-                                            72,
-                                            0,
-                                            33
-                                        ],
-                                        "dist": 200,
-                                        "title": "view",
-                                        "caption": "view",
-                                        "translate": [
-                                            0,
-                                            0,
-                                            0
-                                        ],
-                                        "type": "view",
-                                        "size": [
-                                            400,
-                                            300
-                                        ]
-                                    }
-                                ],
-                                "file": "vitamins/VGrooveBearing.scad",
-                                "title": "624VV 4x13x6mm V Groove Sealed Ball Bearing"
-                            },
-                            {
                                 "type": "vitamin",
-                                "call": "VGrooveBearing(VGrooveBearing_624VV)",
                                 "children": [
                                     {
                                         "rotate": [
@@ -1965,8 +1984,66 @@
                                 ]
                             },
                             {
-                                "type": "vitamin",
                                 "call": "screw(type=M4_hex_screw,length=19, hob_point=0 )",
+                                "type": "vitamin",
+                                "children": [
+                                    {
+                                        "rotate": [
+                                            55,
+                                            0,
+                                            25
+                                        ],
+                                        "dist": 200,
+                                        "filepath": "../vitamins/images/M4hexscrewx19mm_view.png",
+                                        "title": "view",
+                                        "caption": "view",
+                                        "translate": [
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "type": "view",
+                                        "size": [
+                                            400,
+                                            300
+                                        ]
+                                    }
+                                ],
+                                "file": "vitamins/screw.scad",
+                                "title": "M4 hex screw x 19mm"
+                            },
+                            {
+                                "call": "nut(type=M4_nut,nyloc=false,brass=false )",
+                                "type": "vitamin",
+                                "children": [
+                                    {
+                                        "rotate": [
+                                            55,
+                                            0,
+                                            25
+                                        ],
+                                        "dist": 200,
+                                        "filepath": "../vitamins/images/M4Nut_view.png",
+                                        "title": "view",
+                                        "caption": "view",
+                                        "translate": [
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "type": "view",
+                                        "size": [
+                                            400,
+                                            300
+                                        ]
+                                    }
+                                ],
+                                "file": "vitamins/nut.scad",
+                                "title": "M4 Nut"
+                            },
+                            {
+                                "call": "screw(type=M4_hex_screw,length=19, hob_point=0 )",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -1993,8 +2070,8 @@
                                 "title": "M4 hex screw x 19mm"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "nut(type=M4_nut,nyloc=false,brass=false )",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2021,64 +2098,8 @@
                                 "title": "M4 Nut"
                             },
                             {
-                                "type": "vitamin",
-                                "call": "screw(type=M4_hex_screw,length=19, hob_point=0 )",
-                                "children": [
-                                    {
-                                        "rotate": [
-                                            55,
-                                            0,
-                                            25
-                                        ],
-                                        "dist": 200,
-                                        "title": "view",
-                                        "caption": "view",
-                                        "translate": [
-                                            0,
-                                            0,
-                                            0
-                                        ],
-                                        "type": "view",
-                                        "size": [
-                                            400,
-                                            300
-                                        ]
-                                    }
-                                ],
-                                "file": "vitamins/screw.scad",
-                                "title": "M4 hex screw x 19mm"
-                            },
-                            {
-                                "type": "vitamin",
-                                "call": "nut(type=M4_nut,nyloc=false,brass=false )",
-                                "children": [
-                                    {
-                                        "rotate": [
-                                            55,
-                                            0,
-                                            25
-                                        ],
-                                        "dist": 200,
-                                        "title": "view",
-                                        "caption": "view",
-                                        "translate": [
-                                            0,
-                                            0,
-                                            0
-                                        ],
-                                        "type": "view",
-                                        "size": [
-                                            400,
-                                            300
-                                        ]
-                                    }
-                                ],
-                                "file": "vitamins/nut.scad",
-                                "title": "M4 Nut"
-                            },
-                            {
-                                "type": "vitamin",
                                 "call": "screw(type=M4_hex_screw,length=15, hob_point=0 )",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2087,6 +2108,7 @@
                                             25
                                         ],
                                         "dist": 200,
+                                        "filepath": "../vitamins/images/M4hexscrewx15mm_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2105,8 +2127,8 @@
                                 "title": "M4 hex screw x 15mm"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "nut(type=M4_nut,nyloc=false,brass=false )",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2160,8 +2182,8 @@
                                 ]
                             },
                             {
-                                "type": "vitamin",
                                 "call": "DasMikroReceiver()",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2170,6 +2192,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2188,8 +2211,8 @@
                                 "title": "DasMikro Ultra Mini 8CH PPM Receiver"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "DYS16AESC()",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2198,6 +2221,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/DYSBLHeli16AESC_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2216,8 +2240,8 @@
                                 "title": "DYS BLHeli 16A ESC"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "TowerProSG90Driver()",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2226,6 +2250,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/TowerProSG90Driver_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2244,8 +2269,8 @@
                                 "title": "TowerPro SG90 Driver"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "TowerProSG90Driver()",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2299,8 +2324,8 @@
                                 ]
                             },
                             {
-                                "type": "vitamin",
                                 "call": "TurnigyNanoTech120mAh2S25C()",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2309,6 +2334,7 @@
                                             33
                                         ],
                                         "dist": 280,
+                                        "filepath": "../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2354,8 +2380,8 @@
                                 ]
                             },
                             {
-                                "type": "printed",
                                 "call": "Lid_STL()",
+                                "type": "printed",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2364,6 +2390,7 @@
                                             130
                                         ],
                                         "dist": 400,
+                                        "filepath": "../printedparts/images/Lid_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2382,8 +2409,8 @@
                                 "title": "Lid"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "nut(type=M4_nut,nyloc=false,brass=false )",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2410,8 +2437,8 @@
                                 "title": "M4 Nut"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "nut(type=M4_nut,nyloc=false,brass=false )",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [

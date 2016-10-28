@@ -148,7 +148,7 @@ def render_view_using_file(obj_title, scadfile, dir, view, hashchanged, hash="")
         print("        View up to date")
 
 
-def render_view(obj_title, obj_call, dir, view, hashchanged, hash="", includes=[], debug=False):
+def render_view(obj_title, obj_call, dir, view, hashchanged, hash="", includes=[], debug=False, useVitaminSTL=True):
     temp_name = 'temp.scad'
 
     # make a file to use the module
@@ -158,7 +158,10 @@ def render_view(obj_title, obj_call, dir, view, hashchanged, hash="", includes=[
     for i in includes:
         f.write("include <"+i+">\n")
     f.write("UseSTL=true;\n");
-    f.write("UseVitaminSTL=true;\n");
+    if useVitaminSTL:
+        f.write("UseVitaminSTL=true;\n")
+    else:
+        f.write("UseVitaminSTL=false;\n")
     if debug:
         f.write("DebugConnectors=true;\n");
         f.write("DebugCoordinateFrames=true;\n");

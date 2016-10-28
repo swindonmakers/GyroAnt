@@ -3,7 +3,9 @@
 
 ### 1x C2020 Micro Brushless Outrunner 3500kv 11g
 
-No sources found
+Unit Cost | Source | Notes 
+--- | --- | --- 
+10.00 | [link](http://hobbyking.com) | 
 
 ![](../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png) 
 
@@ -123,6 +125,6 @@ No sources found
 Metric | Value 
 --- | --- 
 Total Vitamins | 29
-Total Cost (cheapest) | 0.0 GBP
+Total Cost (cheapest) | 10.0 GBP
 
 
