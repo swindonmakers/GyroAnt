@@ -15,7 +15,7 @@ from types import *
 from views import polish;
 from views import render_view;
 from views import render_view_using_file;
-
+from animate import animateAssembly;
 
 def machine_dir(s):
     s = s.replace(" ","")
@@ -45,6 +45,7 @@ def assemblies():
             if not os.path.isdir(view_dir):
                 os.makedirs(view_dir)
 
+            # for each assembly
             for a in al:
                 print("  "+a['title'])
                 fn = '../' + a['file']
@@ -77,6 +78,11 @@ def assemblies():
                         for view in step['views']:
                             render_view_using_file(a['title']+'_step'+str(step['num']), temp_name, view_dir, view, hashchanged, h)
 
+                    # for each animation
+                    for anim in a['animations']:
+                        print("    Animation: "+anim['title']+", framesPerStep="+str(anim['framesPerStep']))
+
+                        animateAssembly(m['title'], a['title'], anim['title'], anim['framesPerStep'])
 
                 else:
                     print("    Error: scad file not found: "+a['file'])

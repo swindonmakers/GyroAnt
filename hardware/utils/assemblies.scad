@@ -198,6 +198,15 @@ module markdown(section="introduction", markdown="") {
     }
 }
 
+module animation(title="anim",framesPerStep=10) {
+    object(true) {
+        attr("title",title);
+        attr("type","animation");
+        attr("framesPerStep", framesPerStep, raw=true);
+        children();
+    }
+}
+
 module debug(s="") {
     if ($ShowBOM) {
         // TODO: decide what to do here...
