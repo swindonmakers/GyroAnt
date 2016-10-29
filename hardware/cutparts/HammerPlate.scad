@@ -8,7 +8,7 @@
 // Connectors
 
 HammerPlate_Con_Def				= [ [0,0,0], [0,0,-1], 0, 0, 0];
-HammerPlate_Con_Fixing1         = [ [ToothScrewSpacing/2,0,0], [0,0,-1], 0, 0, 0];
+HammerPlate_Con_Fixing1         = [ [ToothScrewSpacing/2,0,-0.5], [0,0,-1], 0, 0, 0];
 
 
 module HammerPlate(complete=false) {

@@ -31,13 +31,13 @@ module WeaponRing_Model()
     difference() {
         union() {
             // thin wall
-            tube(WeaponOR-RingThickness+0.5, WeaponOR-RingThickness, WheelOD-4);
+            tube(WeaponOR-RingThickness+1, WeaponOR-RingThickness, (WheelOD-2*GroundClearance)/3 + eta);
 
             // thick rings
             for(i=[0,1])
                 mirror([0,0,i])
                 translate([0,0, -(WheelOD-2*GroundClearance)/2])
-                conicalTube(WeaponOR, WeaponOR-RingThickness, WeaponOR-RingThickness+0.5, WeaponOR-RingThickness, (WheelOD-2*GroundClearance)/3, center=true);
+                conicalTube(WeaponOR, WeaponOR-RingThickness+0.5, WeaponOR-RingThickness+1, WeaponOR-RingThickness, (WheelOD-2*GroundClearance)/3, center=true);
 
             // v ring
             translate([0,0, - WheelOD/2 + BearingHeight])
@@ -72,11 +72,19 @@ module WeaponRing_Model()
         union()
             for (i=[0,1])
             rotate([0,0, 180*i])
-            translate([WeaponOR-1,0,-(WheelOD-2*GroundClearance)/2 ])
-            linear_extrude(WheelOD - 2*GroundClearance)
-            polygon([[0,0], [-4,17], [7,2], [7,0]]);
+            hull() {
+                translate([WeaponOR-1,0,-(WheelOD-2*GroundClearance)/2 ])
+                    linear_extrude(WheelOD - 2*GroundClearance)
+                    polygon([[0,0], [-17,30], [-5,20], [7,2], [7,0]]);
 
-        // weight loss
+                scale([1.1,1,1])
+                    sector3D(WeaponOR-RingThickness+1, 90, WheelOD-2*GroundClearance, center = true);
+            }
+
+        // hollow
+        cylinder(r=WeaponOR - RingThickness + 0.5, h=100, center=true);
+
+        // v-shaped weight loss
         translate([0,0, 0])
             rotate_extrude()
                 polygon([[WeaponOR+1 ,0], [WeaponOR + 9,7], [WeaponOR + 9,-7]]);

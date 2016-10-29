@@ -140,14 +140,14 @@ module Base_Model()
                 // cable ways
                 for (i=[0,1])
                     mirror([i,0,0])
-                    translate([14,8,0])
+                    translate([10,8,8])
                     cube([5,3.5,10]);
             }
 
             // front fillet
             translate([0, 10.3 + 0.5, BaseThickness])
                 rotate([0,-90,0])
-                fillet(filletR, 28);
+                fillet(filletR, 37);
 
             // back
             difference() {
