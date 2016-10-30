@@ -62,7 +62,7 @@ module WeaponRing_Model()
         }
 
         // debug
-        rotate([0,0,45]) translate([0,0,-50]) cube([100,100,100]);
+        *rotate([0,0,45]) translate([0,0,-50]) cube([100,100,100]);
     }
 
 
