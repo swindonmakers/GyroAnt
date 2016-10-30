@@ -1,13 +1,13 @@
 //
 // Vitamins
-include <../vitamins/N20DCGearMotor.scad>
-include <../vitamins/VGrooveBearing.scad>
-include <../vitamins/nut.scad>
-include <../vitamins/screw.scad>
-include <../vitamins/C2020BrushlessOutrunner.scad>
-include <../vitamins/DYS16AESC.scad>
-include <../vitamins/TurnigyNanoTech120mAh2S25C.scad>
-include <../vitamins/TowerProSG90Driver.scad>
-include <../vitamins/DasMikroReceiver.scad>
-include <../vitamins/ORing.scad>
-include <../vitamins/StockMetal.scad>
+include <../framework/vitamins/N20DCGearMotor.scad>
+include <../framework/vitamins/VGrooveBearing.scad>
+include <../framework/vitamins/nut.scad>
+include <../framework/vitamins/screw.scad>
+include <../framework/vitamins/C2020BrushlessOutrunner.scad>
+include <../framework/vitamins/DYS16AESC.scad>
+include <../framework/vitamins/TurnigyNanoTech120mAh2S25C.scad>
+include <../framework/vitamins/TowerProSG90Driver.scad>
+include <../framework/vitamins/DasMikroReceiver.scad>
+include <../framework/vitamins/ORing.scad>
+include <../framework/vitamins/StockMetal.scad>
