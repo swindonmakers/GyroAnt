@@ -71,7 +71,7 @@ def vitamins():
     print("--------")
 
     # load hardware.json
-    jf = open("hardware.json","r")
+    jf = open("../../build/hardware.json","r")
     jso = json.load(jf)
     jf.close()
 
@@ -87,7 +87,7 @@ def vitamins():
 
 
     # Save changes to json
-    with open('hardware.json', 'w') as f:
+    with open('../../build/hardware.json', 'w') as f:
         f.write(json.dumps(jso, sort_keys=False, indent=4, separators=(',', ': ')))
 
     return 0
