@@ -28,6 +28,7 @@ module WeaponRing_STL() {
 module WeaponRing_Model()
 {
     // centered on origin
+    render()
     difference() {
         union() {
             // thin wall
@@ -46,7 +47,7 @@ module WeaponRing_Model()
                     [WeaponOR-RingThickness-2.3 ,-0.3],
                     [WeaponOR-RingThickness-2.3,0.3],
                     [WeaponOR-RingThickness,2],
-                    [WeaponOR-RingThickness,-2]
+                    [WeaponOR-RingThickness+0.3,-2.2]
                 ]);
 
             // 2nd v-ring to rub against outrunner
