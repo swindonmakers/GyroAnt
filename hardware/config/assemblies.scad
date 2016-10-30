@@ -8,3 +8,4 @@
 // Order the include statements such that the lowest sub-assemblies are first
 include <../assemblies/Final.scad>
 include <../assemblies/WeaponRing.scad>
+include <../assemblies/Wheel.scad>

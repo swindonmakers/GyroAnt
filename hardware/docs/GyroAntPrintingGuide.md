@@ -29,6 +29,20 @@ Approx Plastic Cost | 0.04 GBP
 
 
 
+### Tyre
+
+Metric | Value 
+--- | --- 
+Quantity | 2
+STL | [Tyre](../printedparts/stl/Tyre.stl)
+Plastic (Kg) | 0.0
+Plastic (cm3) | 1.2
+Approx Plastic Cost | 0.02 GBP
+
+![](../printedparts/images/Tyre_view.png)
+
+
+
 ### WeaponRing
 
 Metric | Value 
@@ -65,9 +79,9 @@ Approx Plastic Cost | 0.05 GBP
 
 Metric | Value 
 --- | --- 
-Total Parts | 5
+Total Parts | 7
 Total Plastic (Kg) | 0.03KG
-Total Plastic (cm3) | 21.4cm3
-Approx Plastic Cost | 0.4 GBP
+Total Plastic (cm3) | 22.6cm3
+Approx Plastic Cost | 0.42 GBP
 
 

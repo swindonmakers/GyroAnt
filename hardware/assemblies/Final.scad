@@ -59,7 +59,7 @@ module FinalAssembly () {
             // left wheel
             attach(DefConDown, DefConDown, ExplodeSpacing=30)  // dummy attach to ensure correct explode vector
                 attach(Con_LW, DefConDown, ExplodeSpacing=30)
-                Wheel_STL();
+                WheelAssembly();
 
             // axle
             attach(DefConRight, DefConRight, ExplodeSpacing=15)  // dummy attach to ensure correct explode vector
@@ -72,7 +72,7 @@ module FinalAssembly () {
             // right wheel
             attach(DefConDown, DefConDown, ExplodeSpacing=30)  // dummy attach to ensure correct explode vector
                 attach(Con_RW, DefConDown, ExplodeSpacing=30)
-                Wheel_STL();
+                WheelAssembly();
             // axle
             attach(DefConLeft, DefConLeft, ExplodeSpacing=15)  // dummy attach to ensure correct explode vector
                 attach(Con_RW, DefConDown, ExplodeSpacing=30)

@@ -27,16 +27,25 @@ module Wheel_STL() {
 
 module Wheel_Model()
 {
+    t =1.5;
+    h= 5;
     difference() {
         union() {
             // tyre
-            tube(WheelOD/2, WheelOD/2-2, h=5, center=false);
+            tube(WheelOD/2 - TyreThickness, WheelOD/2-TyreThickness-t, h=h, center=false);
 
             // spokes
             for (i=[0:3])
                 rotate([0,0,i*360/4 + 45])
                 translate([0,-2,0])
-                cube([WheelOD/2-1, 4, 1]);
+                cube([WheelOD/2-TyreThickness-1, 4, 1]);
+
+            // keys for tyre
+            nk = 12;
+            for (i=[0:nk-1])
+                rotate([0,0,i*360/nk])
+                translate([WheelOD/2-TyreThickness-1,-1,0])
+                cube([TyreThickness, 2, h]);
 
             // hub
             cylinder(r=8/2, h=3);

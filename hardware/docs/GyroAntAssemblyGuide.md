@@ -38,13 +38,14 @@ Qty | Part Name | Image
 --- | --- | ---
 1 | [Base](../printedparts/stl/Base.stl) | ![](../printedparts/images/Base_view.png) | 
 1 | [Lid](../printedparts/stl/Lid.stl) | ![](../printedparts/images/Lid_view.png) | 
+2 | [Tyre](../printedparts/stl/Tyre.stl) | ![](../printedparts/images/Tyre_view.png) | 
 1 | [WeaponRing](../printedparts/stl/WeaponRing.stl) | ![](../printedparts/images/WeaponRing_view.png) | 
 2 | [Wheel](../printedparts/stl/Wheel.stl) | ![](../printedparts/images/Wheel_view.png) | 
 
 
 **Plastic Required**
 
-21.4cm3, 0.03KG,  approx: 0.35 GBP
+22.6cm3, 0.03KG,  approx: 0.37 GBP
 
 
 # Cutting Instructions
@@ -66,6 +67,29 @@ Qty | Vitamin | Image
 
 
 # Assembly Instructions
+
+## Wheel (x2)
+
+### Printed Parts
+
+Qty | Part Name | Image
+--- | --- | ---
+2 | [Tyre](../printedparts/stl/Tyre.stl) | ![](../printedparts/images/Tyre_view.png) | 
+2 | [Wheel](../printedparts/stl/Wheel.stl) | ![](../printedparts/images/Wheel_view.png) | 
+
+### Assembly Animation
+
+![](../assemblies/GyroAnt/Wheel.gif)
+
+### Assembly Steps
+
+1. Place wheel hub into the tyre mould
+![](../assemblies/GyroAnt/Wheel_step1_view.png)
+2. Pour in rubber to overmould the tyre
+![](../assemblies/GyroAnt/Wheel_step2_view.png)
+3. Once dry, remove the finished tyre from the mould
+![](../assemblies/GyroAnt/Wheel_step3_view.png)
+
 
 ## WeaponRing
 
@@ -116,12 +140,12 @@ Qty | Part Name | Image
 --- | --- | ---
 1 | [Base](../printedparts/stl/Base.stl) | ![](../printedparts/images/Base_view.png) | 
 1 | [Lid](../printedparts/stl/Lid.stl) | ![](../printedparts/images/Lid_view.png) | 
-2 | [Wheel](../printedparts/stl/Wheel.stl) | ![](../printedparts/images/Wheel_view.png) | 
 
 ### Sub-Assemblies
 
 Qty | Name 
 --- | --- 
+2 | Wheel
 1 | WeaponRing
 
 ### Assembly Animation

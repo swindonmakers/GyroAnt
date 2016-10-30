@@ -25,6 +25,7 @@ tw 				= ThickWall;
 
 // Global design parameters
 WheelOD = 25;
+TyreThickness = 2;
 WeaponOR = 74/2;
 RingThickness = 3;
 GroundClearance = 2;
