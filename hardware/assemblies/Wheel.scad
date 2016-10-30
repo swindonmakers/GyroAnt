@@ -15,7 +15,7 @@ module WheelAssembly () {
             view(t=[0,0,0], r=[52,0,218], d=240);
 
 
-            if (CurStep<3)
+            if (CurStep<3 || $ShowBOM)
                 attach([[0,0,-1], [0,0,1], 0,0,0], DefConUp)
                   TyreMould_STL();
         }
@@ -35,7 +35,7 @@ module WheelAssembly () {
         step(3, "Once dry, remove the finished tyre from the mould") {
             view(t=[0,0,0], r=[52,0,218], d=240);
 
-            if (CurStep<4)
+            if (CurStep<4 || $ShowBOM)
                 attach([[0,0,-11], [0,0,-1], 0,0,0], DefConDown)
                 TyreMould_STL();
         }
