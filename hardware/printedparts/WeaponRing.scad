@@ -57,12 +57,12 @@ module WeaponRing_Model()
                     [WeaponOR-RingThickness-2.3 ,-0.3],
                     [WeaponOR-RingThickness-2.3,0.3],
                     [WeaponOR-RingThickness,2],
-                    [WeaponOR-RingThickness,-2]
+                    [WeaponOR-RingThickness,-2.5]
                 ]);
         }
 
         // debug
-        *rotate([0,0,45]) translate([0,0,-50]) cube([100,100,100]);
+        rotate([0,0,45]) translate([0,0,-50]) cube([100,100,100]);
     }
 
 
