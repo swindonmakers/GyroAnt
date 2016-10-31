@@ -19,6 +19,9 @@ paths = {
     'template':'../template',
     'templatedocs': '../template/docs',
     'vitamins':'../vitamins',
+    'vitaminsstl': '../vitamins/stl',
+    'vitaminsimages':'../vitamins/images',
     'openscadlog': '../../build/openscad.log',
     'dummycsg': '../../build/dummy.csg',
+    'frameworkdocs': '../docs'
 }

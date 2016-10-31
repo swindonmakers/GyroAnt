@@ -2,6 +2,7 @@
 
 # Generate the vitamin catalogue
 
+import config
 import os
 import shutil
 import sys
@@ -60,19 +61,11 @@ def add_vitamin(n, dom):
 
 def compile_vitamin(v, dom):
 
-    temp_name =  "temp.scad"
-
-
     #
     # Make the target directories
     #
-    target_dir = "../vitamins/stl"
-    if not os.path.isdir(target_dir):
-        os.makedirs(target_dir)
-
-    view_dir = "../vitamins/images"
-    if not os.path.isdir(view_dir):
-        os.makedirs(view_dir)
+    if not os.path.isdir(config.paths['vitaminsimages']):
+        os.makedirs(config.paths['vitaminsimages'])
 
     # Compile
     print("  "+v['title'])
@@ -80,8 +73,8 @@ def compile_vitamin(v, dom):
     if (os.path.isfile(fn)):
 
         print("    Checking csg hash")
-        h = openscad.get_csg_hash(temp_name, v['call'], [fn]);
-        os.remove(temp_name);
+        h = openscad.get_csg_hash(config.paths['tempscad'], v['call'], [fn]);
+        os.remove(config.paths['tempscad']);
 
         hashchanged = ('hash' in v and h != v['hash']) or (not 'hash' in v)
 
@@ -94,11 +87,10 @@ def compile_vitamin(v, dom):
             if type(view) is DictType and view['type'] == 'view':
                 print("      "+view['title'])
 
-                render_view(v['title'], v['call'], view_dir, view, hashchanged, h, [fn], False, useVitaminSTL=False)
+                render_view(v['title'], v['call'], config.paths['vitaminsimages'], view, hashchanged, h, [fn], False, useVitaminSTL=False)
 
-                png_name = view_dir + '/' + view_filename(v['title'] + '_' + view['title'])
+                png_name = os.path.join(config.paths['vitaminsimages'],  view_filename(v['title'] + '_' + view['title']))
                 view['png_name'] = png_name
-
 
         node = add_vitamin(v, dom)
 
@@ -109,29 +101,26 @@ def compile_vitamin(v, dom):
 
 def parse_vitamin(vitaminscad, use_catalogue_call=False):
 
-    tempscadfile =  "temp.scad"
-    logfile = 'openscad.log'
-
     vitamincall = vitaminscad[:-5];
 
     print("  Calling: "+ vitamincall + "();")
 
     # Generate a wrapper scad file for the vitamin file
-    with open(tempscadfile, "w") as f:
+    with open(config.paths['tempscad'], "w") as f:
         f.write("include <../config/config.scad>\n")
-        f.write("include <../vitamins/"+vitaminscad+">\n")
+        f.write("include <../framework/vitamins/"+vitaminscad+">\n")
         if use_catalogue_call:
             f.write(vitamincall + "_Catalogue();\n");
         else:
             f.write(vitamincall + "();\n");
 
-    openscad.run('-D','$ShowBOM=true','-o','dummy.csg',tempscadfile);
+    openscad.run('-D','$ShowBOM=true','-o',config.paths['dummycsg'],config.paths['tempscad']);
 
     js = ''
 
     errorlevel = 0
 
-    for line in open(logfile, "rt").readlines():
+    for line in open(config.paths['openscadlog'], "rt").readlines():
         # errors
         r = re.search(r".*syntax error$", line, re.I)
         if r:
@@ -187,10 +176,6 @@ def catalogue():
 
     md = "# Vitamin Catalogue\n\n"
 
-
-    target_dir = "../docs"
-    src_dir = "../vitamins/"
-
     print("Looking for vitamin files...")
 
     js = '[\n'
@@ -198,7 +183,7 @@ def catalogue():
     files = 0
     errorlevel = 0
 
-    for filename in os.listdir(src_dir):
+    for filename in os.listdir(config.paths['vitamins']):
         if filename[-5:] == '.scad':
             print("  Parsing: "+filename)
 
@@ -271,7 +256,7 @@ def catalogue():
 
 
     print("Saving markdown")
-    mdpath = target_dir + '/VitaminCatalogue.md'
+    mdpath = config.paths['frameworkdocs'] + '/VitaminCatalogue.md'
     with open(mdpath,'w') as f:
         f.write(md)
 
