@@ -1,19 +1,17 @@
-# CI Scripts
+# Framework Scripts
 
 ## Overview
 
-The /hardware/ci directory contains all of the continuous integration scripts for the hardware portion of the project.
-
 To build all files within the project:
 
-1. Open a terminal and change to the /hardware/ci directory
-2. Run: python build.py  (or just ./build.py)
+1. Open a terminal and change to the /framework directory
+2. Run: ./build.sh
 
 
 
 ### Build Process
 
-The build.py script calls the other scripts in order to:
+The framework/build.sh script actually calls framework/scripts/build.py, which in turn calls the other scripts in order to:
 
 1. Check machine files (and all included files) for syntax errors
 2. Parse the various machine files for BOM information, storing the result in hardware.json
@@ -34,3 +32,7 @@ You'll need to install the following dependencies to run the full build process:
 
 1. PIL - the Python Image Library - use: pip install pillow
 2. Pystache - the Pystache template library - use: pip install pystache
+
+### Other Dependencies
+
+ImageMagick "convert" utility
