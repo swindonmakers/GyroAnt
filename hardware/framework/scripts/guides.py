@@ -2,6 +2,7 @@
 
 # Generate the assembly guides for each machine, as well as index files
 
+import config
 import os
 import openscad
 import shutil
@@ -213,7 +214,7 @@ def assembly_level(a):
     return a['level']
 
 
-def gen_assembly_guide(m, target_dir, guide_template):
+def gen_assembly_guide(m, guide_template):
     print(m['title'])
 
     md = ''
@@ -256,13 +257,13 @@ def gen_assembly_guide(m, target_dir, guide_template):
 
     print("  Saving markdown")
     mdfilename = md_filename(m['title'] +'AssemblyGuide')
-    mdpath = target_dir + '/' +mdfilename
+    mdpath = config.paths['docs'] + '/' +mdfilename
     with open(mdpath,'w') as f:
         f.write(md)
 
     print("  Generating htm")
     htmfilename = htm_filename(m['title'] +'AssemblyGuide')
-    htmpath = target_dir + '/' + htmfilename
+    htmpath = config.paths['docs'] + '/' + htmfilename
     with open(htmpath, 'w') as f:
         for line in open(guide_template, "r").readlines():
             line = line.replace("{{mdfilename}}", mdfilename)
@@ -271,7 +272,7 @@ def gen_assembly_guide(m, target_dir, guide_template):
     return {'title':m['title']+ ' Assembly Guide', 'mdfilename':mdfilename, 'htmfilename':htmfilename}
 
 
-def gen_printing_guide(m, target_dir, guide_template):
+def gen_printing_guide(m, guide_template):
     print(m['title'])
 
     if len(m['printed']) == 0:
@@ -330,13 +331,13 @@ def gen_printing_guide(m, target_dir, guide_template):
 
     print("  Saving markdown")
     mdfilename = md_filename(m['title'] +'PrintingGuide')
-    mdpath = target_dir + '/' +mdfilename
+    mdpath = config.paths['docs'] + '/' +mdfilename
     with open(mdpath,'w') as f:
         f.write(md)
 
     print("  Generating htm")
     htmfilename = htm_filename(m['title'] +'PrintingGuide')
-    htmpath = target_dir + '/' + htmfilename
+    htmpath = config.paths['docs'] + '/' + htmfilename
     with open(htmpath, 'w') as f:
         for line in open(guide_template, "r").readlines():
             line = line.replace("{{mdfilename}}", mdfilename)
@@ -365,7 +366,7 @@ def load_sources():
 
 
 
-def gen_sourcing_guide(m, target_dir, guide_template):
+def gen_sourcing_guide(m, guide_template):
     print(m['title'])
 
     if len(m['vitamins']) == 0:
@@ -438,13 +439,13 @@ def gen_sourcing_guide(m, target_dir, guide_template):
 
     print("  Saving markdown")
     mdfilename = md_filename(m['title'] +'SourcingGuide')
-    mdpath = target_dir + '/' +mdfilename
+    mdpath = config.paths['docs'] + '/' +mdfilename
     with open(mdpath,'w') as f:
         f.write(md)
 
     print("  Generating htm")
     htmfilename = htm_filename(m['title'] +'SourcingGuide')
-    htmpath = target_dir + '/' + htmfilename
+    htmpath = config.paths['docs'] + '/' + htmfilename
     with open(htmpath, 'w') as f:
         for line in open(guide_template, "r").readlines():
             line = line.replace("{{mdfilename}}", mdfilename)
@@ -478,23 +479,20 @@ def guides():
     print("Guides")
     print("------")
 
-    temp_name =  "temp.scad"
-
     #
     # Make the target directories
     #
-    target_dir = "../docs"
-    if not os.path.isdir(target_dir):
-        os.makedirs(target_dir)
+    if not os.path.isdir(config.paths['docs']):
+        os.makedirs(config.paths['docs'])
 
-    assembly_guide_template = os.path.join(target_dir, "templates/AssemblyGuide.htm")
-    printing_guide_template = os.path.join(target_dir, "templates/PrintingGuide.htm")
-    sourcing_guide_template = os.path.join(target_dir, "templates/SourcingGuide.htm")
-    index_template = os.path.join(target_dir, "templates/index.htm")
-    index_file = os.path.join(target_dir, 'index.htm')
+    assembly_guide_template = os.path.join(config.paths['templatedocs'], "AssemblyGuide.htm")
+    printing_guide_template = os.path.join(config.paths['templatedocs'], "PrintingGuide.htm")
+    sourcing_guide_template = os.path.join(config.paths['templatedocs'], "SourcingGuide.htm")
+    index_template = os.path.join(config.paths['templatedocs'], "index.htm")
+    index_file = os.path.join(config.paths['docs'], 'index.htm')
 
     # load hardware.json
-    jf = open("hardware.json","r")
+    jf = open(config.paths['json'],"r")
     jso = json.load(jf)
     jf.close()
 
@@ -511,11 +509,11 @@ def guides():
             if 'guides' not in m:
                 m['guides'] = []
 
-            m['guides'].append(gen_assembly_guide(m, target_dir, assembly_guide_template))
+            m['guides'].append(gen_assembly_guide(m, assembly_guide_template))
 
-            m['guides'].append(gen_printing_guide(m, target_dir, printing_guide_template))
+            m['guides'].append(gen_printing_guide(m, printing_guide_template))
 
-            m['guides'].append(gen_sourcing_guide(m, target_dir, sourcing_guide_template))
+            m['guides'].append(gen_sourcing_guide(m, sourcing_guide_template))
 
 
     gen_index(jso, index_file, index_template)

@@ -1,7 +1,7 @@
 include <config/config.scad>
 
 STLPath = "printedparts/stl/";
-VitaminSTL = "vitamins/stl/";
+VitaminSTL = "framework/vitamins/stl/";
 
 DebugCoordinateFrames = 0;
 DebugConnectors = false;

@@ -1,7 +1,7 @@
 # GyroAnt
 # Assembly Guide
 
-![view](../images/GyroAnt_view.png)
+![view](../../images/GyroAnt_view.png)
 
 ## Bill of Materials
 
@@ -38,6 +38,7 @@ Qty | Part Name | Image
 --- | --- | ---
 1 | [Base](../printedparts/stl/Base.stl) | ![](../printedparts/images/Base_view.png) | 
 1 | [Lid](../printedparts/stl/Lid.stl) | ![](../printedparts/images/Lid_view.png) | 
+4 | [Tyre Mould](../printedparts/stl/TyreMould.stl) | ![](../printedparts/images/TyreMould_view.png) | 
 2 | [Tyre](../printedparts/stl/Tyre.stl) | ![](../printedparts/images/Tyre_view.png) | 
 1 | [WeaponRing](../printedparts/stl/WeaponRing.stl) | ![](../printedparts/images/WeaponRing_view.png) | 
 2 | [Wheel](../printedparts/stl/Wheel.stl) | ![](../printedparts/images/Wheel_view.png) | 
@@ -45,7 +46,7 @@ Qty | Part Name | Image
 
 **Plastic Required**
 
-22.6cm3, 0.03KG,  approx: 0.37 GBP
+32.6cm3, 0.04KG,  approx: 0.53 GBP
 
 
 # Cutting Instructions
@@ -74,6 +75,7 @@ Qty | Vitamin | Image
 
 Qty | Part Name | Image
 --- | --- | ---
+4 | [Tyre Mould](../printedparts/stl/TyreMould.stl) | ![](../printedparts/images/TyreMould_view.png) | 
 2 | [Tyre](../printedparts/stl/Tyre.stl) | ![](../printedparts/images/Tyre_view.png) | 
 2 | [Wheel](../printedparts/stl/Wheel.stl) | ![](../printedparts/images/Wheel_view.png) | 
 

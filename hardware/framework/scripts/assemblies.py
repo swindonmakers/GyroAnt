@@ -2,6 +2,7 @@
 
 # Renders views for assembly steps
 
+import config
 import os
 import openscad
 import shutil
@@ -26,10 +27,8 @@ def assemblies():
     print("Assemblies")
     print("----------")
 
-    temp_name =  "temp.scad"
-
     # load hardware.json
-    jf = open("hardware.json","r")
+    jf = open(config.paths['json'],"r")
     jso = json.load(jf)
     jf.close()
 
@@ -41,19 +40,19 @@ def assemblies():
             al = m['assemblies']
 
             # make target directory
-            view_dir = "../assemblies/"+machine_dir(m['title'])
+            view_dir = config.paths['assemblies']+"/"+machine_dir(m['title'])
             if not os.path.isdir(view_dir):
                 os.makedirs(view_dir)
 
             # for each assembly
             for a in al:
                 print("  "+a['title'])
-                fn = '../' + a['file']
+                fn = config.paths['root'] + a['file']
                 if (os.path.isfile(fn)):
 
                     print("    Checking csg hash")
-                    h = openscad.get_csg_hash(temp_name, a['call']);
-                    os.remove(temp_name);
+                    h = openscad.get_csg_hash(config.paths['tempscad'], a['call']);
+                    os.remove(config.paths['tempscad']);
 
                     hashchanged = ('hash' in a and h != a['hash']) or (not 'hash' in a)
 
@@ -63,7 +62,7 @@ def assemblies():
                     # Steps
                     for step in a['steps']:
                         # Generate step file
-                        f = open(temp_name, "w")
+                        f = open(config.paths['tempscad'], "w")
                         f.write("include <../config/config.scad>\n")
                         f.write("DebugConnectors = false;\n");
                         f.write("DebugCoordinateFrames = false;\n");
@@ -76,7 +75,7 @@ def assemblies():
                         # Views
                         print("      Step "+str(step['num']))
                         for view in step['views']:
-                            render_view_using_file(a['title']+'_step'+str(step['num']), temp_name, view_dir, view, hashchanged, h)
+                            render_view_using_file(a['title']+'_step'+str(step['num']), config.paths['tempscad'], view_dir, view, hashchanged, h)
 
                     # for each animation
                     for anim in a['animations']:
@@ -89,7 +88,7 @@ def assemblies():
 
 
     # Save changes to json
-    with open('hardware.json', 'w') as f:
+    with open(config.paths['json'], 'w') as f:
         f.write(json.dumps(jso, sort_keys=False, indent=4, separators=(',', ': ')))
 
     return 0

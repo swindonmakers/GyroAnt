@@ -2,6 +2,7 @@
 
 # Renders an animation for a specific machine/assembly combo
 
+import config
 import os
 import openscad
 import shutil
@@ -49,10 +50,8 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
     print("NB: Make sure you've run parse.py first!")
     print("")
 
-    temp_name =  "temp.scad"
-
     # load hardware.json
-    jf = open("hardware.json","r")
+    jf = open(config.paths['json'],"r")
     jso = json.load(jf)
     jf.close()
 
@@ -64,7 +63,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
             al = m['assemblies']
 
             # make target directory
-            view_dir = "../assemblies/"+machine_dir(m['title'])
+            view_dir = os.path.join(config.paths['assemblies'],machine_dir(m['title']))
             if not os.path.isdir(view_dir):
                 os.makedirs(view_dir)
 
@@ -72,12 +71,12 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
             for a in al:
                 if a['title'] == aname:
                     print("Found assembly: "+a['title'])
-                    fn = '../' + a['file']
+                    fn = config.paths['root'] + a['file']
                     if (os.path.isfile(fn)):
 
                         print("  Checking csg hash")
-                        h = openscad.get_csg_hash(temp_name, a['call']);
-                        os.remove(temp_name);
+                        h = openscad.get_csg_hash(config.paths['tempscad'], a['call']);
+                        os.remove(config.paths['tempscad']);
 
                         hashchanged = ('hash' in a and h != a['hash']) or (not 'hash' in a)
 
@@ -129,7 +128,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                         #print("t: "+str(t) +", s: "+str(ShowStep)+", a:"+str(AnimateExplodeT))
 
                                         # Generate step file
-                                        f = open(temp_name, "w")
+                                        f = open(config.paths['tempscad'], "w")
                                         f.write("include <../config/config.scad>\n")
                                         f.write("DebugConnectors = false;\n");
                                         f.write("DebugCoordinateFrames = false;\n");
@@ -144,7 +143,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                         views.PolishTransparentBackground = False
                                         views.PolishCrop = False
                                         lfn = view_dir + "/" +prefix + format(frameNum, '03') + "_" +view['title']+".png"
-                                        views.render_view_using_file(prefix + format(frameNum, '03'), temp_name, view_dir, tv, hashchanged, h)
+                                        views.render_view_using_file(prefix + format(frameNum, '03'), config.paths['tempscad'], view_dir, tv, hashchanged, h)
                                         frameNum = frameNum + 1
 
                                 view['dist'] = nv['dist']
@@ -162,7 +161,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                 #print("t: "+str(t) +", s: "+str(ShowStep)+", a:"+str(AnimateExplodeT))
 
                                 # Generate step file
-                                f = open(temp_name, "w")
+                                f = open(config.paths['tempscad'], "w")
                                 f.write("include <../config/config.scad>\n")
                                 f.write("DebugConnectors = false;\n");
                                 f.write("DebugCoordinateFrames = false;\n");
@@ -179,7 +178,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                                 views.PolishCrop = False
                                 fn = view_dir + "/" +prefix + format(frameNum, '03') + "_" +view['title']+".png"
                                 print("Rendering: "+fn)
-                                views.render_view_using_file(prefix + format(frameNum, '03'), temp_name, view_dir, view, hashchanged, h)
+                                views.render_view_using_file(prefix + format(frameNum, '03'), config.paths['tempscad'], view_dir, view, hashchanged, h)
                                 frameNum = frameNum + 1
 
                                 if frame == 0:
@@ -242,7 +241,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                             #print("t: "+str(t) +", r:"+str(r))
 
                             # Generate step file
-                            f = open(temp_name, "w")
+                            f = open(config.paths['tempscad'], "w")
                             f.write("include <../config/config.scad>\n")
                             f.write("DebugConnectors = false;\n");
                             f.write("DebugCoordinateFrames = false;\n");
@@ -255,7 +254,7 @@ def animateAssembly(mname, aname, prefix, framesPerStep):
                             # Views
                             views.PolishTransparentBackground = False
                             views.PolishCrop = False
-                            views.render_view_using_file(prefix + format(frameNum, '03'), temp_name, view_dir, tv, hashchanged, h)
+                            views.render_view_using_file(prefix + format(frameNum, '03'), config.paths['tempscad'], view_dir, tv, hashchanged, h)
                             frameNum = frameNum + 1
 
 

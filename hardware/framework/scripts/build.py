@@ -2,6 +2,7 @@
 
 # Run the various build scripts
 
+import config
 import sys, getopt
 import os
 from parse import parse_machines
@@ -11,7 +12,6 @@ from vitamins import vitamins
 from cut import cut
 from printed import printed
 from guides import guides
-from publish import publish
 from catalogue import catalogue
 from subprocess import check_output
 
@@ -19,19 +19,17 @@ def build(argv):
 
     doCatalogue = True
     doQuick = False
-    doPublish = False
     try:
-        opts, args = getopt.getopt(argv,"hcqp",[])
+        opts, args = getopt.getopt(argv,"hcq",[])
     except getopt.GetoptError:
-        print 'build.py -h -c -q -p'
+        print 'build.py -h -c -q'
         print ''
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print 'Usage: -h -c -q -p'
+            print 'Usage: -h -c -q'
             print ''
             print '  -c   Skip catalogue'
-            print '  -p   Publish: auto commit and push to git'
             print '  -q   Quick build - skip assemblies, guide and catalogue'
             sys.exit()
         if opt in ("-c"):
@@ -39,26 +37,21 @@ def build(argv):
         if opt in ("-q"):
             doQuick = True
             doCatalogue = False
-        if opt in ("-p"):
-            doPublish = True
 
     print("Build")
     print("-----")
 
-    outfile = '../../build/hardware.json'
-    oldfile = '../../build/backup.json'
-
     print("Backup current json...")
     oldjso = None
-    if os.path.isfile(outfile) and not os.path.isfile(oldfile):
-        os.rename(outfile, oldfile)
+    if os.path.isfile(config.paths['json']) and not os.path.isfile(config.paths['jsonbackup']):
+        os.rename(config.paths['json'], config.paths['jsonbackup'])
 
     errorlevel = 0
 
     errorlevel += parse_machines()
 
     if errorlevel == 0:
-        errorlevel += vitamins()
+        errorlevel += vitamins() #TODO: sort out paths!!
     if errorlevel == 0:
         errorlevel += cut()
     if errorlevel == 0:
@@ -72,15 +65,11 @@ def build(argv):
         errorlevel += guides()
 
     if doCatalogue and not doQuick:
-        catalogue()
-
-    if errorlevel == 0 and doPublish > 0:
-        publish()
-
+        catalogue()  # TODO: catalogue!!
 
     # if everything is ok then delete backup - no longer required
-    if errorlevel == 0 and os.path.isfile(oldfile):
-        os.remove(oldfile)
+    if errorlevel == 0 and os.path.isfile(config.paths['jsonbackup']):
+        os.remove(config.paths['jsonbackup'])
 
     try:
         if sys.platform == "darwin":

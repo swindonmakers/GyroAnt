@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # Renders views and STL cache for printed parts
-
+import config
 import os
 import openscad
 import slic3r
@@ -21,24 +21,20 @@ def printed():
     print("Printed Parts")
     print("-------------")
 
-    temp_name =  "temp.scad"
-
     #
     # Make the target directories
     #
-    target_dir = "../printedparts/stl"
-    if not os.path.isdir(target_dir):
-        os.makedirs(target_dir)
+    if not os.path.isdir(config.paths['printedpartsstl']):
+        os.makedirs(config.paths['printedpartsstl'])
 
     # store a list of valid STLs to aid cleanup
     stlList = []
 
-    view_dir = "../printedparts/images"
-    if not os.path.isdir(view_dir):
-        os.makedirs(view_dir)
+    if not os.path.isdir(config.paths['printedpartsimages']):
+        os.makedirs(config.paths['printedpartsimages'])
 
     # load hardware.json
-    jf = open("hardware.json","r")
+    jf = open(config.paths['json'],"r")
     jso = json.load(jf)
     jf.close()
 
@@ -51,16 +47,16 @@ def printed():
 
             for p in pl:
                 print("  "+p['title'])
-                fn = '../' + p['file']
+                fn = config.paths['root'] + p['file']
                 if (os.path.isfile(fn)):
 
-                    stlpath = os.path.join(target_dir, openscad.stl_filename(p['title']))
-                    md5path = os.path.join(target_dir, openscad.stl_filename(p['title']) + '.md5')
+                    stlpath = os.path.join(config.paths['printedpartsstl'], openscad.stl_filename(p['title']))
+                    md5path = os.path.join(config.paths['printedpartsstl'], openscad.stl_filename(p['title']) + '.md5')
 
                     print("    Checking csg hash")
                     # Get csg hash
-                    h = openscad.get_csg_hash(temp_name, p['call']);
-                    os.remove(temp_name);
+                    h = openscad.get_csg_hash(config.paths['tempscad'], p['call']);
+                    os.remove(config.paths['tempscad']);
 
                     # Get old csg hash
                     oldh = ""
@@ -81,7 +77,7 @@ def printed():
                     print("    STL")
                     if hashchanged or (not os.path.isfile(stlpath)):
                         print("      Rendering STL...")
-                        info = openscad.render_stl(temp_name, stlpath, p['call'])
+                        info = openscad.render_stl(config.paths['tempscad'], stlpath, p['call'])
                         jsontools.json_merge_missing_keys(p, info)
 
                     # Slice for weight and volume
@@ -100,7 +96,7 @@ def printed():
                     for view in p['views']:
                         print("      "+view['title'])
 
-                        render_view(p['title'], p['call'], view_dir, view, hashchanged, h)
+                        render_view(p['title'], p['call'], config.paths['printedpartsimages'], view, hashchanged, h)
 
                     # Add to stlList
                     stlList.append(stlpath)
@@ -111,13 +107,13 @@ def printed():
 
 
     # Save changes to json
-    with open('hardware.json', 'w') as f:
+    with open(config.paths['json'], 'w') as f:
         f.write(json.dumps(jso, sort_keys=False, indent=4, separators=(',', ': ')))
 
     # clean-up orphaned stls and checksums
     print "Checking for outdated STLs..."
-    for f in os.listdir(target_dir):
-        fp = os.path.join(target_dir, f)
+    for f in os.listdir(config.paths['printedpartsstl']):
+        fp = os.path.join(config.paths['printedpartsstl'], f)
         try:
             if os.path.isfile(fp) and (fp not in stlList):
                 print "Removing: "+fp
