@@ -30,7 +30,7 @@ module HammerPlate(complete=false) {
         // Most cut parts use a difference...
         difference() {
             step(1, "Cut a small piece of 1mm steel plate to size") {
-                view();
+                view(d=140);
 
                 color([0.9,0.9,0.9])
                     rotate([90,0,90])
@@ -39,7 +39,7 @@ module HammerPlate(complete=false) {
             }
 
             step(2, "Drill two 3mm dia holes at 14mm spacing") {
-                view();
+                view(d=140);
 
                 for (i=[-1,1])
                     translate([i*ToothScrewSpacing/2, 0, 0])
