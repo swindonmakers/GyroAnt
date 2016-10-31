@@ -459,7 +459,7 @@ def gen_index(jso, index_file, index_template):
     # Generate index file
 
     # build object
-    indexObj = { 'machines': [], project:'' };
+    indexObj = { 'machines': [], 'project':'' };
     for m in jso:
         if type(m) is DictType and m['type'] == 'machine':
 

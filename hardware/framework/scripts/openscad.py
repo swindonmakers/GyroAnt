@@ -1,5 +1,6 @@
 from __future__ import print_function
 
+import config
 import subprocess
 import hashlib
 import re
@@ -27,7 +28,7 @@ def get_csg_hash(scadname, obj_call, includes=[]):
 
 
 def get_csg_hash_for(scadname):
-    run_silent("-o", "dummy.csg", scadname)
+    run_silent("-o", config.paths['dummycsg'], scadname)
 
     hasher = hashlib.md5()
     with open(config.paths['dummycsg'], 'rb') as afile:
