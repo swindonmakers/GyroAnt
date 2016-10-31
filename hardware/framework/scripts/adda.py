@@ -71,7 +71,8 @@ def adda(t, n, d):
             o.write(s)
 
         with open(configFile, "a") as o:
-                o.write("include <"+outFile+">\n")
+            # remove initial ../ to ensure correct relative location
+            o.write("include <"+outFile[3:]+">\n")
 
     else:
         print(templateFile + " template is missing")
