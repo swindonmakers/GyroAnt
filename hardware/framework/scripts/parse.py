@@ -2,6 +2,7 @@
 
 # Parse json from machine files, build hardware.json
 
+import config
 import os
 import shutil
 import sys
@@ -13,12 +14,6 @@ import syntax
 from types import *
 
 def parse_machines():
-    src_dir = '../../'
-    logfile = '../../build/openscad.log'
-    outfile = '../../build/hardware.json'
-    oldfile = '../../build/backup.json'
-    errorfile = '../../build/invalid.json'
-
     errorlevel = 0
 
     print("Parse")
@@ -26,25 +21,25 @@ def parse_machines():
 
     # load backup.json - to read cache values
     oldjso = None
-    if os.path.isfile(oldfile):
-        jf = open(oldfile,"r")
+    if os.path.isfile(config.paths['jsonbackup']):
+        jf = open(config.paths['jsonbackup'],"r")
         oldjso = json.load(jf)
         jf.close()
 
     print("Looking for machine files...")
 
     # reset error file
-    if os.path.isfile(errorfile):
-        os.remove(errorfile)
+    if os.path.isfile(config.paths['errors']):
+        os.remove(config.paths['errors'])
 
     js = '[\n'
 
     files = 0
 
-    for filename in os.listdir(src_dir):
+    for filename in os.listdir(config.paths['root']):
         if filename[-5:] == '.scad':
             print("  Parsing: "+filename)
-            scadfile = src_dir + filename
+            scadfile = os.path.join(config.paths['root'], filename)
 
             if (files > 0):
                 js += ', '
@@ -56,7 +51,7 @@ def parse_machines():
                 errorlevel = syn['errorLevel']
             else:
                 try:
-                    s = parse_machine(scadfile, logfile, errorfile)
+                    s = parse_machine(scadfile)
                 except:
                     errorlevel = 1
 
@@ -89,7 +84,7 @@ def parse_machines():
             print(e)
             errorlevel = 1
 
-        with open(outfile, 'w') as f:
+        with open(config.paths['json'], 'w') as f:
             f.write(js)
 
     print("")
@@ -97,7 +92,7 @@ def parse_machines():
     return errorlevel
 
 
-def parse_machine(scadfile, logfile, errorfile):
+def parse_machine(scadfile):
     openscad.run('-D','$ShowBOM=true','-o',config.paths['dummycsg'],scadfile);
 
     # remove dummy.csg
@@ -107,7 +102,7 @@ def parse_machine(scadfile, logfile, errorfile):
 
     errorlevel = 0
 
-    for line in open(logfile, "rt").readlines():
+    for line in open(config.paths['openscadlog'], "rt").readlines():
         # errors
         r = re.search(r".*syntax error$", line, re.I)
         if r:
@@ -143,8 +138,8 @@ def parse_machine(scadfile, logfile, errorfile):
 
         except Exception as e:
             print(e)
-            print("See "+errorfile+" for malformed json")
-            with open(errorfile, 'w') as f:
+            print("See "+config.paths['errors']+" for malformed json")
+            with open(config.paths['errors'], 'w') as f:
                 f.write(js)
             # Stop malformed machine json screwing up everything else!
             js = ''
@@ -559,4 +554,4 @@ def update_cache_info(jso, oldjso):
 
 
 if __name__ == '__main__':
-    parse_machines()
+    print("Parse complete, errorlevel="+str(parse_machines()))

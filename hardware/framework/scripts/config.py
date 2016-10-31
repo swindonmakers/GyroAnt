@@ -24,5 +24,6 @@ paths = {
     'openscadlog': '../../build/openscad.log',
     'dummycsg': '../../build/dummy.csg',
     'frameworkdocs': '../docs',
-    'sourcingcsv': '../../sourcing.csv'
+    'sourcingcsv': '../../sourcing.csv',
+    'errors': '../../build/errors.json'
 }

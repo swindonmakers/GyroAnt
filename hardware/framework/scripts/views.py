@@ -2,6 +2,7 @@
 
 # Renders pre-defined views into the images directory
 
+import config
 import os
 from PIL import Image, PngImagePlugin
 import sys
@@ -108,8 +109,6 @@ def render_view_using_file(obj_title, scadfile, dir, view, hashchanged, hash="")
 
     view['filepath'] = png_name
 
-    temp_name = 'temp.scad'
-
     oldhashes = read_hashes_from_png(png_name)
 
     viewstr = str(view['size']) + str(view['translate']) + str(view['rotate']) + str(view['dist'])
@@ -149,11 +148,10 @@ def render_view_using_file(obj_title, scadfile, dir, view, hashchanged, hash="")
 
 
 def render_view(obj_title, obj_call, dir, view, hashchanged, hash="", includes=[], debug=False, useVitaminSTL=True):
-    temp_name = 'temp.scad'
 
     # make a file to use the module
     #
-    f = open(temp_name, "w")
+    f = open(config.paths['tempscad'], "w")
     f.write("include <../config/config.scad>\n")
     for i in includes:
         f.write("include <"+i+">\n")
@@ -171,72 +169,7 @@ def render_view(obj_title, obj_call, dir, view, hashchanged, hash="", includes=[
     f.write(obj_call + ";\n");
     f.close()
 
-    render_view_using_file(obj_title, temp_name, dir, view, hashchanged, hash)
+    render_view_using_file(obj_title, config.paths['tempscad'], dir, view, hashchanged, hash)
 
-    os.remove(temp_name)
-
-
-def views(force_update):
-    print("Views")
-    print("---")
-
-    scad_dir = "views"
-    render_dir = "images"
-
-    if not os.path.isdir(render_dir):
-        os.makedirs(render_dir)
-
-    # List of "view" scad files
-    #
-    scads = [i for i in os.listdir(scad_dir) if i[-5:] == ".scad"]
-
-    for scad in scads:
-        scad_name = scad_dir + os.sep + scad
-        png_name = render_dir + os.sep + scad[:-4] + "png"
-
-        print("Checking: " + scad_name)
-
-        view_count = 0
-        for line in open(scad_name, "r").readlines():
-            words = line.split()
-            if len(words) > 10 and words[0] == "//":
-
-                cmd = words[1]
-                if cmd == "view":
-                    view_count += 1
-
-                    # Up-sample images
-                    w = int(words[2]) * 2
-                    h = int(words[3]) * 2
-
-                    dx = float(words[4])
-                    dy = float(words[5])
-                    dz = float(words[6])
-
-                    rx = float(words[7])
-                    ry = float(words[8])
-                    rz = float(words[9])
-
-                    d = float(words[10])
-                    camera = "%.2f,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f" % (dx, dy, dz, rx, ry, rz, d)
-
-                    if (force_update) or (not os.path.isfile(png_name) or os.path.getmtime(png_name) < os.path.getmtime(scad_name)):
-                        openscad.run("--projection=p",
-                                    ("--imgsize=%d,%d" % (w, h)),
-                                    "--camera=" + camera,
-                                    "-o", png_name,
-                                    scad_name)
-                        print
-                        polish(png_name, w/2, h/2)
-
-                    else:
-                        print("  Up to date")
-
-        if view_count < 1:
-            print("  No views found - you need to define at least one view")
-
-if __name__ == '__main__':
-    if len(sys.argv) == 2:
-        views(sys.argv[1])
-    else:
-        views(0)
+    if os.path.isfile(config.paths['tempscad']):
+        os.remove(config.paths['tempscad'])

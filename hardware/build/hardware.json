@@ -3,7 +3,7 @@
         "cut": [
             {
                 "completeCall": "HammerPlate(true)",
-                "call": "HammerPlate()",
+                "hash": "e48117a66b54e1db5a84071bd5ad994a",
                 "vitamins": [
                     {
                         "views": [],
@@ -14,8 +14,9 @@
                         "file": "vitamins/StockMetal.scad"
                     }
                 ],
-                "file": "cutparts/HammerPlate.scad",
+                "views": [],
                 "title": "HammerPlate",
+                "qty": 2,
                 "steps": [
                     {
                         "views": [
@@ -27,6 +28,7 @@
                                 ],
                                 "dist": 140,
                                 "title": "view",
+                                "filepath": "../../cutparts/images/HammerPlate_step1_view.png",
                                 "caption": "view",
                                 "translate": [
                                     0,
@@ -53,6 +55,7 @@
                                 ],
                                 "dist": 140,
                                 "title": "view",
+                                "filepath": "../../cutparts/images/HammerPlate_step2_view.png",
                                 "caption": "view",
                                 "translate": [
                                     0,
@@ -70,12 +73,14 @@
                         "desc": "Drill two 3mm dia holes at 14mm spacing"
                     }
                 ],
-                "views": [],
-                "qty": 2
+                "file": "cutparts/HammerPlate.scad",
+                "call": "HammerPlate()"
             }
         ],
+        "hash": "5df8cb40aa38666fd6484177b2c74e9d",
         "vitamins": [
             {
+                "hash": "1c1e83a50971e512214f28d513848442",
                 "views": [
                     {
                         "rotate": [
@@ -85,6 +90,7 @@
                         ],
                         "dist": 400,
                         "title": "view",
+                        "filepath": "../vitamins/images/StainlesssteelRoundBar2mmx14mm_view.png",
                         "caption": "view",
                         "translate": [
                             20,
@@ -105,6 +111,7 @@
                 "file": "vitamins/StockMetal.scad"
             },
             {
+                "hash": "b49c54a7b142cee2bccc7ed61025b176",
                 "views": [
                     {
                         "rotate": [
@@ -114,6 +121,7 @@
                         ],
                         "dist": 280,
                         "title": "view",
+                        "filepath": "../vitamins/images/N20DCGearMotor_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -134,6 +142,7 @@
                 "file": "vitamins/N20DCGearMotor.scad"
             },
             {
+                "hash": "84a9e41adb685eed8f277ac321e03ae0",
                 "views": [
                     {
                         "rotate": [
@@ -143,6 +152,7 @@
                         ],
                         "dist": 280,
                         "title": "view",
+                        "filepath": "../vitamins/images/ORing2x10_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -163,6 +173,7 @@
                 "file": "vitamins/ORing.scad"
             },
             {
+                "hash": "ec4fc06503eb0095b142981907992f17",
                 "views": [
                     {
                         "rotate": [
@@ -172,6 +183,7 @@
                         ],
                         "dist": 280,
                         "title": "view",
+                        "filepath": "../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -192,6 +204,7 @@
                 "file": "vitamins/C2020BrushlessOutrunner.scad"
             },
             {
+                "hash": "3097c6da12fc50a687bdda7f01f06fe8",
                 "views": [
                     {
                         "rotate": [
@@ -201,6 +214,7 @@
                         ],
                         "dist": 200,
                         "title": "view",
+                        "filepath": "../vitamins/images/M3hexscrewx8mm_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -221,6 +235,7 @@
                 "file": "vitamins/screw.scad"
             },
             {
+                "hash": "2dd0fc2e5c85720edf3ff5d97515fe6e",
                 "views": [
                     {
                         "rotate": [
@@ -230,6 +245,7 @@
                         ],
                         "dist": 400,
                         "title": "view",
+                        "filepath": "../vitamins/images/StainlesssteelFlatBar6x1mmx21mm_view.png",
                         "caption": "view",
                         "translate": [
                             20,
@@ -250,6 +266,7 @@
                 "file": "vitamins/StockMetal.scad"
             },
             {
+                "hash": "aecf92fd6a27d35f362a44faeb2cea30",
                 "views": [
                     {
                         "rotate": [
@@ -259,6 +276,7 @@
                         ],
                         "dist": 200,
                         "title": "view",
+                        "filepath": "../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -279,6 +297,7 @@
                 "file": "vitamins/VGrooveBearing.scad"
             },
             {
+                "hash": "f2c2f7b270be12e99198924c890cf20e",
                 "views": [
                     {
                         "rotate": [
@@ -288,6 +307,7 @@
                         ],
                         "dist": 200,
                         "title": "view",
+                        "filepath": "../vitamins/images/M4hexscrewx19mm_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -308,6 +328,7 @@
                 "file": "vitamins/screw.scad"
             },
             {
+                "hash": "8e5a3a952e49561c6a484e81e35815c1",
                 "views": [
                     {
                         "rotate": [
@@ -317,6 +338,7 @@
                         ],
                         "dist": 200,
                         "title": "view",
+                        "filepath": "../vitamins/images/M4Nut_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -337,6 +359,7 @@
                 "file": "vitamins/nut.scad"
             },
             {
+                "hash": "57a898122e755d8fcc453ad6a464cceb",
                 "views": [
                     {
                         "rotate": [
@@ -346,6 +369,7 @@
                         ],
                         "dist": 200,
                         "title": "view",
+                        "filepath": "../vitamins/images/M4hexscrewx15mm_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -366,6 +390,7 @@
                 "file": "vitamins/screw.scad"
             },
             {
+                "hash": "686db6cef9f4399a92f26877f8da61ae",
                 "views": [
                     {
                         "rotate": [
@@ -375,6 +400,7 @@
                         ],
                         "dist": 280,
                         "title": "view",
+                        "filepath": "../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -395,6 +421,7 @@
                 "file": "vitamins/DasMikroReceiver.scad"
             },
             {
+                "hash": "179f902ff604162ee77b0f5ebfb85bbc",
                 "views": [
                     {
                         "rotate": [
@@ -404,6 +431,7 @@
                         ],
                         "dist": 280,
                         "title": "view",
+                        "filepath": "../vitamins/images/DYSBLHeli16AESC_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -424,6 +452,7 @@
                 "file": "vitamins/DYS16AESC.scad"
             },
             {
+                "hash": "37b7025e85318ca624ffc75c6028f2ec",
                 "views": [
                     {
                         "rotate": [
@@ -433,6 +462,7 @@
                         ],
                         "dist": 280,
                         "title": "view",
+                        "filepath": "../vitamins/images/TowerProSG90Driver_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -453,6 +483,7 @@
                 "file": "vitamins/TowerProSG90Driver.scad"
             },
             {
+                "hash": "bad585b1a8fb566b0384fd4426a6e6dc",
                 "views": [
                     {
                         "rotate": [
@@ -462,6 +493,7 @@
                         ],
                         "dist": 280,
                         "title": "view",
+                        "filepath": "../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png",
                         "caption": "view",
                         "translate": [
                             6.9,
@@ -485,35 +517,8 @@
         "title": "GyroAnt",
         "assemblies": [
             {
-                "views": [],
-                "qty": 1,
-                "printed": [
-                    {
-                        "markdown": [],
-                        "views": [],
-                        "title": "Base",
-                        "qty": 1,
-                        "call": "Base_STL()",
-                        "file": "printedparts/Base.scad"
-                    },
-                    {
-                        "markdown": [],
-                        "views": [],
-                        "title": "Lid",
-                        "qty": 1,
-                        "call": "Lid_STL()",
-                        "file": "printedparts/Lid.scad"
-                    }
-                ],
-                "file": "assemblies/Final.scad",
-                "animations": [
-                    {
-                        "type": "animation",
-                        "framesPerStep": 10,
-                        "title": "GyroAnt"
-                    }
-                ],
                 "cut": [],
+                "hash": "f1a1a69933b071788da6a981ebf2d8f3",
                 "vitamins": [
                     {
                         "views": [],
@@ -615,36 +620,63 @@
                 "title": "Final",
                 "assemblies": [
                     {
-                        "views": [],
-                        "qty": 2,
-                        "printed": [],
-                        "file": "assemblies/Wheel.scad",
-                        "animations": [],
                         "cut": [],
                         "vitamins": [],
                         "title": "Wheel",
                         "assemblies": [],
-                        "level": 1,
+                        "views": [],
+                        "qty": 2,
                         "call": "WheelAssembly()",
-                        "steps": []
+                        "printed": [],
+                        "file": "assemblies/Wheel.scad",
+                        "animations": [],
+                        "steps": [],
+                        "level": 1
                     },
                     {
-                        "views": [],
-                        "qty": 1,
-                        "printed": [],
-                        "file": "assemblies/WeaponRing.scad",
-                        "animations": [],
                         "cut": [],
                         "vitamins": [],
                         "title": "WeaponRing",
                         "assemblies": [],
-                        "level": 1,
+                        "views": [],
+                        "qty": 1,
                         "call": "WeaponRingAssembly()",
-                        "steps": []
+                        "printed": [],
+                        "file": "assemblies/WeaponRing.scad",
+                        "animations": [],
+                        "steps": [],
+                        "level": 1
                     }
                 ],
-                "level": 0,
+                "views": [],
+                "qty": 1,
                 "call": "FinalAssembly()",
+                "printed": [
+                    {
+                        "markdown": [],
+                        "views": [],
+                        "title": "Base",
+                        "qty": 1,
+                        "call": "Base_STL()",
+                        "file": "printedparts/Base.scad"
+                    },
+                    {
+                        "markdown": [],
+                        "views": [],
+                        "title": "Lid",
+                        "qty": 1,
+                        "call": "Lid_STL()",
+                        "file": "printedparts/Lid.scad"
+                    }
+                ],
+                "file": "assemblies/Final.scad",
+                "animations": [
+                    {
+                        "type": "animation",
+                        "framesPerStep": 10,
+                        "title": "GyroAnt"
+                    }
+                ],
                 "steps": [
                     {
                         "views": [
@@ -854,11 +886,18 @@
                         "num": 8,
                         "desc": "Fit lid"
                     }
-                ]
+                ],
+                "level": 0
             },
             {
+                "cut": [],
+                "hash": "1b4624bb4f73cc04418c926661e79622",
+                "vitamins": [],
+                "title": "Wheel",
+                "assemblies": [],
                 "views": [],
                 "qty": 2,
+                "call": "WheelAssembly()",
                 "printed": [
                     {
                         "markdown": [],
@@ -893,12 +932,6 @@
                         "title": "Wheel"
                     }
                 ],
-                "cut": [],
-                "vitamins": [],
-                "title": "Wheel",
-                "assemblies": [],
-                "level": 2,
-                "call": "WheelAssembly()",
                 "steps": [
                     {
                         "views": [
@@ -978,11 +1011,27 @@
                         "num": 3,
                         "desc": "Once dry, remove the finished tyre from the mould"
                     }
-                ]
+                ],
+                "level": 2
             },
             {
+                "cut": [],
+                "hash": "131b4727bd755bd8f83d321ffc2c1f96",
+                "vitamins": [
+                    {
+                        "views": [],
+                        "title": "M3 hex screw x 8mm",
+                        "qty": 4,
+                        "parts": [],
+                        "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
+                        "file": "vitamins/screw.scad"
+                    }
+                ],
+                "title": "WeaponRing",
+                "assemblies": [],
                 "views": [],
                 "qty": 1,
+                "call": "WeaponRingAssembly()",
                 "printed": [
                     {
                         "markdown": [],
@@ -1001,21 +1050,6 @@
                         "title": "WeaponRing"
                     }
                 ],
-                "cut": [],
-                "vitamins": [
-                    {
-                        "views": [],
-                        "title": "M3 hex screw x 8mm",
-                        "qty": 4,
-                        "parts": [],
-                        "call": "screw(type=M3_hex_screw,length=8, hob_point=0 )",
-                        "file": "vitamins/screw.scad"
-                    }
-                ],
-                "title": "WeaponRing",
-                "assemblies": [],
-                "level": 2,
-                "call": "WeaponRingAssembly()",
                 "steps": [
                     {
                         "views": [
@@ -1043,12 +1077,15 @@
                         "num": 1,
                         "desc": "Screw the hammer plates onto the weapon ring"
                     }
-                ]
+                ],
+                "level": 2
             }
         ],
         "printed": [
             {
                 "markdown": [],
+                "hash": "daab2e90b84ad6cc96c5b56592d8aaa8",
+                "plasticWeight": 0.007875,
                 "views": [
                     {
                         "rotate": [
@@ -1058,6 +1095,7 @@
                         ],
                         "dist": 400,
                         "title": "view",
+                        "filepath": "../../printedparts/images/Base_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -1073,11 +1111,14 @@
                 ],
                 "title": "Base",
                 "qty": 1,
+                "plasticVolume": 6.3,
                 "call": "Base_STL()",
                 "file": "printedparts/Base.scad"
             },
             {
                 "markdown": [],
+                "hash": "c18394beb2761f1cdf6733af076f191b",
+                "plasticWeight": 0.0015,
                 "views": [
                     {
                         "rotate": [
@@ -1087,6 +1128,7 @@
                         ],
                         "dist": 400,
                         "title": "view",
+                        "filepath": "../../printedparts/images/Wheel_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -1102,11 +1144,14 @@
                 ],
                 "title": "Wheel",
                 "qty": 2,
+                "plasticVolume": 1.2,
                 "call": "Wheel_STL()",
                 "file": "printedparts/Wheel.scad"
             },
             {
                 "markdown": [],
+                "hash": "69478db477eb82a84799e6a70cd59c80",
+                "plasticWeight": 0.001875,
                 "views": [
                     {
                         "rotate": [
@@ -1116,6 +1161,7 @@
                         ],
                         "dist": 400,
                         "title": "view",
+                        "filepath": "../../printedparts/images/TyreMould_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -1131,11 +1177,14 @@
                 ],
                 "title": "Tyre Mould",
                 "qty": 4,
+                "plasticVolume": 1.5,
                 "call": "TyreMould_STL()",
                 "file": "printedparts/TyreMould.scad"
             },
             {
                 "markdown": [],
+                "hash": "14ad243a2c52c0ea7e9f6025f9e0f541",
+                "plasticWeight": 0.00075,
                 "views": [
                     {
                         "rotate": [
@@ -1145,6 +1194,7 @@
                         ],
                         "dist": 400,
                         "title": "view",
+                        "filepath": "../../printedparts/images/Tyre_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -1160,11 +1210,14 @@
                 ],
                 "title": "Tyre",
                 "qty": 2,
+                "plasticVolume": 0.6,
                 "call": "Tyre_STL()",
                 "file": "printedparts/Tyre.scad"
             },
             {
                 "markdown": [],
+                "hash": "7380406ebf658b0bd1d04563b3b7b1ab",
+                "plasticWeight": 0.018,
                 "views": [
                     {
                         "rotate": [
@@ -1174,6 +1227,7 @@
                         ],
                         "dist": 400,
                         "title": "view",
+                        "filepath": "../../printedparts/images/WeaponRing_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -1189,11 +1243,14 @@
                 ],
                 "title": "WeaponRing",
                 "qty": 1,
+                "plasticVolume": 14.4,
                 "call": "WeaponRing_STL()",
                 "file": "printedparts/WeaponRing.scad"
             },
             {
                 "markdown": [],
+                "hash": "10f92d5b15eee034432f5cd7b8ab5143",
+                "plasticWeight": 0.002875,
                 "views": [
                     {
                         "rotate": [
@@ -1203,6 +1260,7 @@
                         ],
                         "dist": 400,
                         "title": "view",
+                        "filepath": "../../printedparts/images/Lid_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -1218,6 +1276,7 @@
                 ],
                 "title": "Lid",
                 "qty": 1,
+                "plasticVolume": 2.3,
                 "call": "Lid_STL()",
                 "file": "printedparts/Lid.scad"
             }
@@ -1233,6 +1292,7 @@
                 ],
                 "dist": 250,
                 "title": "view",
+                "filepath": "../../images/GyroAnt_view.png",
                 "caption": "view",
                 "translate": [
                     0,
@@ -1266,6 +1326,7 @@
                                 ],
                                 "dist": 400,
                                 "title": "view",
+                                "filepath": "../../printedparts/images/Base_view.png",
                                 "caption": "view",
                                 "translate": [
                                     0,
@@ -1327,6 +1388,7 @@
                                                 ],
                                                 "dist": 400,
                                                 "title": "view",
+                                                "filepath": "../../printedparts/images/Wheel_view.png",
                                                 "caption": "view",
                                                 "translate": [
                                                     0,
@@ -1379,6 +1441,7 @@
                                                         ],
                                                         "dist": 400,
                                                         "title": "view",
+                                                        "filepath": "../../printedparts/images/TyreMould_view.png",
                                                         "caption": "view",
                                                         "translate": [
                                                             0,
@@ -1434,6 +1497,7 @@
                                                         ],
                                                         "dist": 400,
                                                         "title": "view",
+                                                        "filepath": "../../printedparts/images/Tyre_view.png",
                                                         "caption": "view",
                                                         "translate": [
                                                             0,
@@ -1524,6 +1588,7 @@
                                         ],
                                         "dist": 400,
                                         "title": "view",
+                                        "filepath": "../vitamins/images/StainlesssteelRoundBar2mmx14mm_view.png",
                                         "caption": "view",
                                         "translate": [
                                             20,
@@ -1813,6 +1878,7 @@
                                         ],
                                         "dist": 280,
                                         "title": "view",
+                                        "filepath": "../vitamins/images/N20DCGearMotor_view.png",
                                         "caption": "view",
                                         "translate": [
                                             6.9,
@@ -1841,6 +1907,7 @@
                                         ],
                                         "dist": 280,
                                         "title": "view",
+                                        "filepath": "../vitamins/images/ORing2x10_view.png",
                                         "caption": "view",
                                         "translate": [
                                             6.9,
@@ -1952,6 +2019,7 @@
                                         ],
                                         "dist": 280,
                                         "title": "view",
+                                        "filepath": "../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png",
                                         "caption": "view",
                                         "translate": [
                                             6.9,
@@ -2016,6 +2084,7 @@
                                                 ],
                                                 "dist": 400,
                                                 "title": "view",
+                                                "filepath": "../../printedparts/images/WeaponRing_view.png",
                                                 "caption": "view",
                                                 "translate": [
                                                     0,
@@ -2068,6 +2137,7 @@
                                                         ],
                                                         "dist": 200,
                                                         "title": "view",
+                                                        "filepath": "../vitamins/images/M3hexscrewx8mm_view.png",
                                                         "caption": "view",
                                                         "translate": [
                                                             0,
@@ -2211,6 +2281,7 @@
                                                                         ],
                                                                         "dist": 400,
                                                                         "title": "view",
+                                                                        "filepath": "../vitamins/images/StainlesssteelFlatBar6x1mmx21mm_view.png",
                                                                         "caption": "view",
                                                                         "translate": [
                                                                             20,
@@ -2369,6 +2440,7 @@
                                         ],
                                         "dist": 200,
                                         "title": "view",
+                                        "filepath": "../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png",
                                         "caption": "view",
                                         "translate": [
                                             0,
@@ -2480,6 +2552,7 @@
                                         ],
                                         "dist": 200,
                                         "title": "view",
+                                        "filepath": "../vitamins/images/M4hexscrewx19mm_view.png",
                                         "caption": "view",
                                         "translate": [
                                             0,
@@ -2508,6 +2581,7 @@
                                         ],
                                         "dist": 200,
                                         "title": "view",
+                                        "filepath": "../vitamins/images/M4Nut_view.png",
                                         "caption": "view",
                                         "translate": [
                                             0,
@@ -2592,6 +2666,7 @@
                                         ],
                                         "dist": 200,
                                         "title": "view",
+                                        "filepath": "../vitamins/images/M4hexscrewx15mm_view.png",
                                         "caption": "view",
                                         "translate": [
                                             0,
@@ -2675,6 +2750,7 @@
                                         ],
                                         "dist": 280,
                                         "title": "view",
+                                        "filepath": "../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png",
                                         "caption": "view",
                                         "translate": [
                                             6.9,
@@ -2703,6 +2779,7 @@
                                         ],
                                         "dist": 280,
                                         "title": "view",
+                                        "filepath": "../vitamins/images/DYSBLHeli16AESC_view.png",
                                         "caption": "view",
                                         "translate": [
                                             6.9,
@@ -2731,6 +2808,7 @@
                                         ],
                                         "dist": 280,
                                         "title": "view",
+                                        "filepath": "../vitamins/images/TowerProSG90Driver_view.png",
                                         "caption": "view",
                                         "translate": [
                                             6.9,
@@ -2814,6 +2892,7 @@
                                         ],
                                         "dist": 280,
                                         "title": "view",
+                                        "filepath": "../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png",
                                         "caption": "view",
                                         "translate": [
                                             6.9,
@@ -2869,6 +2948,7 @@
                                         ],
                                         "dist": 400,
                                         "title": "view",
+                                        "filepath": "../../printedparts/images/Lid_view.png",
                                         "caption": "view",
                                         "translate": [
                                             0,

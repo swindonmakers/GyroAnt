@@ -81,6 +81,9 @@ def build(argv):
     print("==============")
     print("Build Complete")
 
+    if errorlevel > 0:
+        print("Error: " + str(errorlevel))
+
     return errorlevel
 
 if __name__ == '__main__':
