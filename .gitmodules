@@ -1,0 +1,3 @@
+[submodule "hardware/framework"]
+	path = hardware/framework
+	url = https://github.com/Axford/OpenSCADMachineDesignFramework.git
