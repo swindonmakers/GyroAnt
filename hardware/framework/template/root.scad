@@ -1,7 +1,7 @@
 include <config/config.scad>
 
 STLPath = "printedparts/stl/";
-VitaminSTL = "vitamins/stl/";
+VitaminSTL = "framework/vitamins/stl/";
 
 DebugCoordinateFrames = 0;
 DebugConnectors = false;
@@ -20,5 +20,5 @@ machine("${name}.scad","${name}") {
     cube([10,10,10]);
 
     // NB: use the adda.py utility script to create new assemblies:
-    //     hardware/ci/adda.py assembly <assembly name> <assembly description>
+    //     framework/scripts/adda.py assembly <assembly name> <assembly description>
 }

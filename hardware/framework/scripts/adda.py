@@ -2,6 +2,7 @@
 
 # Utility script to create new parts/assemblies
 
+import config
 import sys
 import os
 import string
@@ -19,37 +20,38 @@ def adda(t, n, d):
     if t == "assembly":
         print("Creating assembly")
 
-        templateFile = "assembly.scad"
-        outFile = "../assemblies/" + n + ".scad"
-        configFile = "../config/assemblies.scad"
+        templateFile = os.path.join(config.paths['template'],"assemblies","assembly.scad")
+        outFile = os.path.join(config.paths['assemblies'], n + ".scad")
+        configFile = os.path.join(config.paths['config'],"assemblies.scad")
         module = n + "Assembly"
         sandbox = module
 
     elif t == "printedpart":
         print("Creating printedpart")
 
-        templateFile = "printedpart.scad"
-        outFile = "../printedparts/" + n + ".scad"
-        configFile = "../config/printedparts.scad"
+        templateFile = os.path.join(config.paths['template'],"printedparts","printedpart.scad")
+        outFile = os.path.join(config.paths['printedparts'], n + ".scad")
+        configFile = os.path.join(config.paths['config'],"printedparts.scad")
         module = n + "_STL"
         sandbox = n
 
     elif t == "cutpart":
         print("Creating cutpart")
 
-        templateFile = "cutpart.scad"
-        outFile = "../cutparts/" + n + ".scad"
-        configFile = "../config/cutparts.scad"
+        templateFile = os.path.join(config.paths['template'],"cutparts","cutpart.scad")
+        outFile = os.path.join(config.paths['cutparts'], n + ".scad")
+        configFile = os.path.join(config.paths['config'],"cutparts.scad")
         module = n
         sandbox = n
 
 
     elif t == "vitamin":
         print("Creating vitamin")
+        # TODO: Update paths!!!
 
-        templateFile = "vitamin.scad"
-        outFile = "../vitamins/" + n + ".scad"
-        configFile = "../config/vitamins.scad"
+        templateFile = os.path.join(config.paths['template'],"vitamins","vitamin.scad")
+        outFile = os.path.join(config.paths['template'],"sandbox",n + ".scad")
+        configFile = os.path.join(config.paths['config'],"vitamins.scad")
         module = n
         sandbox = n
 
@@ -75,8 +77,8 @@ def adda(t, n, d):
         print(templateFile + " template is missing")
 
     # Sandbox
-    templateFile = "sandbox.scad"
-    outFile = "../sandbox/" + t + "_" + sandbox + ".scad"
+    templateFile = os.path.join(config.paths['template'],"sandbox","sandbox.scad")
+    outFile = os.path.join(config.paths['sandbox'], t + "_" + sandbox + ".scad")
     if os.path.isfile(templateFile):
         f = open(templateFile,"r")
         template = f.read()
