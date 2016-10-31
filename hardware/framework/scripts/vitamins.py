@@ -2,6 +2,7 @@
 
 # Renders views and STL cache for vitamins
 
+import config
 import os
 import openscad
 import shutil
@@ -17,27 +18,23 @@ from views import render_view;
 
 def compile_vitamin(v):
 
-    temp_name =  "temp.scad"
-
     #
     # Make the target directories
     #
-    target_dir = "../vitamins/stl"
-    if not os.path.isdir(target_dir):
-        os.makedirs(target_dir)
+    if not os.path.isdir(config.paths['vitaminsstl']):
+        os.makedirs(config.paths['vitaminsstl'])
 
-    view_dir = "../vitamins/images"
-    if not os.path.isdir(view_dir):
-        os.makedirs(view_dir)
+    if not os.path.isdir(config.paths['vitaminsimages']):
+        os.makedirs(config.paths['vitaminsimages'])
 
     # Compile
     print("  "+v['title'])
-    fn = '../' + v['file']
+    fn = os.path.join('..', v['file'])
     if (os.path.isfile(fn)):
 
         print("    Checking csg hash")
-        h = openscad.get_csg_hash(temp_name, v['call']);
-        os.remove(temp_name);
+        h = openscad.get_csg_hash(config.paths['tempscad'], v['call']);
+        os.remove(config.paths['tempscad']);
 
         hashchanged = ('hash' in v and h != v['hash']) or (not 'hash' in v)
 
@@ -48,10 +45,10 @@ def compile_vitamin(v):
         print("    STL Parts")
         if 'parts' in v:
             for part in v['parts']:
-                stlpath = target_dir + '/' + openscad.stl_filename(part['title'])
+                stlpath = os.path.join(config.paths['vitaminsstl'], openscad.stl_filename(part['title']))
                 if hashchanged or (not os.path.isfile(stlpath)):
                     print("      Rendering STL...")
-                    openscad.render_stl(temp_name, stlpath, part['call'])
+                    openscad.render_stl(config.paths['tempscad'], stlpath, part['call'])
                 else:
                     print("      STL up to date")
 
@@ -60,7 +57,7 @@ def compile_vitamin(v):
         for view in v['views']:
             print("      "+view['title'])
 
-            render_view(v['title'], v['call'], view_dir, view, hashchanged, h)
+            render_view(v['title'], v['call'], config.paths['vitaminsimages'], view, hashchanged, h)
 
 
     else:
@@ -71,7 +68,7 @@ def vitamins():
     print("--------")
 
     # load hardware.json
-    jf = open("../../build/hardware.json","r")
+    jf = open(config.paths['json'],"r")
     jso = json.load(jf)
     jf.close()
 
@@ -87,7 +84,7 @@ def vitamins():
 
 
     # Save changes to json
-    with open('../../build/hardware.json', 'w') as f:
+    with open(config.paths['json'], 'w') as f:
         f.write(json.dumps(jso, sort_keys=False, indent=4, separators=(',', ': ')))
 
     return 0

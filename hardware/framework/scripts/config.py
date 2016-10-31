@@ -23,5 +23,6 @@ paths = {
     'vitaminsimages':'../vitamins/images',
     'openscadlog': '../../build/openscad.log',
     'dummycsg': '../../build/dummy.csg',
-    'frameworkdocs': '../docs'
+    'frameworkdocs': '../docs',
+    'sourcingcsv': '../../sourcing.csv'
 }

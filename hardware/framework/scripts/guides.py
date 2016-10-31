@@ -349,21 +349,23 @@ def gen_printing_guide(m, guide_template):
 def load_sources():
     print "Loading sourcing info..."
 
-    src_dir = "../vitamins"
+    load_source(config.paths['sourcingcsv'])
 
-    for filename in os.listdir(src_dir):
+    for filename in os.listdir(config.paths['vitamins']):
         if filename[-4:] == '.csv':
             print("  Parsing: "+filename)
             csvfn = os.path.join(src_dir, filename)
+            load_source(csvfn)
 
-            with open(csvfn, 'rb') as csvfile:
-                rdr = csv.DictReader(csvfile)
-                for row in rdr:
-                    vn = row['Vitamin']
-                    if vn not in sourcing:
-                        sourcing[vn] = []
-                    sourcing[vn].append({"Cost":row['Cost'], "Source":row['Source'], 'Notes':row['Notes']});
-
+def load_source(csvfn):
+    if os.path.isfile(csvfn):
+        with open(csvfn, 'rb') as csvfile:
+            rdr = csv.DictReader(csvfile)
+            for row in rdr:
+                vn = row['Vitamin']
+                if vn not in sourcing:
+                    sourcing[vn] = []
+                sourcing[vn].append({"Cost":row['Cost'], "Source":row['Source'], 'Notes':row['Notes']});
 
 
 def gen_sourcing_guide(m, guide_template):

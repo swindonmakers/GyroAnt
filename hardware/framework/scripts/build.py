@@ -51,7 +51,7 @@ def build(argv):
     errorlevel += parse_machines()
 
     if errorlevel == 0:
-        errorlevel += vitamins() #TODO: sort out paths!!
+        errorlevel += vitamins()
     if errorlevel == 0:
         errorlevel += cut()
     if errorlevel == 0:
@@ -65,7 +65,7 @@ def build(argv):
         errorlevel += guides()
 
     if doCatalogue and not doQuick:
-        catalogue()  # TODO: catalogue!!
+        catalogue()
 
     # if everything is ok then delete backup - no longer required
     if errorlevel == 0 and os.path.isfile(config.paths['jsonbackup']):

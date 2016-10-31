@@ -252,6 +252,7 @@ Title | Call | Image
 Ball Bearing 623 | `ball_bearing(BB623)` | ![Ball Bearing 623](../vitamins/images/BallBearing623_view.png)
 Ball Bearing 624 | `ball_bearing(BB624)` | ![Ball Bearing 624](../vitamins/images/BallBearing624_view.png)
 Ball Bearing 608 | `ball_bearing(BB608)` | ![Ball Bearing 608](../vitamins/images/BallBearing608_view.png)
+Ball Bearing 625_2RS | `ball_bearing(BB625_2RS)` | ![Ball Bearing 625_2RS](../vitamins/images/BallBearing625_2RS_view.png)
 Ball Bearing 6205_2RS | `ball_bearing(BB6205_2RS)` | ![Ball Bearing 6205_2RS](../vitamins/images/BallBearing6205_2RS_view.png)
 
 ## nut.scad
