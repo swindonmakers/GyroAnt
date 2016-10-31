@@ -13,6 +13,7 @@ def adda(t, n, d):
     template = ""
     templateFile = ""
     outFile = ""
+    incFile = ""
     configFile = ""
     module = ""
     sandbox = ""
@@ -22,6 +23,7 @@ def adda(t, n, d):
 
         templateFile = os.path.join(config.paths['template'],"assemblies","assembly.scad")
         outFile = os.path.join(config.paths['assemblies'], n + ".scad")
+        incFile = outFile[3:]
         configFile = os.path.join(config.paths['config'],"assemblies.scad")
         module = n + "Assembly"
         sandbox = module
@@ -31,6 +33,7 @@ def adda(t, n, d):
 
         templateFile = os.path.join(config.paths['template'],"printedparts","printedpart.scad")
         outFile = os.path.join(config.paths['printedparts'], n + ".scad")
+        incFile = outFile[3:]
         configFile = os.path.join(config.paths['config'],"printedparts.scad")
         module = n + "_STL"
         sandbox = n
@@ -39,7 +42,7 @@ def adda(t, n, d):
         print("Creating cutpart")
 
         templateFile = os.path.join(config.paths['template'],"cutparts","cutpart.scad")
-        outFile = os.path.join(config.paths['cutparts'], n + ".scad")
+        incFile = outFile[3:]
         configFile = os.path.join(config.paths['config'],"cutparts.scad")
         module = n
         sandbox = n
@@ -50,7 +53,8 @@ def adda(t, n, d):
         # TODO: Update paths!!!
 
         templateFile = os.path.join(config.paths['template'],"vitamins","vitamin.scad")
-        outFile = os.path.join(config.paths['template'],"sandbox",n + ".scad")
+        outFile = os.path.join(config.paths['vitamins'],n + ".scad")
+        incFile = os.path.join("..","framework", outFile[3:])
         configFile = os.path.join(config.paths['config'],"vitamins.scad")
         module = n
         sandbox = n
@@ -71,8 +75,7 @@ def adda(t, n, d):
             o.write(s)
 
         with open(configFile, "a") as o:
-            # remove initial ../ to ensure correct relative location
-            o.write("include <"+outFile[3:]+">\n")
+            o.write("include <"+incFile+">\n")
 
     else:
         print(templateFile + " template is missing")
