@@ -379,6 +379,8 @@ def gen_sourcing_guide(m, guide_template):
     md += '# '+m['title'] + '\n'
     md += '# Sourcing Guide\n\n'
 
+    missing = []
+
     cost = 0
     qty = 0
     m['vitamins'].sort(key=vitamin_call, reverse=False)
@@ -412,8 +414,7 @@ def gen_sourcing_guide(m, guide_template):
 
         else:
             md += 'No sources found\n'
-
-
+            missing.append('"'+vn+'",0,"","No sources found"')
 
         md += '\n'
         md += '![](../vitamins/images/'+views.view_filename(v['title']+'_view') + ') \n'
@@ -452,6 +453,11 @@ def gen_sourcing_guide(m, guide_template):
         for line in open(guide_template, "r").readlines():
             line = line.replace("{{mdfilename}}", mdfilename)
             f.write(line)
+
+    print("  Updating sourcing.csv")
+    with open(config.paths['sourcingcsv'], 'a') as f:
+        for line in missing:
+            f.write(line + "\n")
 
     return {'title':m['title'] + ' Sourcing Guide', 'mdfilename':mdfilename, 'htmfilename':htmfilename}
 
