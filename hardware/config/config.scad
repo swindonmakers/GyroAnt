@@ -16,7 +16,7 @@ include <../framework/config/config.scad>
 
 
 // Put overrides to framework config here
-ColourScheme = 2;
+ColourScheme = 1;
 
 
 // Machine specific global parameters here

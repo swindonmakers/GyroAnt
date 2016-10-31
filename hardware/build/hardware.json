@@ -77,7 +77,7 @@
                 "call": "HammerPlate()"
             }
         ],
-        "hash": "5df8cb40aa38666fd6484177b2c74e9d",
+        "hash": "407b9bc4329fb732b3e7301ebc4c738c",
         "vitamins": [
             {
                 "hash": "1c1e83a50971e512214f28d513848442",
@@ -518,7 +518,7 @@
         "assemblies": [
             {
                 "cut": [],
-                "hash": "f1a1a69933b071788da6a981ebf2d8f3",
+                "hash": "9b47c86d0d6765d9370c4fb09e5331bb",
                 "vitamins": [
                     {
                         "views": [],
@@ -891,7 +891,7 @@
             },
             {
                 "cut": [],
-                "hash": "1b4624bb4f73cc04418c926661e79622",
+                "hash": "1c35905e9e4bbaa2d77e5b03be838b24",
                 "vitamins": [],
                 "title": "Wheel",
                 "assemblies": [],
@@ -1016,7 +1016,7 @@
             },
             {
                 "cut": [],
-                "hash": "131b4727bd755bd8f83d321ffc2c1f96",
+                "hash": "bcf6cf809fea1416f4264e3e71f490a5",
                 "vitamins": [
                     {
                         "views": [],
@@ -1084,7 +1084,7 @@
         "printed": [
             {
                 "markdown": [],
-                "hash": "daab2e90b84ad6cc96c5b56592d8aaa8",
+                "hash": "beb742ed1d76edce694f11b700a35199",
                 "plasticWeight": 0.007875,
                 "views": [
                     {
@@ -1109,15 +1109,29 @@
                         ]
                     }
                 ],
+                "aabb": [
+                    [
+                        -33.0,
+                        -33.0,
+                        0.0
+                    ],
+                    [
+                        33.0,
+                        33.0,
+                        20.4
+                    ]
+                ],
                 "title": "Base",
                 "qty": 1,
+                "volume": 5380.955545687833,
+                "area": 16465.844720889294,
                 "plasticVolume": 6.3,
                 "call": "Base_STL()",
                 "file": "printedparts/Base.scad"
             },
             {
                 "markdown": [],
-                "hash": "c18394beb2761f1cdf6733af076f191b",
+                "hash": "1ea9bdad7a67e0c26b6e13ef9d011345",
                 "plasticWeight": 0.0015,
                 "views": [
                     {
@@ -1142,8 +1156,22 @@
                         ]
                     }
                 ],
+                "aabb": [
+                    [
+                        -11.5,
+                        -11.5,
+                        0.0
+                    ],
+                    [
+                        11.5,
+                        11.5,
+                        7.0
+                    ]
+                ],
                 "title": "Wheel",
                 "qty": 2,
+                "volume": 946.9717971827432,
+                "area": 1455.0620978519041,
                 "plasticVolume": 1.2,
                 "call": "Wheel_STL()",
                 "file": "printedparts/Wheel.scad"
@@ -1183,7 +1211,7 @@
             },
             {
                 "markdown": [],
-                "hash": "14ad243a2c52c0ea7e9f6025f9e0f541",
+                "hash": "82b677326bb022e827b93caddab63a9a",
                 "plasticWeight": 0.00075,
                 "views": [
                     {
@@ -1208,15 +1236,29 @@
                         ]
                     }
                 ],
+                "aabb": [
+                    [
+                        -12.5,
+                        -12.5,
+                        0.0
+                    ],
+                    [
+                        12.5,
+                        12.5,
+                        5.0
+                    ]
+                ],
                 "title": "Tyre",
                 "qty": 2,
+                "volume": 598.9895774014991,
+                "area": 1087.8749891787559,
                 "plasticVolume": 0.6,
                 "call": "Tyre_STL()",
                 "file": "printedparts/Tyre.scad"
             },
             {
                 "markdown": [],
-                "hash": "7380406ebf658b0bd1d04563b3b7b1ab",
+                "hash": "07649b123b69a3dcf2b79c7a5e7512d4",
                 "plasticWeight": 0.018,
                 "views": [
                     {
@@ -1241,15 +1283,29 @@
                         ]
                     }
                 ],
+                "aabb": [
+                    [
+                        -43.0,
+                        -37.0,
+                        -10.5
+                    ],
+                    [
+                        43.0,
+                        37.0,
+                        10.5
+                    ]
+                ],
                 "title": "WeaponRing",
                 "qty": 1,
+                "volume": 13162.261343744025,
+                "area": 12267.930650081913,
                 "plasticVolume": 14.4,
                 "call": "WeaponRing_STL()",
                 "file": "printedparts/WeaponRing.scad"
             },
             {
                 "markdown": [],
-                "hash": "10f92d5b15eee034432f5cd7b8ab5143",
+                "hash": "9382ba01f392b5bbd823157203b15e43",
                 "plasticWeight": 0.002875,
                 "views": [
                     {
@@ -1274,8 +1330,22 @@
                         ]
                     }
                 ],
+                "aabb": [
+                    [
+                        -33.0,
+                        -33.0,
+                        -4.0
+                    ],
+                    [
+                        33.0,
+                        33.0,
+                        0.299999
+                    ]
+                ],
                 "title": "Lid",
                 "qty": 1,
+                "volume": 2066.616956501774,
+                "area": 6960.284732531488,
                 "plasticVolume": 2.3,
                 "call": "Lid_STL()",
                 "file": "printedparts/Lid.scad"
