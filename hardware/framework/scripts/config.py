@@ -18,5 +18,7 @@ paths = {
     'config': '../../config',
     'template':'../template',
     'templatedocs': '../template/docs',
-    'vitamins':'../vitamins'
+    'vitamins':'../vitamins',
+    'openscadlog': '../../build/openscad.log',
+    'dummycsg': '../../build/dummy.csg',
 }

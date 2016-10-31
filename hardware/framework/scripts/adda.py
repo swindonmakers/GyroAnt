@@ -50,7 +50,6 @@ def adda(t, n, d):
 
     elif t == "vitamin":
         print("Creating vitamin")
-        # TODO: Update paths!!!
 
         templateFile = os.path.join(config.paths['template'],"vitamins","vitamin.scad")
         outFile = os.path.join(config.paths['vitamins'],n + ".scad")

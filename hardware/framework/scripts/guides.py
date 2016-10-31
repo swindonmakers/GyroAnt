@@ -459,12 +459,14 @@ def gen_index(jso, index_file, index_template):
     # Generate index file
 
     # build object
-    indexObj = { 'machines': [] };
+    indexObj = { 'machines': [], project:'' };
     for m in jso:
         if type(m) is DictType and m['type'] == 'machine':
 
             # tack in a view filename
             m['viewFilename'] = views.view_filename(m['title'] + '_view')
+            if indexObj['project'] == '':
+                indexObj['project'] = m['viewFilename']
 
             indexObj['machines'].append(m)
 

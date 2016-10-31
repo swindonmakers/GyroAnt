@@ -30,12 +30,12 @@ def get_csg_hash_for(scadname):
     run_silent("-o", "dummy.csg", scadname)
 
     hasher = hashlib.md5()
-    with open('dummy.csg', 'rb') as afile:
+    with open(config.paths['dummycsg'], 'rb') as afile:
         buf = afile.read()
         hasher.update(buf)
 
     # remove dummy.csg
-    os.remove('dummy.csg')
+    os.remove(config.paths['dummycsg'])
 
     return hasher.hexdigest()
 
@@ -75,7 +75,7 @@ def which(program):
     return None
 
 def run_silent(*args):
-    log = open("../../build/openscad.log", "w")
+    log = open(config.paths['openscadlog'], "w")
     programs = ['OpenSCAD', 'openscad']
     for locate_prog in programs:
         prog = which(locate_prog)
