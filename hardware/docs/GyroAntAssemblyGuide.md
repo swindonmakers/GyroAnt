@@ -1,7 +1,7 @@
 # GyroAnt
 # Assembly Guide
 
-![view](../../images/GyroAnt_view.png)
+![view](../images/GyroAnt_view.png)
 
 ## Bill of Materials
 
