@@ -27,6 +27,8 @@ module HammerPlate(complete=false) {
         complete  // show as complete?  i.e. last step!
         ) {
 
+        view(d=140);
+
         // Most cut parts use a difference...
         difference() {
             step(1, "Cut a small piece of 1mm steel plate to size") {

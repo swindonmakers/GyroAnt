@@ -3,7 +3,7 @@
         "cut": [
             {
                 "completeCall": "HammerPlate(true)",
-                "hash": "e48117a66b54e1db5a84071bd5ad994a",
+                "hash": "324798f1501efcd4a6ae263fe22d336c",
                 "vitamins": [
                     {
                         "title": "Stainless steel Flat Bar 6x1mm x 21mm",
@@ -15,7 +15,29 @@
                     }
                 ],
                 "title": "HammerPlate",
-                "views": [],
+                "views": [
+                    {
+                        "rotate": [
+                            55,
+                            0,
+                            25
+                        ],
+                        "dist": 140,
+                        "filepath": "../../cutparts/images/HammerPlate_view.png",
+                        "title": "view",
+                        "caption": "view",
+                        "translate": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "type": "view",
+                        "size": [
+                            400,
+                            300
+                        ]
+                    }
+                ],
                 "qty": 2,
                 "steps": [
                     {
@@ -77,7 +99,7 @@
                 "call": "HammerPlate()"
             }
         ],
-        "hash": "407b9bc4329fb732b3e7301ebc4c738c",
+        "hash": "507d2f359a20d9326f0317c9a4c470f7",
         "vitamins": [
             {
                 "hash": "1c1e83a50971e512214f28d513848442",
@@ -518,7 +540,7 @@
         "assemblies": [
             {
                 "cut": [],
-                "hash": "9b47c86d0d6765d9370c4fb09e5331bb",
+                "hash": "2c6c10468ce3677ee9e078b1dc3a1d15",
                 "vitamins": [
                     {
                         "title": "Stainless steel Round Bar 2mm x 14mm",
@@ -689,6 +711,7 @@
                                     238
                                 ],
                                 "dist": 250,
+                                "filepath": "../../assemblies/GyroAnt/Final_step1_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -715,6 +738,7 @@
                                     238
                                 ],
                                 "dist": 250,
+                                "filepath": "../../assemblies/GyroAnt/Final_step2_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -741,6 +765,7 @@
                                     238
                                 ],
                                 "dist": 250,
+                                "filepath": "../../assemblies/GyroAnt/Final_step3_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -767,6 +792,7 @@
                                     238
                                 ],
                                 "dist": 250,
+                                "filepath": "../../assemblies/GyroAnt/Final_step4_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -793,6 +819,7 @@
                                     358
                                 ],
                                 "dist": 250,
+                                "filepath": "../../assemblies/GyroAnt/Final_step5_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -819,6 +846,7 @@
                                     358
                                 ],
                                 "dist": 250,
+                                "filepath": "../../assemblies/GyroAnt/Final_step6_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -845,6 +873,7 @@
                                     358
                                 ],
                                 "dist": 250,
+                                "filepath": "../../assemblies/GyroAnt/Final_step7_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -871,6 +900,7 @@
                                     238
                                 ],
                                 "dist": 250,
+                                "filepath": "../../assemblies/GyroAnt/Final_step8_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -944,6 +974,7 @@
                                     218
                                 ],
                                 "dist": 240,
+                                "filepath": "../../assemblies/GyroAnt/Wheel_step1_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -970,6 +1001,7 @@
                                     218
                                 ],
                                 "dist": 240,
+                                "filepath": "../../assemblies/GyroAnt/Wheel_step2_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -996,6 +1028,7 @@
                                     218
                                 ],
                                 "dist": 240,
+                                "filepath": "../../assemblies/GyroAnt/Wheel_step3_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -1016,7 +1049,7 @@
             },
             {
                 "cut": [],
-                "hash": "bcf6cf809fea1416f4264e3e71f490a5",
+                "hash": "af91c1fa81043cb33852d58fdd584acc",
                 "vitamins": [
                     {
                         "title": "M3 hex screw x 8mm",
@@ -1062,6 +1095,7 @@
                                     218
                                 ],
                                 "dist": 240,
+                                "filepath": "../../assemblies/GyroAnt/WeaponRing_step1_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -1361,8 +1395,8 @@
                     238
                 ],
                 "dist": 250,
-                "filepath": "../../images/GyroAnt_view.png",
                 "title": "view",
+                "filepath": "../../images/GyroAnt_view.png",
                 "caption": "view",
                 "translate": [
                     0,
@@ -1657,7 +1691,7 @@
                                             90
                                         ],
                                         "dist": 400,
-                                        "filepath": "../vitamins/images/StainlesssteelRoundBar2mmx14mm_view.png",
+                                        "filepath": "../../vitamins/images/StainlesssteelRoundBar2mmx14mm_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1947,7 +1981,7 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/N20DCGearMotor_view.png",
+                                        "filepath": "../../vitamins/images/N20DCGearMotor_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -1976,7 +2010,7 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/ORing2x10_view.png",
+                                        "filepath": "../../vitamins/images/ORing2x10_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2088,7 +2122,7 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png",
+                                        "filepath": "../../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2206,7 +2240,7 @@
                                                             25
                                                         ],
                                                         "dist": 200,
-                                                        "filepath": "../vitamins/images/M3hexscrewx8mm_view.png",
+                                                        "filepath": "../../vitamins/images/M3hexscrewx8mm_view.png",
                                                         "title": "view",
                                                         "caption": "view",
                                                         "translate": [
@@ -2316,6 +2350,26 @@
                                                 "type": "cut",
                                                 "children": [
                                                     {
+                                                        "rotate": [
+                                                            55,
+                                                            0,
+                                                            25
+                                                        ],
+                                                        "dist": 140,
+                                                        "title": "view",
+                                                        "caption": "view",
+                                                        "translate": [
+                                                            0,
+                                                            0,
+                                                            0
+                                                        ],
+                                                        "type": "view",
+                                                        "size": [
+                                                            400,
+                                                            300
+                                                        ]
+                                                    },
+                                                    {
                                                         "num": 1,
                                                         "type": "step",
                                                         "children": [
@@ -2350,7 +2404,7 @@
                                                                             90
                                                                         ],
                                                                         "dist": 400,
-                                                                        "filepath": "../vitamins/images/StainlesssteelFlatBar6x1mmx21mm_view.png",
+                                                                        "filepath": "../../vitamins/images/StainlesssteelFlatBar6x1mmx21mm_view.png",
                                                                         "title": "view",
                                                                         "caption": "view",
                                                                         "translate": [
@@ -2407,6 +2461,26 @@
                                                 "file": "cutparts/HammerPlate.scad",
                                                 "type": "cut",
                                                 "children": [
+                                                    {
+                                                        "rotate": [
+                                                            55,
+                                                            0,
+                                                            25
+                                                        ],
+                                                        "dist": 140,
+                                                        "title": "view",
+                                                        "caption": "view",
+                                                        "translate": [
+                                                            0,
+                                                            0,
+                                                            0
+                                                        ],
+                                                        "type": "view",
+                                                        "size": [
+                                                            400,
+                                                            300
+                                                        ]
+                                                    },
                                                     {
                                                         "num": 1,
                                                         "type": "step",
@@ -2509,7 +2583,7 @@
                                             33
                                         ],
                                         "dist": 200,
-                                        "filepath": "../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png",
+                                        "filepath": "../../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2621,7 +2695,7 @@
                                             25
                                         ],
                                         "dist": 200,
-                                        "filepath": "../vitamins/images/M4hexscrewx19mm_view.png",
+                                        "filepath": "../../vitamins/images/M4hexscrewx19mm_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2650,7 +2724,7 @@
                                             25
                                         ],
                                         "dist": 200,
-                                        "filepath": "../vitamins/images/M4Nut_view.png",
+                                        "filepath": "../../vitamins/images/M4Nut_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2735,7 +2809,7 @@
                                             25
                                         ],
                                         "dist": 200,
-                                        "filepath": "../vitamins/images/M4hexscrewx15mm_view.png",
+                                        "filepath": "../../vitamins/images/M4hexscrewx15mm_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2819,7 +2893,7 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png",
+                                        "filepath": "../../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2848,7 +2922,7 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/DYSBLHeli16AESC_view.png",
+                                        "filepath": "../../vitamins/images/DYSBLHeli16AESC_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2877,7 +2951,7 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/TowerProSG90Driver_view.png",
+                                        "filepath": "../../vitamins/images/TowerProSG90Driver_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
@@ -2961,7 +3035,7 @@
                                             33
                                         ],
                                         "dist": 280,
-                                        "filepath": "../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png",
+                                        "filepath": "../../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png",
                                         "title": "view",
                                         "caption": "view",
                                         "translate": [
