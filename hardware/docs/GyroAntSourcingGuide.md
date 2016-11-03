@@ -5,7 +5,7 @@
 
 Unit Cost | Source | Notes 
 --- | --- | --- 
-10.00 | [link](http://hobbyking.com) | 
+8.20 | [link](http://hobbyking.com) | 
 
 ![](../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png) 
 
@@ -15,7 +15,7 @@ Unit Cost | Source | Notes
 
 Unit Cost | Source | Notes 
 --- | --- | --- 
-0 |  | No sources found
+3.20 | [link](http://hobbyking.com) | 
 
 ![](../vitamins/images/DYSBLHeli16AESC_view.png) 
 
@@ -25,7 +25,7 @@ Unit Cost | Source | Notes
 
 Unit Cost | Source | Notes 
 --- | --- | --- 
-0 |  | No sources found
+9.14 | [link](http://www.banggood.com/FLYSKY-Ultra-Miniature-PPM-Signal-Output-8CH-Receiver-For-Multicopter-p-988175.html) | 
 
 ![](../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png) 
 
@@ -35,7 +35,7 @@ Unit Cost | Source | Notes
 
 Unit Cost | Source | Notes 
 --- | --- | --- 
-0 |  | No sources found
+2.64 | [link](http://cgi.ebay.co.uk/ws/eBayISAPI.dll?ViewItem&item=181946954392&var=481770476175) | 6V 200RPM version
 
 ![](../vitamins/images/N20DCGearMotor_view.png) 
 
@@ -75,7 +75,7 @@ Unit Cost | Source | Notes
 
 Unit Cost | Source | Notes 
 --- | --- | --- 
-0 |  | No sources found
+2.00 | www.ebay.co.uk | 
 
 ![](../vitamins/images/TowerProSG90Driver_view.png) 
 
@@ -85,7 +85,7 @@ Unit Cost | Source | Notes
 
 Unit Cost | Source | Notes 
 --- | --- | --- 
-0 |  | No sources found
+5.99 | [link](http://cgi.ebay.co.uk/ws/eBayISAPI.dll?ViewItem&item=331965220542) | 
 
 ![](../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png) 
 
@@ -95,7 +95,7 @@ Unit Cost | Source | Notes
 
 Unit Cost | Source | Notes 
 --- | --- | --- 
-0 |  | No sources found
+0.19 | [link](http://cgi.ebay.co.uk/ws/eBayISAPI.dll?ViewItem&item=221317556825&var=520193870489) | 
 
 ![](../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png) 
 
@@ -105,7 +105,7 @@ Unit Cost | Source | Notes
 
 Unit Cost | Source | Notes 
 --- | --- | --- 
-0 |  | No sources found
+0.05 |  | No sources found
 
 ![](../vitamins/images/M4Nut_view.png) 
 
@@ -115,7 +115,7 @@ Unit Cost | Source | Notes
 
 Unit Cost | Source | Notes 
 --- | --- | --- 
-0 |  | No sources found
+0.10 |  | No sources found
 
 ![](../vitamins/images/M3hexscrewx8mm_view.png) 
 
@@ -125,7 +125,7 @@ Unit Cost | Source | Notes
 
 Unit Cost | Source | Notes 
 --- | --- | --- 
-0 |  | No sources found
+0.10 |  | No sources found
 
 ![](../vitamins/images/M4hexscrewx15mm_view.png) 
 
@@ -135,7 +135,7 @@ Unit Cost | Source | Notes
 
 Unit Cost | Source | Notes 
 --- | --- | --- 
-0 |  | No sources found
+0.10 |  | No sources found
 
 ![](../vitamins/images/M4hexscrewx19mm_view.png) 
 
@@ -151,6 +151,6 @@ Unit Cost | Source | Notes
 Metric | Value 
 --- | --- 
 Total Vitamins | 29
-Total Cost (cheapest) | 10.0 GBP
+Total Cost (cheapest) | 37.33 GBP
 
 
