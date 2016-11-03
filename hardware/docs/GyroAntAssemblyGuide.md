@@ -11,20 +11,20 @@ Make sure you have all of the following parts before you begin.
 
 Qty | Vitamin | Image
 --- | --- | ---
-1 | [C2020 Micro Brushless Outrunner 3500kv 11g]() | ![](../framework/vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png) | 
-1 | [DYS BLHeli 16A ESC]() | ![](../framework/vitamins/images/DYSBLHeli16AESC_view.png) | 
-1 | [DasMikro Ultra Mini 8CH PPM Receiver]() | ![](../framework/vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png) | 
-2 | [N20DCGearMotor]() | ![](../framework/vitamins/images/N20DCGearMotor_view.png) | 
-2 | [O-Ring 2x10]() | ![](../framework/vitamins/images/ORing2x10_view.png) | 
-2 | [Stainless steel Flat Bar 6x1mm x 21mm]() | ![](../framework/vitamins/images/StainlesssteelFlatBar6x1mmx21mm_view.png) | 
-2 | [Stainless steel Round Bar 2mm x 14mm]() | ![](../framework/vitamins/images/StainlesssteelRoundBar2mmx14mm_view.png) | 
-2 | [TowerPro SG90 Driver]() | ![](../framework/vitamins/images/TowerProSG90Driver_view.png) | 
-1 | [Turnigy Nano-Tech 120mAh 2S 25C Lipo Pack E-Flite Compatible]() | ![](../framework/vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png) | 
-3 | [624VV 4x13x6mm V Groove Sealed Ball Bearing]() | ![](../framework/vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png) | 
-5 | [M4 Nut]() | ![](../framework/vitamins/images/M4Nut_view.png) | 
-4 | [M3 hex screw x 8mm]() | ![](../framework/vitamins/images/M3hexscrewx8mm_view.png) | 
-1 | [M4 hex screw x 15mm]() | ![](../framework/vitamins/images/M4hexscrewx15mm_view.png) | 
-2 | [M4 hex screw x 19mm]() | ![](../framework/vitamins/images/M4hexscrewx19mm_view.png) | 
+1 | [C2020 Micro Brushless Outrunner 3500kv 11g]() | ![](../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png) | 
+1 | [DYS BLHeli 16A ESC]() | ![](../vitamins/images/DYSBLHeli16AESC_view.png) | 
+1 | [DasMikro Ultra Mini 8CH PPM Receiver]() | ![](../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png) | 
+2 | [N20DCGearMotor]() | ![](../vitamins/images/N20DCGearMotor_view.png) | 
+2 | [O-Ring 2x10]() | ![](../vitamins/images/ORing2x10_view.png) | 
+2 | [Stainless steel Flat Bar 6x1mm x 21mm]() | ![](../vitamins/images/StainlesssteelFlatBar6x1mmx21mm_view.png) | 
+2 | [Stainless steel Round Bar 2mm x 14mm]() | ![](../vitamins/images/StainlesssteelRoundBar2mmx14mm_view.png) | 
+2 | [TowerPro SG90 Driver]() | ![](../vitamins/images/TowerProSG90Driver_view.png) | 
+1 | [Turnigy Nano-Tech 120mAh 2S 25C Lipo Pack E-Flite Compatible]() | ![](../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png) | 
+3 | [624VV 4x13x6mm V Groove Sealed Ball Bearing]() | ![](../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png) | 
+5 | [M4 Nut]() | ![](../vitamins/images/M4Nut_view.png) | 
+4 | [M3 hex screw x 8mm]() | ![](../vitamins/images/M3hexscrewx8mm_view.png) | 
+1 | [M4 hex screw x 15mm]() | ![](../vitamins/images/M4hexscrewx15mm_view.png) | 
+2 | [M4 hex screw x 19mm]() | ![](../vitamins/images/M4hexscrewx19mm_view.png) | 
 
 ### Cut Parts
 
@@ -57,7 +57,7 @@ Qty | Part Name | Image
 
 Qty | Vitamin | Image
 --- | --- | ---
-2 | [Stainless steel Flat Bar 6x1mm x 21mm]() | ![](../framework/vitamins/images/StainlesssteelFlatBar6x1mmx21mm_view.png) | 
+2 | [Stainless steel Flat Bar 6x1mm x 21mm]() | ![](../vitamins/images/StainlesssteelFlatBar6x1mmx21mm_view.png) | 
 
 ### Fabrication Steps
 
@@ -99,7 +99,7 @@ Qty | Part Name | Image
 
 Qty | Vitamin | Image
 --- | --- | ---
-4 | [M3 hex screw x 8mm]() | ![](../framework/vitamins/images/M3hexscrewx8mm_view.png) | 
+4 | [M3 hex screw x 8mm]() | ![](../vitamins/images/M3hexscrewx8mm_view.png) | 
 
 ### Printed Parts
 
@@ -123,18 +123,18 @@ Qty | Part Name | Image
 
 Qty | Vitamin | Image
 --- | --- | ---
-1 | [C2020 Micro Brushless Outrunner 3500kv 11g]() | ![](../framework/vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png) | 
-1 | [DYS BLHeli 16A ESC]() | ![](../framework/vitamins/images/DYSBLHeli16AESC_view.png) | 
-1 | [DasMikro Ultra Mini 8CH PPM Receiver]() | ![](../framework/vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png) | 
-2 | [N20DCGearMotor]() | ![](../framework/vitamins/images/N20DCGearMotor_view.png) | 
-2 | [O-Ring 2x10]() | ![](../framework/vitamins/images/ORing2x10_view.png) | 
-2 | [Stainless steel Round Bar 2mm x 14mm]() | ![](../framework/vitamins/images/StainlesssteelRoundBar2mmx14mm_view.png) | 
-2 | [TowerPro SG90 Driver]() | ![](../framework/vitamins/images/TowerProSG90Driver_view.png) | 
-1 | [Turnigy Nano-Tech 120mAh 2S 25C Lipo Pack E-Flite Compatible]() | ![](../framework/vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png) | 
-3 | [624VV 4x13x6mm V Groove Sealed Ball Bearing]() | ![](../framework/vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png) | 
-5 | [M4 Nut]() | ![](../framework/vitamins/images/M4Nut_view.png) | 
-1 | [M4 hex screw x 15mm]() | ![](../framework/vitamins/images/M4hexscrewx15mm_view.png) | 
-2 | [M4 hex screw x 19mm]() | ![](../framework/vitamins/images/M4hexscrewx19mm_view.png) | 
+1 | [C2020 Micro Brushless Outrunner 3500kv 11g]() | ![](../vitamins/images/C2020MicroBrushlessOutrunner3500kv11g_view.png) | 
+1 | [DYS BLHeli 16A ESC]() | ![](../vitamins/images/DYSBLHeli16AESC_view.png) | 
+1 | [DasMikro Ultra Mini 8CH PPM Receiver]() | ![](../vitamins/images/DasMikroUltraMini8CHPPMReceiver_view.png) | 
+2 | [N20DCGearMotor]() | ![](../vitamins/images/N20DCGearMotor_view.png) | 
+2 | [O-Ring 2x10]() | ![](../vitamins/images/ORing2x10_view.png) | 
+2 | [Stainless steel Round Bar 2mm x 14mm]() | ![](../vitamins/images/StainlesssteelRoundBar2mmx14mm_view.png) | 
+2 | [TowerPro SG90 Driver]() | ![](../vitamins/images/TowerProSG90Driver_view.png) | 
+1 | [Turnigy Nano-Tech 120mAh 2S 25C Lipo Pack E-Flite Compatible]() | ![](../vitamins/images/TurnigyNanoTech120mAh2S25CLipoPackEFliteCompatible_view.png) | 
+3 | [624VV 4x13x6mm V Groove Sealed Ball Bearing]() | ![](../vitamins/images/624VV4x13x6mmVGrooveSealedBallBearing_view.png) | 
+5 | [M4 Nut]() | ![](../vitamins/images/M4Nut_view.png) | 
+1 | [M4 hex screw x 15mm]() | ![](../vitamins/images/M4hexscrewx15mm_view.png) | 
+2 | [M4 hex screw x 19mm]() | ![](../vitamins/images/M4hexscrewx19mm_view.png) | 
 
 ### Printed Parts
 
